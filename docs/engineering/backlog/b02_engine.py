@@ -258,6 +258,58 @@ ITEMS = [
             "The Windows job runs the platform-neutral suite without a timeout",
         ],
     ),
+    dict(
+        key="win-list-dir",
+        epic="e04",
+        title="fix: make the sensitive-name list filter pass on Windows",
+        area="indexing",
+        type="bug",
+        priority="p1",
+        size="s",
+        context=(
+            "The Windows platform-neutral run passes test-core and test-semantic but "
+            "fails one list-dir test without output: sensitive names and directory "
+            "aliases are filtered differently on Windows, likely because the test "
+            "assumes POSIX separators or case sensitivity."
+        ),
+        evidence=[
+            "CI run 39858587393, build (windows-2022)",
+            "test-list-dir: 16 pass, 1 fail",
+            "list_dir.test.listUnderRoot filters sensitive names and sensitive directory aliases",
+        ],
+        acceptance=[
+            "The test passes on windows-2022",
+            "Case-insensitive aliases are covered by a regression test",
+            "test-list-dir runs in the Windows job",
+        ],
+    ),
+    dict(
+        key="win-ann",
+        epic="e04",
+        title="fix: make the ANN and semantic sidecar tests pass on Windows",
+        area="indexing",
+        type="bug",
+        priority="p1",
+        size="l",
+        context=(
+            "test-ann reports 69 pass, 4 skip, 8 fail, and 2 crash on windows-2022. "
+            "Three failures are the watcher cases in #90. The other seven are ANN mmap "
+            "and semantic sidecar tests that fail without output, which points at mmap, "
+            "file locking, or path handling that differs from POSIX."
+        ),
+        evidence=[
+            "CI run 39858587393, build (windows-2022)",
+            "test-ann: 69 pass, 4 skip, 8 fail, 2 crash",
+            "ann: mmap loader rejects out-of-range neighbor ids",
+            "ann: mmap layout round-trips after neighbor slabs cross a page boundary",
+            "semantic ANN: hosted 512D migration, metadata bounds, forged ranges, warm generation",
+        ],
+        acceptance=[
+            "All ANN and semantic sidecar tests pass on windows-2022",
+            "test-ann runs in the Windows job",
+            "The mmap and locking assumptions are documented for Windows",
+        ],
+    ),
     # E05
     dict(
         key="mcp-uaf-bundle",
