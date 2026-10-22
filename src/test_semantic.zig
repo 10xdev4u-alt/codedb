@@ -77,10 +77,10 @@ const MockEmbeddingServer = struct {
 
         while (self.request_len < self.request.len) {
             var iov = [1][]u8{self.request[self.request_len..]};
-            const n = stream.read(io, &iov) catch |err| {
+            const n = (stream.readWithControl(io, &iov, &.{}) catch |err| {
                 self.failure = err;
                 return;
-            };
+            }).data_len;
             if (n == 0) break;
             self.request_len += n;
             const header_end = std.mem.indexOf(u8, self.request[0..self.request_len], "\r\n\r\n") orelse continue;

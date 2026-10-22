@@ -608,7 +608,8 @@ fn handleConnection(
 fn readSome(io: std.Io, stream: std.Io.net.Stream, dest: []u8) !usize {
     if (dest.len == 0) return 0;
     var iov: [1][]u8 = .{dest};
-    return stream.read(io, &iov);
+    const result = try stream.readWithControl(io, &iov, &.{});
+    return result.data_len;
 }
 
 // ── Response helpers ────────────────────────────────────────────
