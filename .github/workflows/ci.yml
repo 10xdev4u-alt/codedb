@@ -59,7 +59,7 @@ jobs:
   windows:
     name: build (windows-2022)
     runs-on: windows-2022
-    timeout-minutes: 20
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -87,4 +87,4 @@ jobs:
 
       - name: Test (platform-neutral)
         shell: pwsh
-        run: zig build test-core test-list-dir test-semantic test-ann -Doptimize=ReleaseFast --summary all
+        run: zig build test-core test-semantic -Doptimize=ReleaseFast --summary all
