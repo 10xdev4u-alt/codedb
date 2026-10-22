@@ -176,9 +176,6 @@ test "windows cli pipe metadata parser rejects spoofable records" {
 }
 
 fn buildCliForHelpTests() !void {
-    // Build ReleaseFast so the spawned binary matches the shipped one and the
-    // suite does not overwrite zig-out with a slow Debug build.
-    //
     // `--global-cache-dir` is only accepted by newer zigs (the pinned
     // 0.17.0-dev.813 rejects it); prefer the env var, which every version
     // honors, and keep the arg off entirely.
@@ -957,6 +954,10 @@ test "issue-148: codedb mcp exits when stdin is closed" {
     // project so only the real stdin-EOF-to-exit path is timed.
     try buildCliForHelpTests();
 
+    const allow_temp = EnvVarGuard.save("CODEDB_ALLOW_TEMP");
+    defer allow_temp.restore();
+    cio.posixSetenv("CODEDB_ALLOW_TEMP", "1");
+
     var tmp = testing.tmpDir(.{});
     defer tmp.cleanup();
     var path_buf: [std.fs.max_path_bytes]u8 = undefined;
@@ -997,10 +998,21 @@ test "issue-148: codedb mcp exits when stdin is closed" {
 
     const elapsed = cio.milliTimestamp() - start;
 
-    // Ignoring stdout avoids a full-pipe deadlock in the child. A 15s budget
-    // still catches the 30s idle watchdog, while tolerating a loaded runner.
+    switch (term) {
+        .exited => |code| {
+            if (code != 0) {
+                std.debug.print("mcp stdin-close exit code {d} after {d} ms\n", .{ code, elapsed });
+                return error.TestUnexpectedResult;
+            }
+        },
+        else => {
+            std.debug.print("mcp stdin-close terminated abnormally: {any} after {d} ms\n", .{ term, elapsed });
+            return error.TestUnexpectedResult;
+        },
+    }
+
     if (elapsed >= 15_000) {
-        std.debug.print("mcp stdin-close exit took {d} ms (term {any})\n", .{ elapsed, term });
+        std.debug.print("mcp stdin-close exit took {d} ms\n", .{elapsed});
         return error.TestUnexpectedResult;
     }
 }
