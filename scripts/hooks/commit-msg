@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+# Enforce Conventional Commits and the required co-author trailer.
+#
+# Installed by scripts/install-hooks.sh.
+# Merge commits are exempt because GitHub creates them from the PR title.
+
+set -euo pipefail
+
+message_file=${1:?commit message file required}
+subject=$(head -n 1 "$message_file")
+
+# GitHub merge commits are generated from the PR title and carry no trailer.
+if [[ "$subject" == Merge\ * ]]; then
+  exit 0
+fi
+
+# Local fixup and squash commits are allowed while a branch is being shaped.
+if [[ "$subject" == fixup!\ * || "$subject" == squash!\ * ]]; then
+  exit 0
+fi
+
+# git revert writes a quoted subject by default.
+if [[ "$subject" != Revert\ \"*\" ]]; then
+  if ! [[ "$subject" =~ ^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\([a-z0-9._/-]+\))?!?:\ .+ ]]; then
+    printf 'commit-msg: subject must use Conventional Commits\n' >&2
+    printf '  got:  %s\n' "$subject" >&2
+    printf '  want: <type>(<scope>): <summary>\n' >&2
+    exit 1
+  fi
+fi
+
+if (( ${#subject} > 72 )); then
+  printf 'commit-msg: subject is %d characters, the limit is 72\n' "${#subject}" >&2
+  exit 1
+fi
+
+trailer='Co-authored-by: the-ai-developer <88466089+the-ai-developer@users.noreply.github.com>'
+if ! grep -qxF "$trailer" "$message_file"; then
+  printf 'commit-msg: missing the required co-author trailer\n' >&2
+  printf '  add: %s\n' "$trailer" >&2
+  exit 1
+fi
