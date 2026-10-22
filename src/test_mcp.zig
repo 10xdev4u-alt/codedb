@@ -181,7 +181,7 @@ fn buildCliForHelpTests() !void {
     // honors, and keep the arg off entirely.
     const build = try cio.runCapture(.{
         .allocator = testing.allocator,
-        .argv = &.{ zigExe(), "build" },
+        .argv = &.{ zigExe(), "build", "-Doptimize=ReleaseFast" },
         .max_output_bytes = 8192,
     });
     defer testing.allocator.free(build.stdout);
@@ -954,6 +954,10 @@ test "issue-148: codedb mcp exits when stdin is closed" {
     // project so only the real stdin-EOF-to-exit path is timed.
     try buildCliForHelpTests();
 
+    const allow_temp = EnvVarGuard.save("CODEDB_ALLOW_TEMP");
+    defer allow_temp.restore();
+    cio.posixSetenv("CODEDB_ALLOW_TEMP", "1");
+
     var tmp = testing.tmpDir(.{});
     defer tmp.cleanup();
     var path_buf: [std.fs.max_path_bytes]u8 = undefined;
@@ -965,7 +969,7 @@ test "issue-148: codedb mcp exits when stdin is closed" {
     var child = std.process.spawn(io, .{
         .argv = &.{ builtCodedbExe(), proj, "mcp" },
         .stdin = .pipe,
-        .stdout = .pipe,
+        .stdout = .ignore,
         .stderr = .ignore,
     }) catch {
         // If spawn fails (e.g., binary not built), skip the test
@@ -987,22 +991,30 @@ test "issue-148: codedb mcp exits when stdin is closed" {
     // Wait for the process to exit. The main read loop exits on stdin EOF;
     // the watchdog also polls dead clients every second as a backup.
     const start = cio.milliTimestamp();
-    const term = child.wait(io) catch {
-        // If wait fails, the process is stuck — test fails
-        try testing.expect(false);
-        return;
+    const term = child.wait(io) catch |err| {
+        std.debug.print("mcp stdin-close wait failed: {any}\n", .{err});
+        return error.TestUnexpectedResult;
     };
 
     const elapsed = cio.milliTimestamp() - start;
 
-    // Should have exited (not been killed by us)
     switch (term) {
-        .exited => |code| _ = code,
-        else => {},
+        .exited => |code| {
+            if (code != 0) {
+                std.debug.print("mcp stdin-close exit code {d} after {d} ms\n", .{ code, elapsed });
+                return error.TestUnexpectedResult;
+            }
+        },
+        else => {
+            std.debug.print("mcp stdin-close terminated abnormally: {any} after {d} ms\n", .{ term, elapsed });
+            return error.TestUnexpectedResult;
+        },
     }
 
-    // Should exit promptly after stdin closes.
-    try testing.expect(elapsed < 5_000);
+    if (elapsed >= 15_000) {
+        std.debug.print("mcp stdin-close exit took {d} ms\n", .{elapsed});
+        return error.TestUnexpectedResult;
+    }
 }
 
 test "issue-249: nuke.removeJsonMcpServerEntry returns null when key absent" {

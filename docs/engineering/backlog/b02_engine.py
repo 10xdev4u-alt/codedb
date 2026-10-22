@@ -209,6 +209,107 @@ ITEMS = [
             "A 500 KB fixture is either fully indexed or explicitly reported",
         ],
     ),
+    dict(
+        key="win-watcher",
+        epic="e04",
+        title="fix: make the watcher reconciliation tests pass on Windows",
+        area="indexing",
+        type="bug",
+        priority="p1",
+        size="m",
+        context=(
+            "The Windows suite fails three watcher tests: issue-754 exits 253, "
+            "issue-704 exits 253, and the notify-drain fingerprint test expects "
+            "2183468070895612314 but gets 16144801376001656436. Two binaries crash on "
+            "the same cases, so the failures reproduce."
+        ),
+        evidence=[
+            "CI run 39851904822, build (windows-2022)",
+            "watcher.test.issue-754 exits 253",
+            "watcher.test.issue-704 exits 253",
+            "watcher.test.notify drain fingerprint mismatch",
+        ],
+        acceptance=[
+            "The three tests pass on windows-2022",
+            "test-watcher runs in the Windows job",
+            "A regression test covers the path separator or metadata difference",
+        ],
+    ),
+    dict(
+        key="win-hang",
+        epic="e04",
+        title="test: find and fix the Windows suite hang",
+        area="indexing",
+        type="test",
+        priority="p1",
+        size="m",
+        context=(
+            "After two test binaries report, the Windows job sits idle for 31 minutes "
+            "until the job timeout. The last output is a failed test binary, so the hang "
+            "is in a later binary that never prints a summary."
+        ),
+        evidence=[
+            "CI run 39851904822, build (windows-2022)",
+            "Last test output at 21:01:37, job cancelled at 21:32:50",
+        ],
+        acceptance=[
+            "The hanging test binary is named",
+            "The full suite finishes under 20 minutes on windows-2022",
+            "The Windows job runs the platform-neutral suite without a timeout",
+        ],
+    ),
+    dict(
+        key="win-list-dir",
+        epic="e04",
+        title="fix: make the sensitive-name list filter pass on Windows",
+        area="indexing",
+        type="bug",
+        priority="p1",
+        size="s",
+        context=(
+            "The Windows platform-neutral run passes test-core and test-semantic but "
+            "fails one list-dir test without output: sensitive names and directory "
+            "aliases are filtered differently on Windows, likely because the test "
+            "assumes POSIX separators or case sensitivity."
+        ),
+        evidence=[
+            "CI run 39858587393, build (windows-2022)",
+            "test-list-dir: 16 pass, 1 fail",
+            "list_dir.test.listUnderRoot filters sensitive names and sensitive directory aliases",
+        ],
+        acceptance=[
+            "The test passes on windows-2022",
+            "Case-insensitive aliases are covered by a regression test",
+            "test-list-dir runs in the Windows job",
+        ],
+    ),
+    dict(
+        key="win-ann",
+        epic="e04",
+        title="fix: make the ANN and semantic sidecar tests pass on Windows",
+        area="indexing",
+        type="bug",
+        priority="p1",
+        size="l",
+        context=(
+            "test-ann reports 69 pass, 4 skip, 8 fail, and 2 crash on windows-2022. "
+            "Three failures are the watcher cases in #90. The other seven are ANN mmap "
+            "and semantic sidecar tests that fail without output, which points at mmap, "
+            "file locking, or path handling that differs from POSIX."
+        ),
+        evidence=[
+            "CI run 39858587393, build (windows-2022)",
+            "test-ann: 69 pass, 4 skip, 8 fail, 2 crash",
+            "ann: mmap loader rejects out-of-range neighbor ids",
+            "ann: mmap layout round-trips after neighbor slabs cross a page boundary",
+            "semantic ANN: hosted 512D migration, metadata bounds, forged ranges, warm generation",
+        ],
+        acceptance=[
+            "All ANN and semantic sidecar tests pass on windows-2022",
+            "test-ann runs in the Windows job",
+            "The mmap and locking assumptions are documented for Windows",
+        ],
+    ),
     # E05
     dict(
         key="mcp-uaf-bundle",
@@ -361,6 +462,32 @@ ITEMS = [
             "The tool returns a job id immediately",
             "ping stays under 100 ms during a full index",
             "A status tool reports progress and completion",
+        ],
+    ),
+    dict(
+        key="mcp-exit-flake",
+        epic="e05",
+        title="test: make the MCP stdin-close exit test deterministic",
+        area="mcp",
+        type="test",
+        priority="p1",
+        size="m",
+        context=(
+            "test_mcp.test.issue-148: codedb mcp exits when stdin is closed failed "
+            "without output on macOS 14 in run 39860699861, after passing in two prior "
+            "runs. The test spawns the prebuilt binary with stdout as a pipe and never "
+            "drains it, so a child that writes past the pipe buffer blocks before it "
+            "can observe stdin EOF."
+        ),
+        evidence=[
+            "CI run 39860699861, test (macos-14)",
+            "src/test_mcp.zig:949-1006",
+            "The rerun of the same commit passed, so the failure is not deterministic",
+        ],
+        acceptance=[
+            "A failure reports the child exit code and the elapsed time",
+            "The child cannot block on an undrained stdout pipe",
+            "The test passes 100 consecutive local runs and 10 CI runs without a rerun",
         ],
     ),
     # E06
