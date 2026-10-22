@@ -448,20 +448,30 @@ ITEMS = [
     dict(
         key="docs-agents",
         epic="e09",
-        title="docs: point AGENTS.md at the workflow contract",
+        title="docs: rewrite AGENTS.md for the local retrieval fork",
         area="docs",
         type="docs",
         priority="p1",
-        size="s",
+        size="m",
         context=(
-            "AGENTS.md holds upstream accuracy rules that still apply. It does not mention the "
-            "issue tree, the co-author trailer, or the merge policy."
+            "AGENTS.md still carries the upstream objective: the hosted default is the product "
+            "and local models are forbidden. That directly contradicts this fork, whose product "
+            "default is local text-only EmbeddingGemma 2 measured against the frozen hosted "
+            "baseline. The file also omits the issue tree, the co-author trailer, and the merge "
+            "policy."
         ),
-        evidence=["AGENTS.md"],
+        evidence=[
+            "AGENTS.md",
+            "docs/engineering/AGENTIC_WORKFLOW.md",
+            "docs/research/embeddinggemma2/",
+        ],
         acceptance=[
-            "AGENTS.md links docs/engineering/AGENTIC_WORKFLOW.md",
-            "The upstream accuracy rules stay intact",
-            "No rule is duplicated in two places",
+            "AGENTS.md states the fork objective: local text-only EmbeddingGemma 2 is the default, "
+            "and the hosted default is only the comparison baseline",
+            "No retrieval win is claimed until the 128-question eval proves it against a frozen baseline",
+            "The code-intelligence framing, security review rules, and pre-merge verification stay",
+            "The workflow contract, backlog, eval, and research dossier are linked, not restated",
+            "No upstream instruction that forbids local models remains",
         ],
     ),
     dict(
