@@ -1,0 +1,86 @@
+name: ci
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  ZIG_VERSION: "0.17.0"
+
+jobs:
+  test:
+    name: test (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-24.04
+            target: x86_64-linux
+            sha256: 1cbe9df9f27e6b78d14ccbca43b6703a404ef79ef1c463de901d7f088d4e2026
+          - os: macos-14
+            target: aarch64-macos
+            sha256: b607e9b9234790a008116ae5bdb71c6243b84b9fb42a53a9e70fde41c06c536a
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Install Zig
+        shell: bash
+        env:
+          TARGET: ${{ matrix.target }}
+          SHA256: ${{ matrix.sha256 }}
+        run: |
+          set -euo pipefail
+          archive="zig-${TARGET}-${ZIG_VERSION}.tar.xz"
+          curl --fail --show-error --location --retry 3 \
+            "https://ziglang.org/download/${ZIG_VERSION}/${archive}" -o "${archive}"
+          echo "${SHA256}  ${archive}" | shasum -a 256 --check
+          tar -xf "${archive}"
+          echo "${PWD}/zig-${TARGET}-${ZIG_VERSION}" >> "${GITHUB_PATH}"
+          "zig-${TARGET}-${ZIG_VERSION}/zig" version
+
+      - name: Build
+        run: zig build -Doptimize=ReleaseFast
+
+      - name: Test
+        run: zig build test -Doptimize=ReleaseFast --summary all
+
+  windows:
+    name: build (windows-2022)
+    runs-on: windows-2022
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Install Zig
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          $version = $env:ZIG_VERSION
+          $archive = "zig-x86_64-windows-$version.zip"
+          Invoke-WebRequest -Uri "https://ziglang.org/download/$version/$archive" -OutFile $archive
+          $expected = "b5663f69581dcf391293fbf16c06cb80d81d806545ce618b4d0bab7f0eb8c428"
+          $actual = (Get-FileHash $archive -Algorithm SHA256).Hash.ToLower()
+          if ($actual -ne $expected) {
+            throw "Zig checksum mismatch: expected $expected, got $actual"
+          }
+          Expand-Archive -Path $archive -DestinationPath .
+          "$PWD\zig-x86_64-windows-$version" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+
+      - name: Build
+        shell: pwsh
+        run: |
+          zig version
+          zig build -Doptimize=ReleaseFast

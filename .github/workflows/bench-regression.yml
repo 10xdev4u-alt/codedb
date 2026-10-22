@@ -1,7 +1,9 @@
+# Quarantined until #14 rebuilds the benchmark gate. The pinned Zig build is no
+# longer published and the paired baseline harness is stale.
 name: bench-regression
 
 on:
-  pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
