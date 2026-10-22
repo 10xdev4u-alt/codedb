@@ -464,6 +464,32 @@ ITEMS = [
             "A status tool reports progress and completion",
         ],
     ),
+    dict(
+        key="mcp-exit-flake",
+        epic="e05",
+        title="test: make the MCP stdin-close exit test deterministic",
+        area="mcp",
+        type="test",
+        priority="p1",
+        size="m",
+        context=(
+            "test_mcp.test.issue-148: codedb mcp exits when stdin is closed failed "
+            "without output on macOS 14 in run 39860699861, after passing in two prior "
+            "runs. The test spawns the prebuilt binary with stdout as a pipe and never "
+            "drains it, so a child that writes past the pipe buffer blocks before it "
+            "can observe stdin EOF."
+        ),
+        evidence=[
+            "CI run 39860699861, test (macos-14)",
+            "src/test_mcp.zig:949-1006",
+            "The rerun of the same commit passed, so the failure is not deterministic",
+        ],
+        acceptance=[
+            "A failure reports the child exit code and the elapsed time",
+            "The child cannot block on an undrained stdout pipe",
+            "The test passes 100 consecutive local runs and 10 CI runs without a rerun",
+        ],
+    ),
     # E06
     dict(
         key="perf-cache-lock",
