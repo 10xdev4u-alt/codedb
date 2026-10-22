@@ -209,6 +209,55 @@ ITEMS = [
             "A 500 KB fixture is either fully indexed or explicitly reported",
         ],
     ),
+    dict(
+        key="win-watcher",
+        epic="e04",
+        title="fix: make the watcher reconciliation tests pass on Windows",
+        area="indexing",
+        type="bug",
+        priority="p1",
+        size="m",
+        context=(
+            "The Windows suite fails three watcher tests: issue-754 exits 253, "
+            "issue-704 exits 253, and the notify-drain fingerprint test expects "
+            "2183468070895612314 but gets 16144801376001656436. Two binaries crash on "
+            "the same cases, so the failures reproduce."
+        ),
+        evidence=[
+            "CI run 39851904822, build (windows-2022)",
+            "watcher.test.issue-754 exits 253",
+            "watcher.test.issue-704 exits 253",
+            "watcher.test.notify drain fingerprint mismatch",
+        ],
+        acceptance=[
+            "The three tests pass on windows-2022",
+            "test-watcher runs in the Windows job",
+            "A regression test covers the path separator or metadata difference",
+        ],
+    ),
+    dict(
+        key="win-hang",
+        epic="e04",
+        title="test: find and fix the Windows suite hang",
+        area="indexing",
+        type="test",
+        priority="p1",
+        size="m",
+        context=(
+            "After two test binaries report, the Windows job sits idle for 31 minutes "
+            "until the job timeout. The last output is a failed test binary, so the hang "
+            "is in a later binary that never prints a summary."
+        ),
+        evidence=[
+            "CI run 39851904822, build (windows-2022)",
+            "Last test output at 21:01:37, job cancelled at 21:32:50",
+        ],
+        acceptance=[
+            "The hanging test binary is named",
+            "The full suite finishes under 20 minutes on windows-2022",
+            "The Windows job runs the platform-neutral suite without a timeout",
+        ],
+    ),
     # E05
     dict(
         key="mcp-uaf-bundle",
