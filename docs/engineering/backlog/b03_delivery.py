@@ -205,6 +205,31 @@ ITEMS = [
     ),
     # E08
     dict(
+        key="ci-inherited",
+        epic="e08",
+        title="ci: remove the upstream PR base guard and quarantine the broken benchmark gate",
+        area="ci",
+        type="ci",
+        priority="p0",
+        size="s",
+        context=(
+            "Every PR to main fails the inherited guard job, which tells contributors to "
+            "target a release/* branch this repository does not use. The benchmark job pins "
+            "the dead Zig development build and fails to compile. A red check on every PR "
+            "teaches reviewers to ignore checks."
+        ),
+        evidence=[
+            ".github/workflows/pr-base-guard.yml:3,33-40",
+            ".github/workflows/bench-regression.yml:7,53-58",
+            "PR #87: guard failed in 5s, bench failed in 25s",
+        ],
+        acceptance=[
+            "The guard job is removed",
+            "The benchmark gate is green or moved to workflow_dispatch with a linked issue",
+            "Every remaining PR check is meaningful and required",
+        ],
+    ),
+    dict(
         key="ci-cache",
         epic="e08",
         title="ci: cache the Zig toolchain and build outputs",
