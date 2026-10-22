@@ -1,0 +1,50 @@
+kind	slug	status	stars	forks	pushed_at	archived	downloads	likes	last_modified	gated	full_name
+github	ARahim3/DigUp	ok	5500	402	2026-10-22T10:56:35Z	false					ARahim3/DigUp
+github	DenisovAV/flutter_edge_ai	ok	643	176	2026-10-22T12:46:08Z	false					DenisovAV/flutter_edge_ai
+github	FluidInference/FluidUse	ok	524	40	2026-10-14T22:54:12Z	false					FluidInference/FluidUse
+github	JimLiu/baocut	ok	1208	124	2026-10-22T07:55:06Z	false					JimLiu/baocut
+github	KB01111/WinSearch-lumen-engine	ok	0	0	2026-10-22T12:34:23Z	false					KB01111/WinSearch-lumen-engine
+github	Nuu-maan/omarchy-digup	ok	5	0	2026-10-15T17:21:32Z	false					Nuu-maan/omarchy-digup
+github	QuixiAI/embeddinggemma.c	ok	28	3	2026-10-18T19:03:04Z	false					QuixiAI/embeddinggemma.c
+github	The-Vibe-Company/quivr	ok	39601	3731	2026-10-21T18:00:15Z	false					The-Vibe-Company/quivr
+github	ajisrawi/DigUp-Windows	ok	1	0	2026-10-14T08:46:09Z	false					ajisrawi/DigUp-Windows
+github	allenv0/SCM	ok	504	38	2026-10-22T07:34:26Z	false					allenv0/SCM
+github	ampersandru/VectorDash	ok	30	3	2026-10-22T18:41:04Z	false					ampersandru/VectorDash
+github	cgoat/DigUp-Windows	ok	0	0	2026-10-13T04:09:03Z	false					cgoat/DigUp-Windows
+github	curiosity-ai/sentence-transformers-sharp	ok	25	2	2026-10-07T10:47:46Z	false					curiosity-ai/sentence-transformers-sharp
+github	ggml-org/llama.cpp	ok	132033	24685	2026-10-22T18:55:09Z	false					ggml-org/llama.cpp
+github	iDiagoValeta/localOllamaRAG	ok	14	0	2026-10-21T19:40:16Z	false					iDiagoValeta/localOllamaRAG
+github	jwa91/sift-it	ok	2	0	2026-10-21T09:27:18Z	false					jwa91/sift-it
+github	meangrinch/LocalLens	ok	26	5	2026-10-12T03:48:57Z	false					meangrinch/LocalLens
+github	misterekkk/lantern	ok	5	0	2026-10-20T18:01:23Z	false					misterekkk/lantern
+github	ml-explore/mlx-swift-lm	ok	839	439	2026-10-22T17:34:23Z	false					ml-explore/mlx-swift-lm
+github	pdstn12/Recall	ok	9	1	2026-10-12T11:47:18Z	false					pdstn12/Recall
+github	rabimba/Prism	ok	0	0	2026-10-13T18:58:53Z	false					rabimba/Prism
+github	radimsem/omafind	ok	4	0	2026-10-17T10:18:20Z	false					radimsem/omafind
+github	raisulsohan/lazyFinds	ok	10	0	2026-10-16T04:40:00Z	false					raisulsohan/lazyFinds
+github	shivanathd/embeddinggemma2-vs-gemini-bench	ok	0	0	2026-10-11T13:53:31Z	false					shivanathd/embeddinggemma2-vs-gemini-bench
+github	sunboss/DigUp-Windows	ok	0	0	2026-10-11T17:37:56Z	false					sunboss/DigUp-Windows
+github	thakurious/trowel	ok	0	0	2026-10-22T07:18:10Z	false					thakurious/trowel
+github	vllm-project/vllm	ok	95139	23801	2026-10-22T18:37:41Z	false					vllm-project/vllm
+github	xafold/SpotLite	ok	1	0	2026-10-14T19:52:29Z	false					xafold/SpotLite
+github	yazzang-homelab/im-looking-for	ok	10	1	2026-10-14T10:31:35Z	false					yazzang-homelab/im-looking-for
+github	zhongkaifu/TensorSharp	ok	600	63	2026-10-22T17:42:05Z	false					zhongkaifu/TensorSharp
+huggingface	FluidInference/embeddinggemma-2-coreml	ok					1481	27	2026-10-09T06:01:30.000Z	False	
+huggingface	Steveeeeeeen/embeddinggemma2-en-direct-1000h-20261014-rnnt	ok					0	1	2026-10-15T09:41:24.000Z	False	
+huggingface	Yazeedx0/embeddinggemma-cpu-max	http-401									
+huggingface	eulogik/bharat-embed-270m-gemma2	ok					126	0	2026-10-09T10:57:59.000Z	False	
+huggingface	ggml-org/embeddinggemma-2-GGUF	ok					82951	51	2026-10-19T10:57:29.000Z	False	
+huggingface	google/embeddinggemma-2	ok					185259	2838	2026-10-06T15:29:23.000Z	False	
+huggingface	jonpark0/embeddinggemma-2-ko	ok					58	0	2026-10-19T16:45:06.000Z	False	
+huggingface	litert-community/embeddinggemma-2-740m-litert-lm	ok					120190	35	2026-10-06T19:04:44.000Z	False	
+huggingface	litert-community/embeddinggemma-2-text-270m-litert-lm	ok					11432	10	2026-10-06T19:04:50.000Z	False	
+huggingface	litert-community/embeddinggemma-2-text-vision-440m-litert-lm	ok					9379	6	2026-10-06T19:04:47.000Z	False	
+huggingface	mlx-community/embeddinggemma-2-bf16	ok					5069	10	2026-10-06T15:47:58.000Z	False	
+huggingface	mofumail/embeddinggemma-2-candle	http-401									
+huggingface	mrm8488/embeddinggemma-2-ft-typed-decision	ok					1277	63	2026-10-13T17:52:04.000Z	False	
+huggingface	mstkyvz/embeddinggemma2-turkish-stt	ok					62	1	2026-10-20T20:52:43.000Z	False	
+huggingface	naijaml/embeddinggemma-2-african-speech-lora	ok					29	1	2026-10-19T13:51:13.000Z	False	
+huggingface	onnx-community/embeddinggemma-2-ONNX	ok					232368	26	2026-10-06T16:58:12.000Z	False	
+huggingface	pastel-labs/embeddinggemma-2-photo-anchor	ok					0	8	2026-10-12T12:25:18.000Z	False	
+huggingface	qnguyen3/QUAN-Transcribe-1.0	ok					521	58	2026-10-14T03:59:50.000Z	auto	
+huggingface	unsloth/embeddinggemma-2-GGUF	ok					119460	341	2026-10-07T07:09:29.000Z	False	

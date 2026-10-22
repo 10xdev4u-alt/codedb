@@ -1,0 +1,1073 @@
+ollama/ollama	183614	18357	Go	-	2023-06-26	2026-10-17	Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.	https://github.com/ollama/ollama
+huggingface/transformers	167791	34885	Python	-	2018-10-29	2026-10-17	🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. 	https://github.com/huggingface/transformers
+ggml-org/llama.cpp	131512	24493	C++	-	2023-03-10	2026-10-17	LLM inference in C/C++	https://github.com/ggml-org/llama.cpp
+vllm-project/vllm	94000	23494	Python	-	2023-02-09	2026-10-17	A high-throughput and memory-efficient inference and serving engine for LLMs	https://github.com/vllm-project/vllm
+unslothai/unsloth	78184	7224	Python	-	2023-11-29	2026-10-17	Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4, MiniMax-H3, Gemma 4, FLUX and more.	https://github.com/unslothai/unsloth
+diegosouzapw/OmniRoute	77655	11247	TypeScript	-	2026-02-13	2026-10-17	Never stop coding. Free MIT AI gateway: one endpoint, 359 providers (150+ free), 1200+ models Kimi, Claude, GPT, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by hundreds of contributors	https://github.com/diegosouzapw/OmniRoute
+MemPalace/mempalace	59614	7563	Python	-	2026-04-05	2026-10-17	The best-benchmarked open-source AI memory system. And it's free.	https://github.com/MemPalace/mempalace
+The-Vibe-Company/quivr	39598	3737	Go	-	2023-05-12	2026-10-15	An open-source engine that turns continuous content streams into search and monitoring. Durable ingestion, hybrid search, alerts, and plugins for formats, models and business rules.	https://github.com/The-Vibe-Company/quivr
+google-ai-edge/mediapipe	37305	6189	C++	-	2019-06-13	2026-10-16	Cross-platform, customizable ML solutions for live and streaming media.	https://github.com/google-ai-edge/mediapipe
+sgl-project/sglang	37251	9649	Python	-	2024-01-08	2026-10-17	SGLang is a high-performance serving framework for large language models and multimodal models.	https://github.com/sgl-project/sglang
+blakeblackshear/frigate	36696	3718	Python	-	2019-01-26	2026-10-16	NVR with realtime local object detection for IP cameras	https://github.com/blakeblackshear/frigate
+google-ai-edge/gallery	24991	2742	Kotlin	-	2025-03-31	2026-10-16	A gallery that showcases on-device ML/GenAI use cases and allows people to try and use models locally.	https://github.com/google-ai-edge/gallery
+jundot/omlx	22886	2096	Python	-	2026-02-13	2026-10-17	LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar	https://github.com/jundot/omlx
+huggingface/sentence-transformers	19188	2962	Python	-	2019-07-24	2026-10-16	State-of-the-Art Embeddings, Retrieval, and Reranking	https://github.com/huggingface/sentence-transformers
+huggingface/transformers.js	16349	1203	JavaScript	-	2023-02-13	2026-10-15	State-of-the-art Machine Learning for the web. Run 🤗 Transformers directly in your browser, with no need for a server!	https://github.com/huggingface/transformers.js
+xorbitsai/inference	9613	883	Python	-	2023-06-14	2026-10-17	Swap GPT for any LLM by changing a single line of code. Xinference lets you run open-source, speech, and multimodal models on cloud, on-prem, or your laptop — all through one unified, production-ready inference API.	https://github.com/xorbitsai/inference
+HarnessMD/munder-difflin	8845	1227	TypeScript	-	2026-05-31	2026-10-17	an open-source alternative to the dots, bots and muses of the world, run an office of claude code/codex like agents on your laptop, sandboxes or anywhere, uses your existing subscriptions	https://github.com/HarnessMD/munder-difflin
+osaurus-ai/osaurus	8055	483	Swift	-	2025-08-17	2026-10-17	Own your AI. The native macOS harness for AI agents -- any model, persistent memory, autonomous execution, cryptographic identity. Built in Swift. Fully offline. Open source.	https://github.com/osaurus-ai/osaurus
+vespa-engine/vespa	7128	745	Java	-	2016-06-03	2026-10-17	The AI search platform	https://github.com/vespa-engine/vespa
+google-ai-edge/LiteRT-LM	6687	758	C++	-	2025-04-14	2026-10-17	LiteRT-LM is Google's production-ready, high-performance, open-source inference framework for deploying Large Language Models on edge devices.	https://github.com/google-ai-edge/LiteRT-LM
+kenn-io/agentsview	6138	698	Go	-	2026-02-19	2026-10-17	Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 	https://github.com/kenn-io/agentsview
+unslothai/notebooks	5743	953	Jupyter Notebook	-	2024-12-08	2026-10-17	250+ Fine-tuning & RL Notebooks for text, vision, audio, embedding, TTS models.	https://github.com/unslothai/notebooks
+Blaizzy/mlx-vlm	5634	837	Python	-	2024-04-16	2026-10-17	MLX-VLM is a package for inference and fine-tuning of Vision Language Models (VLMs) on your Mac using MLX.	https://github.com/Blaizzy/mlx-vlm
+ARahim3/DigUp	4534	321	Swift	-	2026-10-08	2026-10-14	Search your computer by what's in your files: photos, PDFs, documents, recordings, videos and code. On-device on Mac, Windows and Linux, built on Google DeepMind's EmbeddingGemma 2.	https://github.com/ARahim3/DigUp
+google-gemma/cookbook	4098	674	Jupyter Notebook	-	2024-05-27	2026-10-17	A collection of guides and examples for the Gemma open models from Google.	https://github.com/google-gemma/cookbook
+raullenchai/Rapid-MLX	3994	432	Python	-	2026-02-25	2026-10-17	Rapid-MLX is an open-source (Apache 2.0) OpenAI- and Anthropic-compatible LLM inference server for Apple Silicon, built on MLX, focused on reliable tool calling for coding agents. Up to 4× faster than Apple's MLX (mlx-lm) on the same weights.	https://github.com/raullenchai/Rapid-MLX
+AtomicBot-ai/atomic-agent	3381	275	TypeScript	-	2026-04-21	2026-10-17	Atomic Agent is a local-first AI agent. Runs open-weight models on your own machine via llama.cpp.	https://github.com/AtomicBot-ai/atomic-agent
+rafska/awesome-local-llm	2981	480	-	-	2025-06-03	2026-10-17	A curated list of awesome platforms, tools, practices and resources that helps run LLMs locally	https://github.com/rafska/awesome-local-llm
+michaelfeil/infinity	2961	219	Rust	-	2023-10-11	2026-10-17	Infinity is a high-throughput, low-latency serving engine for text-embeddings, reranking models, clip, clap and colpali	https://github.com/michaelfeil/infinity
+google-ai-edge/mediapipe-samples	2868	787	Jupyter Notebook	-	2022-10-21	2026-10-16	-	https://github.com/google-ai-edge/mediapipe-samples
+kenn-io/msgvault	2159	170	Go	-	2026-01-28	2026-10-17	Archive a lifetime of email and chat. Offline search, analytics, and AI query over your full message history. Powered by SQLite and DuckDB	https://github.com/kenn-io/msgvault
+ddalcu/mlx-serve	1968	203	Zig	-	2026-02-17	2026-10-17	Native LLM inference server for Apple Silicon. OpenAI + Anthropic API compatible. No Python. Zig backend, Swift frontend macOS app with chat, music, voice, video generation.	https://github.com/ddalcu/mlx-serve
+AtomicBot-ai/Atomic-Chat	1807	202	TypeScript	-	2026-03-31	2026-10-16	Local AI app and inference engine for agents. Run open-weight LLMs locally — private, 100% offline on your computer. Join our Discord: https://discord.com/invite/8wGSsvmg4V	https://github.com/AtomicBot-ai/Atomic-Chat
+Blaizzy/nativ	1530	103	Swift	-	2026-07-20	2026-10-17	Local AI, native to your Mac. Chat, serve, monitor, and connect MLX models from one macOS app.	https://github.com/Blaizzy/nativ
+HelgeSverre/ollama-gui	1259	172	TypeScript	-	2023-10-08	2026-10-13	A Web Interface for chatting with your local LLMs via the ollama API	https://github.com/HelgeSverre/ollama-gui
+syntaxfm/website	1215	513	Svelte	-	2017-06-19	2026-10-16	Syntax Podcast Website	https://github.com/syntaxfm/website
+duanyytop/agents-radar	1133	220	TypeScript	-	2026-02-23	2026-10-17	Daily AI ecosystem digest from 10 sources (GitHub, ArXiv, HN, HuggingFace, Product Hunt, Dev.to, Lobste.rs). Bilingual ZH/EN reports via GitHub Actions.	https://github.com/duanyytop/agents-radar
+joreilly/Confetti	1066	124	Kotlin	-	2021-12-07	2026-10-17	KMP/CMP GraphQL based conference project with Jetpack Compose Android, Compose for Wear, and Compose Multiplatform Desktop, Web and iOS clients along with GraphQL backend.	https://github.com/joreilly/Confetti
+JimLiu/baocut	1046	98	TypeScript	-	2026-07-13	2026-10-17	BaoCut: an AI video agent with an editable timeline. Transcribe, subtitle, translate, dub, cut and animate.	https://github.com/JimLiu/baocut
+peonist-ai/halogen-flash-server	1014	73	Shell	-	2026-08-26	2026-10-17	The fastest way to run Qwen3.8-Flash-Next on Strix Halo (gfx1151)	https://github.com/peonist-ai/halogen-flash-server
+Rheosoph/flow-like	962	79	Rust	-	2025-02-16	2026-10-16	Flow-Like: Strongly Typed Enterprise Scale Workflows. Built for scalability, speed, seamless AI integration and rich customization.	https://github.com/Rheosoph/flow-like
+spiritbuun/buun-llama-cpp	888	95	C++	-	2026-03-26	2026-10-16	Experimental llama.cpp fork for inference research and development	https://github.com/spiritbuun/buun-llama-cpp
+liyedanpdx/reddit-ai-trends	871	86	Python	-	2025-03-17	2026-10-17	Stay ahead of AI trends with automated Reddit insights! 🚀 This tool scans AI-related Reddit communities in English & Chinese, using Reddit Official API, DeepSeek V4.1 by OpenRouter to analyze posts, summarize key discussions, and track trends. Daily rankings hot topics—catch emerging trends before they go mainstream! (Updated every 6 AM CDT)	https://github.com/liyedanpdx/reddit-ai-trends
+ml-explore/mlx-swift-lm	837	432	Swift	-	2025-10-02	2026-10-16	LLMs and VLMs with MLX Swift	https://github.com/ml-explore/mlx-swift-lm
+RichmondAlake/memorizz	774	86	Python	-	2024-09-01	2026-10-16	MemoRizz: A Python library serving as a memory layer for AI applications. Leverages popular databases and storage solutions to optimize memory usage. Provides utility classes and methods for efficient data management.	https://github.com/RichmondAlake/memorizz
+rust-lang/crates.io-index	752	271	Tcl	-	2014-11-04	2026-10-17	Registry index for crates.io	https://github.com/rust-lang/crates.io-index
+microsoft/TypeAgent	749	109	TypeScript	-	2024-07-16	2026-10-17	Sample code that explores an architecture for using language models to build a personal agent that can work with application agents.	https://github.com/microsoft/TypeAgent
+sandroandric/AgentHandover	703	58	Python	-	2026-03-30	2026-10-14	What if OpenClaw, Claude Code, Codex etc. knew how to do your work without you saying it? AgentHandover observes you, learns and teaches your agents with self-improving skills.	https://github.com/sandroandric/AgentHandover
+DenisovAV/flutter_edge_ai	641	176	Dart	-	2024-04-02	2026-10-17	On-device AI for Flutter — Gemma and other LLMs, multimodal, function calling, embeddings, RAG and speech on Android, iOS, Web, macOS, Windows and Linux.	https://github.com/DenisovAV/flutter_edge_ai
+timmyy123/LLM-Hub	616	137	C	-	2025-07-08	2026-10-17	Local LLM, image&video&music generator, run codex with local models on your phone	https://github.com/timmyy123/LLM-Hub
+dolag233/Serpent	603	44	TypeScript	-	2026-07-12	2026-10-17	Cross-platform digital asset management software for game artists, VFX professionals, and graphic and motion designers.	https://github.com/dolag233/Serpent
+zhongkaifu/TensorSharp	592	63	C#	-	2026-04-03	2026-10-17	A native .NET LLM inference engine and agent runtime for GGUF models. TensorSharp provides a console application, a web-based chatbot interface, iPhone App, and Ollama/OpenAI-compatible HTTP APIs for programmatic access. It supports Windows/MacOS/iOS/Linux with full GPU capability	https://github.com/zhongkaifu/TensorSharp
+tryonlabs/opentryon	555	69	Python	-	2023-09-18	2026-10-17	Open-source APIs, SDKs, and models for building virtual try-on and fashion AI applications. Generate models, edit garments, create photoshoots, and build personalized fashion experiences.	https://github.com/tryonlabs/opentryon
+Teskann/QuaX	525	17	Dart	-	2025-07-13	2026-10-17	Privacy respecting X client for Android	https://github.com/Teskann/QuaX
+FluidInference/FluidUse	520	39	Swift	-	2026-09-21	2026-10-14	Local computer use on Apple silicon: on-device typed decisions with laya and form filling with CUA-S1-FORMS, driven through the macOS Accessibility API	https://github.com/FluidInference/FluidUse
+allenv0/SCM	487	38	TypeScript	-	2026-10-03	2026-10-16	Multimodal memory agent on macOS	https://github.com/allenv0/SCM
+xybrid-ai/xybrid	484	53	Rust	-	2025-12-13	2026-10-17	Cross-platform on-device AI toolkit	https://github.com/xybrid-ai/xybrid
+lablup/mlxcel	475	56	Rust	-	2026-01-30	2026-10-17	High-performance LLM, VLM, embedding, reranking, and audio inference for Apple Silicon and NVIDIA CUDA systems.	https://github.com/lablup/mlxcel
+antflydb/antfly	470	31	Zig	-	2026-03-15	2026-10-17	-	https://github.com/antflydb/antfly
+google-ai-edge/litert-samples	465	122	Python	-	2024-05-14	2026-10-17	LiteRT and LiteRT-LM sample apps, model recipes, agent skills and utilities.	https://github.com/google-ai-edge/litert-samples
+john-rocky/coreai-model-zoo	460	30	Python	-	2026-06-10	2026-10-15	Downloadable models and conversion recipes for Apple's Core AI on iPhone and Mac. Chat, vision, speech and generative models with per-model validation records, Swift examples through CoreAIKit, and a downloadable Mac app.	https://github.com/john-rocky/coreai-model-zoo
+mylxsw/typeflux	359	38	Swift	-	2026-01-12	2026-10-17	Typeflux is a macOS menu bar voice input tool built with Swift. It is designed for a fast "hold to talk, release to insert" workflow: press a hotkey, speak naturally, let the app transcribe your speech, and send the resulting text back into the currently focused app.	https://github.com/mylxsw/typeflux
+talex-touch/tuff	285	23	TypeScript	-	2023-01-24	2026-10-17	The command bar, reimagined for those who build. Tuff is an open-source core for your OS, built on a sandboxed architecture with a local-first AI and a powerful TypeScript SDK.	https://github.com/talex-touch/tuff
+shawnxie94/infinitum	285	22	TypeScript	-	2026-04-10	2026-10-16	基于RSS的资讯聚合工作台	https://github.com/shawnxie94/infinitum
+CodeAlta/CodeAlta	280	24	C#	-	2026-02-25	2026-10-17	Agentic Development Environment	https://github.com/CodeAlta/CodeAlta
+gupsammy/Claudest	274	16	Python	-	2026-02-03	2026-10-15	A highly opinionated plugin marketplace for augmenting your Claude Code.  Battle-tested skills and tools that actually work.	https://github.com/gupsammy/Claudest
+mgonzs13/llama_ros	268	50	C++	-	2023-04-01	2026-10-17	llama.cpp (GGUF LLMs) and llava.cpp (GGUF VLMs) for ROS 2	https://github.com/mgonzs13/llama_ros
+luoluoluo22/yanzi	258	20	C#	-	2026-04-23	2026-10-17	Yanzi launcher with cloud-synced JSON extensions and Cloudflare backend	https://github.com/luoluoluo22/yanzi
+qualixar/superlocalmemory	250	36	Python	-	2026-02-05	2026-10-17	Open-source governed, local-first memory control plane for AI agents and teams. arXiv:2608.08253	https://github.com/qualixar/superlocalmemory
+Dodaios/Dodaios	231	83	Python	-	2026-05-31	2026-10-17	Your AI assistant, built for the agentic era. Open source and local: talk to it, and it runs your agents, your coding CLIs, your browser and your apps. Windows, macOS, Linux.	https://github.com/Dodaios/Dodaios
+FreePeak/LeanKG	221	29	Go	-	2026-04-13	2026-10-17	LeanKG: Stop Burning Tokens. Start Coding Lean.	https://github.com/FreePeak/LeanKG
+Arnon-hs/open-source	196	34	-	-	2026-04-22	2026-10-17	A living, machine-readable catalog of open-source projects with practical summaries, categories, quality signals and transparent scoring.	https://github.com/Arnon-hs/open-source
+ahastudio/til	192	24	Python	-	2015-10-09	2026-10-17	Today I Learned	https://github.com/ahastudio/til
+tribgames/mixdog	143	23	JavaScript	-	2026-06-25	2026-10-17	Open-source desktop coding agent where a lead model plans and cheaper models handle search, edits and review.	https://github.com/tribgames/mixdog
+truespar/paddock	135	19	Rust	-	2026-09-03	2026-10-15	Native Rust inference server for open models on NVIDIA and Apple Silicon. OpenAI- and Anthropic-compatible APIs, GGUF + safetensors + MLX, FP8/NVFP4/MXFP4/Q8/Q4, built-in Studio	https://github.com/truespar/paddock
+paiml/aprender	132	22	Rust	-	2025-11-18	2026-10-17	Next Generation Machine Learning, Statistics and Deep Learning in PURE Rust	https://github.com/paiml/aprender
+BYK/loreai	126	9	TypeScript	-	2026-02-20	2026-10-17	Your AI never starts over. Lore keeps sessions coherent for days and millions of tokens — no lossy summary that wipes your file paths and decisions — and turns every session into compounding memory across tools, providers, and (soon) your team. No context files. No workflow changes.	https://github.com/BYK/loreai
+cloudrift-ai/emmy	110	19	Python	-	2025-08-02	2026-10-17	Optimized GPU compiler for LLM inference. Choose from a list of optimized recipes or optimize your own model via kernel fusion, autotuning, and advanced scheduling. Run benchmarks across different GPU types and configurations, track results and share experiments with the community.	https://github.com/cloudrift-ai/emmy
+bobkingdom/TrendRadar	97	72	HTML	-	2025-11-12	2026-10-17	🎯 告别信息过载，AI 助你看懂新闻资讯热点，简单的舆情监控分析 - 多平台热点聚合+基于 MCP 的AI分析工具。监控35个平台（抖音、知乎、B站、华尔街见闻、财联社等），智能筛选+自动推送+AI对话分析（用自然语言深度挖掘新闻：趋势追踪、情感分析、相似检索等13种工具）。支持企业微信/飞书/钉钉/Telegram/邮件/ntfy推送，30秒网页部署，1分钟手机通知，无需编程。支持Docker部署⭐ 让算法为你服务，用AI理解热点	https://github.com/bobkingdom/TrendRadar
+vespa-engine/documentation	94	111	HTML	-	2017-08-10	2026-10-16	Documentation for Vespa.ai - the AI search platform	https://github.com/vespa-engine/documentation
+eas4ai/suprnova	94	8	Rust	-	2026-05-13	2026-10-17	Suprnova - A Laravel Inspired Full Stack Framework For Rust	https://github.com/eas4ai/suprnova
+software-mansion/runntime	87	2	TypeScript	-	2026-09-14	2026-10-16	High-performance neural networks engine for web, built on top of TypeGPU	https://github.com/software-mansion/runntime
+sawfwair/mere-run	83	7	Swift	-	2026-03-29	2026-10-17	Run local image, text, speech, vision, music, and video workflows, plus model management and a loopback OpenAI-compatible API server. The repo ships the core libraries and the mere.run executable.	https://github.com/sawfwair/mere-run
+jaylfc/taosmd	81	4	Python	-	2026-04-13	2026-10-17	Local-first AI memory — runs offline on any machine with 8 GB+ RAM (SBC, mini PC, laptop, workstation). Zero-loss verbatim archive, knowledge graph, hybrid retrieval. Framework-agnostic, no cloud.	https://github.com/jaylfc/taosmd
+leehack/llamadart	78	30	Dart	-	2026-01-28	2026-10-17	Cross-platform on-device LLM inference for Dart & Flutter: GGUF via llama.cpp and LiteRT-LM on Android, iOS, macOS, Windows, Linux and web.	https://github.com/leehack/llamadart
+CrispStrobe/CrispEmbed	70	13	C++	-	2026-04-14	2026-10-17	Lightweight text and scans processing: embedding, document processing, OCR, OMR, etc,  with inference via ggml in pure C++	https://github.com/CrispStrobe/CrispEmbed
+TedHaley/pensieve	65	6	Python	-	2026-10-08	2026-10-17	One place for all your information, for context engineering: your files, repos, agent sessions and tickets, on your Mac, for you and your AI agents.	https://github.com/TedHaley/pensieve
+hung-yueh/react-native-litert-lm	62	18	TypeScript	-	2026-01-21	2026-10-17	High-performance on-device LLM inference for React Native, powered by LiteRT-LM and Nitro Modules	https://github.com/hung-yueh/react-native-litert-lm
+qdrant/landing_page	61	149	SCSS	-	2021-03-20	2026-10-17	Landing page for qdrant.tech	https://github.com/qdrant/landing_page
+encoreshao/github-trending	61	12	Jupyter Notebook	-	2024-07-22	2026-10-17	GitHub Daily/Weekly/Monthly Trending Repositories	https://github.com/encoreshao/github-trending
+SuperagenticAI/superqode	61	10	Python	-	2026-01-19	2026-10-17	The harness interoperability layer for coding agent. Agent to Agent connect over ACP, A2A and UHP	https://github.com/SuperagenticAI/superqode
+stevyhacker/LokalBot	59	9	Swift	-	2026-06-23	2026-10-17	A local LLM workhorse that keeps a memory of your workday. On-device meeting notes, dictation, autocomplete, and recall for macOS. GPLv3.	https://github.com/stevyhacker/LokalBot
+beclab/apps	56	44	Go Template	-	2024-04-23	2026-10-16	The official application repository of Olares Market	https://github.com/beclab/apps
+ggml-org/convert	55	10	Shell	-	2026-07-08	2026-10-16	Convert models to GGUF	https://github.com/ggml-org/convert
+Jimmuji/ai-daily-digest	54	23	Python	-	2026-04-14	2026-10-17	Automated daily AI news digest - powered by DeepSeek	https://github.com/Jimmuji/ai-daily-digest
+mnemosyne-systems/orangu	50	19	Rust	-	2026-05-15	2026-10-16	Advanced code editor using local AI	https://github.com/mnemosyne-systems/orangu
+OpenCSGs/csglite	49	11	Go	-	2026-03-11	2026-10-17	CSGLite is a lightweight local LLM inference platform. One command downloads, loads, and chats with models. It   ships a web UI, OpenAI-compatible API, llama.cpp inference, resumable downloads, marketplace browsing, and one-click AI app and  coding-agent setup—all in a single cross-platform binary.	https://github.com/OpenCSGs/csglite
+ROCmFPX/ROCmFPX	48	8	C++	-	2026-08-01	2026-10-17	This will be the official ROCmFPX stack and studio	https://github.com/ROCmFPX/ROCmFPX
+HYGON-AI/sglang-das	46	75	Python	-	2026-05-26	2026-10-16	基于 sgl-project/sglang 上游社区版本建设的 das 下游适配仓库，面向 hcu 平台进行功能适配与优化。	https://github.com/HYGON-AI/sglang-das
+smol-ai/ainews-web-2025	45	13	HTML	-	2025-04-23	2026-10-17	-	https://github.com/smol-ai/ainews-web-2025
+ohdearquant/lattice	45	5	Rust	-	2026-05-13	2026-10-17	Run, quantize, and fine-tune LLMs on Apple Silicon. Pure Rust, no Python, no CUDA, no ONNX	https://github.com/ohdearquant/lattice
+molecule-dev/molecule	44	4	TypeScript	-	2021-12-13	2026-10-17	Open-source, composable full-stack packages an AI can wire correctly. Swap any provider in one line. Export anytime.	https://github.com/molecule-dev/molecule
+Buildstarted/linksfordevs	44	13	HTML	-	2019-05-22	2026-10-17	A curated list of sources of development information including c#, c++, and other dev related links.	https://github.com/Buildstarted/linksfordevs
+lattifai/awesome-EmbeddingGemma	43	5	Python	-	2026-10-12	2026-10-17	EmbeddingGemma2 resources: local search apps, decision models, inference frameworks, tutorials, and datasets. English / 简体中文.	https://github.com/lattifai/awesome-EmbeddingGemma
+elbruno/elbruno.localembeddings	42	1	C#	-	2026-02-12	2026-10-07	.NET library for local embedding generation using ONNX and Microsoft.Extensions.AI	https://github.com/elbruno/elbruno.localembeddings
+edwardcapriolo/deliverance	40	10	Java	-	2025-09-10	2026-10-16	An advanced Java based inference engine for Large Language Models 	https://github.com/edwardcapriolo/deliverance
+masgari/ollama-cli	38	7	Go	-	2025-03-08	2026-10-10	A simple CLI tool for interacting with multiple remote Ollama servers, no Ollama installation required	https://github.com/masgari/ollama-cli
+lvxworld/lux-in-music	38	3	Python	-	2026-10-08	2026-10-17	Create songs from lyrics and a style on your own computer. Local AI music studio with YuE2 via audio.cpp, stem separation and section editing.	https://github.com/lvxworld/lux-in-music
+iammrduncan/inference-benchmarks	38	5	TypeScript	-	2026-09-16	2026-10-17	This is a LLM Gateway that mimics typesafe ai structured output. Like an imposter Jev.	https://github.com/iammrduncan/inference-benchmarks
+zerfoo/zerfoo	37	2	Go	-	2025-07-26	2026-10-14	Pure Go machine learning framework. Train, run, and serve ML models with go build. Zero CGo.	https://github.com/zerfoo/zerfoo
+MichelKerkmeester/skilled-agent-harness_spec-driven-loops	37	3	TypeScript	-	2025-12-23	2026-10-17	AI-assisted coding setup that helps you spend less time re-explaining context, and more time shipping with better output. Includes a custom spec kit, memory, agent and skill framework.	https://github.com/MichelKerkmeester/skilled-agent-harness_spec-driven-loops
+local-ai-zone/local-ai-zone.github.io	36	12	HTML	-	2025-07-31	2026-10-17	My public AI learning journey — sharing what I learn, build, test, and discover across AI.                           Traffic: 7K+ monthly clicks · 150K+ AI citations/month · 5.5 average search position across search engines.   local-ai-zone.github.io	https://github.com/local-ai-zone/local-ai-zone.github.io
+sunholo-data/ailang	35	5	Go	-	2025-09-26	2026-10-17	For humans, a language is a tool for expression. For AIs, it's a substrate for reasoning.	https://github.com/sunholo-data/ailang
+Supwils/swil-news	35	0	TypeScript	-	2026-03-07	2026-10-17	A all in one news tool by the power of cursor cli and automation display on web view.	https://github.com/Supwils/swil-news
+DeepBlueDynamics/lume	34	2	Rust	-	2026-06-09	2026-10-16	A small, crazy fast hybrid search engine written in Rust.	https://github.com/DeepBlueDynamics/lume
+yui0/catseye	32	3	C	-	2016-01-25	2026-10-17	Neural network library written in C and Javascript	https://github.com/yui0/catseye
+tura-learn/Dhee	32	4	Python	-	2026-01-28	2026-10-17	Memory for Tutor agents	https://github.com/tura-learn/Dhee
+orsonteodoro/oiledmachine-overlay	32	8	HTML	-	2016-01-14	2026-10-17	Another ebuild overlay for the Gentoo Linux operating system containing enhancements, game development, apps.	https://github.com/orsonteodoro/oiledmachine-overlay
+infosave2007/cmf	32	4	Rust	-	2026-07-07	2026-10-15	One backbone, many specialists. CMF is a self-describing, memory-mappable single-file format and a dependency-free runtime for quantized LLMs — zero-copy execution on CPU or GPU (Vulkan · Metal · DX12) that overlays task-specialized skills onto one shared model, with no per-model duplication.	https://github.com/infosave2007/cmf
+hakari-bench/hakari-bench	32	1	Python	-	2026-04-30	2026-10-13	⚖️ HAKARI-Bench is a lightweight IR benchmark that rebuilds retrieval tasks as small Nano-sets, making model selection, regression checks, quantization, truncation, and reranking comparisons practical under the same conditions.	https://github.com/hakari-bench/hakari-bench
+home-operations/kritika	31	2	Go	-	2026-09-24	2026-10-17	Repository-aware AI pull request reviewer for GitHub	https://github.com/home-operations/kritika
+paradite/hn-ratio	28	4	JavaScript	-	2017-04-21	2026-10-17	:arrow_up: Hacker News ranked by Comment/Score ratio	https://github.com/paradite/hn-ratio
+john-rocky/hf-to-litertlm	28	2	Python	-	2026-07-07	2026-10-17	Custom converter: open-weight Hugging Face LLMs/VLMs -> on-device LiteRT-LM (.litertlm), with one-command reproduction	https://github.com/john-rocky/hf-to-litertlm
+aflin/rampart	28	3	C	-	2020-05-25	2026-10-14	Old school JavaScript with fast C full text/vector search, sql, lmdb, redis, https, websockets, curl, crypt and more. 	https://github.com/aflin/rampart
+Jzoooooon/TrendRadar	28	15	HTML	-	2025-12-09	2026-10-17	🎯 告别信息过载，AI 助你看懂新闻资讯热点，简单的舆情监控分析 - 多平台热点聚合+基于 MCP 的AI分析工具。监控35个平台（抖音、知乎、B站、华尔街见闻、财联社等），智能筛选+自动推送+AI对话分析（用自然语言深度挖掘新闻：趋势追踪、情感分析、相似检索等13种工具）。支持企业微信/个人微信/飞书/钉钉/Telegram/邮件/ntfy/bark/slack 推送，1分钟手机通知，无需编程。	https://github.com/Jzoooooon/TrendRadar
+qnguyen3/QUAN-Transcribe	27	4	Python	-	2026-10-14	2026-10-14	Inference code for QUAN-Transcribe: fast Vietnamese speech recognition on EmbeddingGemma 2	https://github.com/qnguyen3/QUAN-Transcribe
+arrase/ollama-agent	27	6	Python	-	2025-11-01	2026-10-17	Ollama Agent is a powerful command-line tool (CLI and REPL) that allows you to interact with local AI models.	https://github.com/arrase/ollama-agent
+midagedev/bloomery	26	5	Rust	-	2026-09-19	2026-10-17	Hybrid GPU + CPU inference for mixture-of-experts models, written in Rust down to the CUDA kernels. A drop-in llama-server.	https://github.com/midagedev/bloomery
+radkawar/screenlogger	25	3	Swift	-	2026-08-01	2026-10-14	Private, searchable screen history for macOS.	https://github.com/radkawar/screenlogger
+marella/modelregistry	25	0	HTML	-	2026-06-27	2026-10-17	Decentralizing distribution of open-source AI models.	https://github.com/marella/modelregistry
+daiwk/auto-research	25	4	Python	-	2026-07-13	2026-10-17	-	https://github.com/daiwk/auto-research
+curiosity-ai/sentence-transformers-sharp	25	2	C#	-	2023-04-20	2026-10-07	-	https://github.com/curiosity-ai/sentence-transformers-sharp
+ampersandru/VectorDash	25	2	Rust	-	2026-10-10	2026-10-17	Local, full Windows search replacement, clipboard manager, and launcher: files, apps, settings and semantic media search with Google's EmbeddingGemma 2.	https://github.com/ampersandru/VectorDash
+Maklith/Kitopia	25	1	C#	-	2023-05-03	2026-10-16	Kitopia -属于你的新一代桌面全能效率神器 Your Next-Gen All-in-One Desktop Productivity Suite	https://github.com/Maklith/Kitopia
+aarnphm/aarnphm.github.io	24	0	TypeScript	-	2022-08-21	2026-10-17	simulacrum of Aaron Pham	https://github.com/aarnphm/aarnphm.github.io
+AtlasOmnia/hermes-agent-community	24	2	Python	-	2026-07-20	2026-10-17	Community guides, megathreads, and resources for Hermes Agent by Nous Research. Mirrored from r/hermesagent.	https://github.com/AtlasOmnia/hermes-agent-community
+meangrinch/LocalLens	23	5	Python	-	2025-05-30	2026-10-12	Local image search engine powered by AI	https://github.com/meangrinch/LocalLens
+limcheekin/fluwix	23	8	Dart	-	2020-12-26	2026-08-09	Fluwix: A Flutter showcase platform on the mobile apps and web.	https://github.com/limcheekin/fluwix
+shashankswe2020-ux/rigspark	20	0	Rust	-	2026-08-04	2026-10-17	Which local LLMs can your computer run? Hardware-aware CLI, TUI and GUI: yes/slow/no verdicts and tok/s from your GPU VRAM and RAM, then verified installs via Ollama, llama.cpp, MLX and LM Studio. Native Rust.	https://github.com/shashankswe2020-ux/rigspark
+rip-tyang/trend-archive	20	2	Python	-	2020-12-07	2026-10-17	Archive Bilibili daily trend	https://github.com/rip-tyang/trend-archive
+oisee/open-steamgate	20	4	JavaScript	-	2026-09-11	2026-10-17	Local /IWBEP/ OData v2 runtime for classic code-based SEGW services: transpile ABAP, Open SQL over SQLite, serve Fiori	https://github.com/oisee/open-steamgate
+desplega-ai/agent-fs	20	6	TypeScript	-	2026-03-15	2026-10-17	A persistent, searchable filesystem for AI agents.	https://github.com/desplega-ai/agent-fs
+MaxtuneLee/memora	20	1	TypeScript	-	2026-03-24	2026-10-17	Memora is a local-first workspace for learning across documents, audio, images, and video.	https://github.com/MaxtuneLee/memora
+townsendmerino/goinfer	19	5	Go	-	2026-06-04	2026-10-17	Pure-Go, no-cgo local LLM inference — run Gemma, Qwen, Llama and friends from safetensors or GGUF in a single static binary.	https://github.com/townsendmerino/goinfer
+freedmand/semantra	19	1	Rust	-	2026-06-20	2026-10-08	Full-featured semantic search engine on your device	https://github.com/freedmand/semantra
+arashakb/ActQuant	19	3	C++	-	2026-05-18	2026-06-19	Official implementation of ActQuant: Sub-4-bit Action-Guided Quantization for Vision-Language-Action Models	https://github.com/arashakb/ActQuant
+teloa-ai/teloa	18	3	TypeScript	-	2026-10-01	2026-10-17	Teloa Community — AI-Native Team Studio	https://github.com/teloa-ai/teloa
+ProjectArgus-cc/libargus.cc	18	1	Java	-	2026-07-12	2026-10-17	A unified, unmanaged multimodal runtime. Zero-allocation native AI inference for Java 22+.	https://github.com/ProjectArgus-cc/libargus.cc
+frisket-dev/frisket	17	2	Python	-	2026-09-10	2026-10-17	Frisket is an AI spreadsheet for investigations and research.	https://github.com/frisket-dev/frisket
+Softcatala/ai-eval-catalan	17	4	Python	-	2026-04-04	2026-10-14	Avaluació de la competència en català d'eines d'IA	https://github.com/Softcatala/ai-eval-catalan
+NotTanJune/locator	16	2	Rust	-	2026-05-01	2026-10-17	Lightning fast indexing and searching tool for any directory/external drive	https://github.com/NotTanJune/locator
+DevelopersCoffee/airo	16	2	Dart	-	2025-10-07	2026-10-17	Airo - open-source super app: AI chat, personal finance, TV & music, games, reading. Local-first, Flutter. Includes Airo TV for Android TV.	https://github.com/DevelopersCoffee/airo
+Tanguille/cluster	15	0	YAML	-	2024-10-06	2026-10-17	My home kubernetes GitOps repository.	https://github.com/Tanguille/cluster
+Bullobis/kevrai-omni	15	3	Python	-	2026-08-09	2026-10-17	一键本地 AI 工作站：模型市场（多源测速+断点续传）、llama.cpp+MNN 双引擎、多芯片检测（NVIDIA/AMD ROCm/华为昇腾）、LLM/TTS/图像/视频/3D/超分、Agent 助手；Electron + 原生 JS + Python sidecar，数据默认本地 / One-stop local AI workstation	https://github.com/Bullobis/kevrai-omni
+rumca-js/RSS-Link-Database-2026	14	3	-	-	2026-01-03	2026-10-17	-	https://github.com/rumca-js/RSS-Link-Database-2026
+jamiezigelbaum/Olympus	14	1	TypeScript	-	2026-09-03	2026-10-17	Give your AI your whole life. Keep your private things private. Olympus runs on your Mac or Omarchy computer and works with ChatGPT, Claude, Grok, Codex, Claude Code and any app that speaks MCP.	https://github.com/jamiezigelbaum/Olympus
+iDiagoValeta/localOllamaRAG	14	0	Python	-	2026-02-17	2026-10-17	Local multimodal RAG for PDFs: MinerU, embeddinggemma-2, FAISS, BM25, BGE reranking and Ollama. Runs on your hardware via web and desktop; summaries, outlines and quizzes of any document.	https://github.com/iDiagoValeta/localOllamaRAG
+hobbytp/hobbytp.github.io	14	1	HTML	-	2024-12-14	2026-10-17	Peng Tan's AI Blog	https://github.com/hobbytp/hobbytp.github.io
+freehul/sgme	14	0	Python	-	2026-08-11	2026-10-16	SGME 拾光记忆引擎：AI 全面接管记忆、技能库、WIKI 知识库三大模块，跨会话、多智能体共享记忆，AI 会一直记得你的偏好。ShiGuang Memory Engine · AI takes full charge of three core modules — memory, skills, and wiki knowledge base. Memory is shared across sessions and multiple agents, so your AI always remembers your preferences.	https://github.com/freehul/sgme
+almatkai/Tezbar	14	3	TypeScript	-	2026-04-19	2026-10-16	Tezbar is a high-performance, lightweight Spotlight alternative for macOS that blends the best of Raycast with the power of an integrated AI coding agent.	https://github.com/almatkai/Tezbar
+Codemarchant/rexclaw	14	1	JavaScript	-	2026-06-06	2026-10-16	Rexclaw companions, realtime voice chat with VRM avatars that have persistent memory, gestures and emotions. Play games with companions, including minecraft.	https://github.com/Codemarchant/rexclaw
+nickpending/prismis	13	4	Python	-	2025-09-08	2026-10-16	A local-first content intelligence daemon that fetches RSS/Reddit/YouTube content, analyzes it with AI for priority scoring, and provides a blazing-fast   TUI for consumption, turning your information streams into structured, queryable intelligence.	https://github.com/nickpending/prismis
+guzus/ai-research-arm	13	1	HTML	-	2026-01-14	2026-10-17	Self-running AI-news intelligence pipeline: multi-source agents, validated research artifacts, and a live dashboard.	https://github.com/guzus/ai-research-arm
+fusedio/fused-render	13	1	Python	-	2026-07-06	2026-10-17	Local file explorer with Python-interactive HTML views	https://github.com/fusedio/fused-render
+fblissjr/ComfyUI-h3-explorations	13	4	Python	-	2026-08-04	2026-10-17	my personal tinkering and research hub for the minimax H3 ecosystem	https://github.com/fblissjr/ComfyUI-h3-explorations
+dvessel/dot-files	13	1	Shell	-	2023-01-25	2026-10-16	Personal dot files.	https://github.com/dvessel/dot-files
+ai-news-daily/ai-news-daily.github.io	13	4	JavaScript	-	2025-06-30	2026-10-17	Automated, zero-cost AI news aggregator. Crawls 50+ sources, uses local LLMs for categorization, and deploys to GitHub Pages.	https://github.com/ai-news-daily/ai-news-daily.github.io
+turlockmike/deep-recall	12	1	Python	-	2026-09-29	2026-10-15	Answer-aware memory for Markdown notes: hybrid search + pluggable passage reranker, as a Claude Code plugin	https://github.com/turlockmike/deep-recall
+n0mad-ai/bastra-recall	12	7	TypeScript	-	2026-04-29	2026-10-17	Local-first memory for AI assistants. Keep preferences, decisions and lessons across sessions and connected tools in readable Markdown files.	https://github.com/n0mad-ai/bastra-recall
+integrallis/models	12	1	Java	-	2026-05-02	2026-10-17	In-JVM small language model inference	https://github.com/integrallis/models
+chynggi/gigatoken-llama.cpp	12	3	C++	-	2026-07-22	2026-10-17	LLM inference in C/C++ with Gigatoken / This Repo is Very Vibe-Coded-Experimental	https://github.com/chynggi/gigatoken-llama.cpp
+X-Wei/x-wei.github.com	12	5	HTML	-	2012-04-10	2026-10-11	X. Wei's blog	https://github.com/X-Wei/x-wei.github.com
+686f6c61/radar-huggingface-dataset	12	4	JavaScript	-	2026-08-18	2026-10-17	Dataset abierto de modelos de HuggingFace: metadatos curados y normalizados, licencias clasificadas, parámetros reales, tumbas de modelos retirados y ficha técnica en castellano por modelo. Actualización incremental 3 veces al día.	https://github.com/686f6c61/radar-huggingface-dataset
+zc277584121/modern-ir-bench	11	0	Python	-	2026-03-11	2026-10-15	Multimodal Embedding Model Benchmark & Evaluation Framework	https://github.com/zc277584121/modern-ir-bench
+assistant-ui/modelpedia	11	1	TypeScript	-	2026-03-18	2026-10-17	Open catalog of AI models across providers	https://github.com/assistant-ui/modelpedia
+WyvernTKC/llama.cpp-4xV100	11	0	C++	-	2026-08-24	2026-10-12	Fork of llama.cpp Nvida Volta V100 (tensor parallelism 4 x v100 GPU)	https://github.com/WyvernTKC/llama.cpp-4xV100
+OrihuelaConde/LiteRtLmSharp	11	4	C#	-	2026-06-07	2026-10-12	Unofficial .NET bindings for Google's LiteRT-LM — on-device LLM inference (Gemma) for Windows, Linux, Android, macOS & MAUI	https://github.com/OrihuelaConde/LiteRtLmSharp
+raisulsohan/lazyFinds	10	0	Python	-	2026-10-13	2026-10-16	Search your Windows PC by what's inside your files: photos, screenshots, PDFs, documents, audio, video and code, in English and Bengali. On-device, with EmbeddingGemma 2.	https://github.com/raisulsohan/lazyFinds
+leDissolution/gewell	10	2	Cuda	-	2026-09-17	2026-10-12	Gemma 4 inference engine	https://github.com/leDissolution/gewell
+cohere-ai/rcp-ndcg	10	0	Python	-	2026-09-29	2026-10-17	-	https://github.com/cohere-ai/rcp-ndcg
+bruvduroiu/dotfiles	10	0	Nix	-	2020-03-22	2026-10-16	Extendable NixOS + Home Manager configuration	https://github.com/bruvduroiu/dotfiles
+FavorPan/ai-daily-pulse	10	5	TypeScript	-	2026-05-18	2026-10-17	Your AI radar for AI news — scores, filters, and summarizes 47+ RSS feeds into a daily Obsidian digest with trends and builder insights.	https://github.com/FavorPan/ai-daily-pulse
+yazzang-homelab/im-looking-for	9	1	Python	-	2026-10-14	2026-10-14	Find files by what's in them: photos, PDFs, docs, voice memos and video, on your own computer. EmbeddingGemma 2 + llama.cpp; CLI, app and MCP server for agents.	https://github.com/yazzang-homelab/im-looking-for
+rye-001/Qwenium	9	3	C++	-	2026-03-10	2026-10-11	Minimal C++ LLM Qwen/Gemma inference engine 	https://github.com/rye-001/Qwenium
+phaseoteam/Phaseo	9	4	TypeScript	-	2025-06-12	2026-10-17	Open-source, OpenAI-compatible AI gateway with health-aware routing, failover, and live telemetry (cost, latency, errors). Built for production.	https://github.com/phaseoteam/Phaseo
+pau-mensa/packed-encoders	9	1	Python	-	2026-06-22	2026-10-15	A padding-free runtime for Encoders	https://github.com/pau-mensa/packed-encoders
+kyegomez/Open-EmbeddingGemma	9	0	Python	-	2026-10-07	2026-10-09	Implementation of EmbeddingGemma 2, Google DeepMind's 740M parameter multimodal embedding model, in Pytorch	https://github.com/kyegomez/Open-EmbeddingGemma
+google-gemma/docs	9	3	Python	-	2026-07-21	2026-10-17	Gemma documentation	https://github.com/google-gemma/docs
+bydb/mindgraph-notes	9	1	TypeScript	-	2026-01-24	2026-10-13	This the repo to my new PKM Software	https://github.com/bydb/mindgraph-notes
+Cyb3rb1ade/openclaw-plur1bus-memory	9	2	JavaScript	-	2026-04-06	2026-10-16	-	https://github.com/Cyb3rb1ade/openclaw-plur1bus-memory
+zrg-team/memorall	8	3	TypeScript	-	2025-09-10	2026-10-17	Local-first AI extension that turns what you read into a searchable knowledge graph with hybrid search, temporal context, and proactive recall—fully private.	https://github.com/zrg-team/memorall
+kzinmr/ai-topics	8	0	HTML	-	2026-03-26	2026-10-17	-	https://github.com/kzinmr/ai-topics
+ahdrage/norsk-asr	8	0	Python	-	2026-10-14	2026-10-15	Fast Norwegian speech-to-text: CTC on the EmbeddingGemma 2 audio encoder, trained on open data	https://github.com/ahdrage/norsk-asr
+Narcissu-s1/llm-launcher	8	0	Python	-	2026-05-30	2026-10-11	本地大语言模型一键启动器 · 可视化配置 llama.cpp · 内置聊天测试与运行时监控	https://github.com/Narcissu-s1/llm-launcher
+zigzag-tech/livestack	7	3	Python	-	2023-10-26	2026-10-17	A full stack, realtime AI framework for JavaScript developers. From concept to deployment in hours.	https://github.com/zigzag-tech/livestack
+ukashceyner/hidden-gems-newsletter	7	1	Shell	-	2025-05-25	2026-10-17	-	https://github.com/ukashceyner/hidden-gems-newsletter
+pdstn12/Recall	7	0	Rust	-	2026-10-10	2026-10-12	Search your files by what's in them, on Linux: documents, scans, screenshots, meeting recordings and videos. Local AI (EmbeddingGemma 2 on llama.cpp), no cloud, no LLM.	https://github.com/pdstn12/Recall
+martianzhang/aigc-cli	7	1	Go	-	2026-06-15	2026-10-16	Terminal-native AIGC toolkit: multi-provider image/video/audio generation, Midjourney, chat, AIGC forensics, knowledge base, MCP Server. 终端原生 AIGC 工具包：多厂商图片/视频/音频生成、Midjourney、AI 对话、AIGC 取证、知识库、MCP 集成。	https://github.com/martianzhang/aigc-cli
+detiuaveiro/aas	7	5	Jupyter Notebook	-	2023-09-13	2026-10-16	-	https://github.com/detiuaveiro/aas
+chesteripz/immich-ml-proxy	7	0	Python	-	2026-10-11	2026-10-11	Immich ML Proxy	https://github.com/chesteripz/immich-ml-proxy
+agentiumOS/agentium	7	1	TypeScript	-	2026-05-22	2026-10-13	Agentium is a TypeScript agent framework for Node.js: models, tools, memory, teams, workflows, and runtime integrations in one codebase.	https://github.com/agentiumOS/agentium
+Round-Tower/M1K3	7	0	Swift	-	2026-07-02	2026-10-17	Local, offline AI for your Machine. Punk intelligence — no data centers required.	https://github.com/Round-Tower/M1K3
+MrLordCat/llama.cpp-rdna-lab	7	0	C++	-	2025-12-22	2026-09-26	Hardware-focused llama.cpp fork for Windows and dual AMD RDNA4 RX 9070 XT GPUs: ROCm/HIP + Vulkan backends, PyQt6 GUI (RDNA LLM Studio), MTP speculative decoding, FP8 attention, long-context Qwen3.8 benchmarks	https://github.com/MrLordCat/llama.cpp-rdna-lab
+zoharbabin/fen	6	2	Swift	-	2026-06-28	2026-10-16	Fen — a native Swift/SwiftUI Markdown editor for macOS and iOS, growing into a connected knowledge suite.	https://github.com/zoharbabin/fen
+vibewatch/vibewatch.github.io	6	1	JavaScript	-	2026-04-11	2026-10-17	Daily AI pulse from the social web - trends, breakthroughs, pain points, and emerging topics	https://github.com/vibewatch/vibewatch.github.io
+srvsngh99/Krill	6	0	Swift	-	2026-05-03	2026-10-08	Fast local LLM inference CLI for Apple Silicon. 1.57x faster than Ollama, 58% less memory.	https://github.com/srvsngh99/Krill
+samwit/basic-video-rag-with-embeddinggemma2	6	3	TypeScript	-	2026-10-12	2026-10-12	This is a simple test of building a video RAG app with embedding Gemma 2 and Gemma-4-12B, served fully locally. 	https://github.com/samwit/basic-video-rag-with-embeddinggemma2
+rorosaga/cicada	6	0	Python	-	2026-03-11	2026-10-17	Your life as a stream agents can read. Local-first memory that captures what you read, save and say, consolidates it overnight into a git-versioned knowledge graph, and asks you when it's unsure. 🌌	https://github.com/rorosaga/cicada
+pavi2410/semsearch	6	0	Python	-	2024-10-10	2026-10-14	CLI semantic search engine with BM25 ranking, web crawler, NLP pipeline, and rich terminal UI. Written in Python.	https://github.com/pavi2410/semsearch
+nipunbatra/dl-teaching	6	0	Jupyter Notebook	-	2026-04-18	2026-10-09	ES 667: Deep Learning — IIT Gandhinagar · Aug 2026 · Prof. Nipun Batra	https://github.com/nipunbatra/dl-teaching
+lwm-luminx/garage-rag	6	0	Swift	-	2026-08-17	2026-10-17	A utility for reading in the corpus of your life...	https://github.com/lwm-luminx/garage-rag
+laithalsaadoon/atif-sql	6	0	Python	-	2026-08-28	2026-10-15	ATIF-native analytics over Claude Code agent trajectories: convert sessions to ATIF, materialize a corpus, query it with DuckDB.	https://github.com/laithalsaadoon/atif-sql
+alisonjenkins/nix-config	6	1	Nix	-	2023-09-26	2026-10-17	My Nix Configs + Dotfiles	https://github.com/alisonjenkins/nix-config
+snailium/llama.cpp-sycl-intel-b70	5	1	C++	-	2026-08-20	2026-10-17	Community-maintained llama.cpp SYCL Docker optimized for Intel Arc Pro B70 (Battlemage). Latest oneAPI/compute-runtime/IGC, B70-specific AOT build, all features enabled (Flash Attention, MTP, reorder kernels, no GGML_SYCL_DISABLE_OPT).	https://github.com/snailium/llama.cpp-sycl-intel-b70
+scooter-lacroix/LeIndex	5	1	Rust	-	2026-01-05	2026-10-16	Your intelligent code companion that understands what you’re looking for. Imagine searching for “authentication flow” and finding not just files containing those words, but the actual authentication logic, login handlers, session management, and security patterns even if they’re named completely differently. That’s the magic of semantic search! 🎯	https://github.com/scooter-lacroix/LeIndex
+pastel-sketchbook/legal-learn	5	2	Rust	-	2026-05-22	2026-10-11	Burn-based Rust training pipeline for learning Korean legal embeddings from laws and precedents.	https://github.com/pastel-sketchbook/legal-learn
+octaviusp/embedding-gemma-2-cli-mlx-accelerated	5	0	Python	-	2026-10-08	2026-10-08	EmbeddingGemma 2 on Apple Silicon: fused Metal kernels and int8 matmuls on the M5 Neural Accelerators	https://github.com/octaviusp/embedding-gemma-2-cli-mlx-accelerated
+nikusti/semantic-search	5	0	Python	-	2026-10-11	2026-10-12	Local semantic search for Mac files and Apple Photos. EmbeddingGemma 2 with MLX/Core ML, for Tinycast and Raycast.	https://github.com/nikusti/semantic-search
+nikships/gemdex	5	0	TypeScript	-	2026-05-25	2026-10-11	Memory layer MCP for AI coding agents — durable save/recall/update on Gemini embeddings + embedded LanceDB hybrid retrieval	https://github.com/nikships/gemdex
+luksamuk/ai-dotfiles	5	0	Python	-	2026-01-29	2026-10-17	Dotfiles for AI-related stuff	https://github.com/luksamuk/ai-dotfiles
+hebbihebb/Sharpr	5	1	Rust	-	2026-04-04	2026-10-17	Fast Preview. Smart Upscale.	https://github.com/hebbihebb/Sharpr
+elbruno/nuget-repo-dashboard	5	0	C#	-	2026-04-02	2026-10-17	Public dashboard tracking NuGet packages and GitHub repos	https://github.com/elbruno/nuget-repo-dashboard
+devexpert-io/local-photo-search	5	2	Python	-	2026-10-08	2026-10-08	Busca en tus fotos con lenguaje natural, 100% en local, con EmbeddingGemma 2 y SQLite	https://github.com/devexpert-io/local-photo-search
+cirwel/unitares	5	0	Python	-	2025-12-04	2026-10-17	Accountability infrastructure for long-running AI agents. Self-hosted MCP server: identity, claims and evidence, review, outcomes, and reconstruction across agent runtimes.	https://github.com/cirwel/unitares
+agentculture/lobes-cli	5	1	Python	-	2026-05-22	2026-10-17	A local thinking agent for Culture ecosystem 	https://github.com/agentculture/lobes-cli
+Pseudogiant-xr/Pseudolife-MCP	5	1	Python	-	2026-07-16	2026-10-17	Persistent long-term memory for Agents — an MCP server with an associative memory bank, a canonical-fact cortex, sleep-like dream consolidation, and a web console. Not quite alive.	https://github.com/Pseudogiant-xr/Pseudolife-MCP
+PaulKinlan/web-ai-showcase	5	0	HTML	-	2026-07-18	2026-10-15	Every AI model you can run locally in a browser — interactive explainers, live controls, see-inside viz, and real use cases.	https://github.com/PaulKinlan/web-ai-showcase
+1bit-MONSTER/engine	5	2	C++	-	2026-09-22	2026-10-17	1bit engine: local LLM inference for AMD Ryzen AI (Strix Halo) inside Lemonade. HRX with our Loom kernels on the Radeon iGPU, plus the XDNA 2 NPU; OpenAI-compatible API. Runs Qwen3.8, Zyphra ZAYA1, ternary Bonsai.	https://github.com/1bit-MONSTER/engine
+wdndev/wdndev.github.io	4	0	HTML	-	2022-08-12	2026-10-17	Dongnian's personal blog	https://github.com/wdndev/wdndev.github.io
+unsolublesugar/daily-tech-news	4	0	HTML	-	2025-06-28	2026-10-16	Automated daily Japanese tech news aggregator powered by Python & GitHub Actions. Fetches from 11+ RSS feeds and publishes in Markdown, HTML, and RSS format.	https://github.com/unsolublesugar/daily-tech-news
+tryAGI/DeepInfra	4	0	C#	-	2024-08-06	2026-10-15	C# SDK for the DeepInfra API -- serverless LLM inference	https://github.com/tryAGI/DeepInfra
+townsendmerino/aikit	4	2	Go	-	2026-05-31	2026-10-15	Portable Go AI building blocks — pure-Go, no-cgo packages (topk, ann, bm25, embed, encoder, chunk) extracted from townsendmerino/ken's code-search pipeline. Importable by any Go project.	https://github.com/townsendmerino/aikit
+sunl611/newTread	4	2	HTML	-	2025-12-09	2026-10-17	多平台热点聚合+基于 MCP 的AI分析工具	https://github.com/sunl611/newTread
+stuga-dev/stuga	4	0	TypeScript	-	2026-09-24	2026-10-15	Self-hosted Notion alternative where AI agents' edits arrive as tracked changes you accept or reject. Docs, databases, MCP.	https://github.com/stuga-dev/stuga
+statefulai/ai-daily-brief	4	0	HTML	-	2026-04-24	2026-10-17	公开来源，中文编选的 AI 日报	https://github.com/statefulai/ai-daily-brief
+soliluqoy/midnight2	4	0	JavaScript	-	2026-09-29	2026-10-14	midnight: a desktop capsule that searches, reads and works on your computer in plain view	https://github.com/soliluqoy/midnight2
+smarthi/dhurandhar	4	0	Python	-	2026-04-27	2026-10-07	-	https://github.com/smarthi/dhurandhar
+samggreenberg/VTSearch	4	2	Python	-	2026-02-13	2026-10-17	A media search tool. Train new detectors to find your goal media, or use existing detectors to find more of your goal media.	https://github.com/samggreenberg/VTSearch
+ponapon280/5chSummary	4	0	-	-	2025-03-22	2026-10-17	-	https://github.com/ponapon280/5chSummary
+oaustegard/experiments	4	0	Python	-	2026-07-28	2026-10-16	Random vibe-experiments	https://github.com/oaustegard/experiments
+nullspook/quantum-llama.cpp	4	5	C++	-	2025-06-09	2026-02-07	-	https://github.com/nullspook/quantum-llama.cpp
+misterekkk/lantern	4	0	Python	-	2026-10-15	2026-10-17	A Spotlight replacement for your Mac that searches by meaning: files, code, PDFs, photos and the moment in a recording, next to apps and settings. Runs entirely on your Mac. No cloud, no telemetry.	https://github.com/misterekkk/lantern
+mann1x/xollama	4	0	Go	-	2026-09-18	2026-10-17	xollama — an ollama fork with the fixes and PRs upstream has not merged, and the opencoti-llamafile inference engine	https://github.com/mann1x/xollama
+john-rocky/edge-compat	4	1	Python	-	2026-09-08	2026-10-17	Will this .tflite run on the GPU, NPU, or in the browser? Measured LiteRT delegate compatibility: op-level matrix per backend x version, edge-lint static pre-flight, model cards with dated device + browser results. Unofficial, not a Google product.	https://github.com/john-rocky/edge-compat
+jayluxferro/local-splitter	4	1	Python	-	2026-04-12	2026-10-17	An MCP-compatible outbound LLM request shim that cuts cloud token usage by running a local small model (via Ollama or any OpenAI-compatible endpoint) as a triage layer in front of a frontier cloud model.	https://github.com/jayluxferro/local-splitter
+iamwavecut/llamacpp-turboquant-gemma4-mtp	4	0	C++	-	2026-05-09	2026-08-05	Best-effort TurboQuant Gemma 4 MTP llama.cpp integration	https://github.com/iamwavecut/llamacpp-turboquant-gemma4-mtp
+hflong240/CatLlamaCpp	4	0	C++	-	2026-07-13	2026-09-16	CatEngine fork of `llama.cpp`, adds **on-demand MoE expert streaming from disk**	https://github.com/hflong240/CatLlamaCpp
+harpreetsahota204/cross_modal_similarity_search	4	0	Python	-	2026-10-09	2026-10-13	A Panel for Performing Cross Modal Similarity Search in FiftyOne with EmbeddingGemma 2 and LanceDB	https://github.com/harpreetsahota204/cross_modal_similarity_search
+doublemover/PairOfCleats	4	1	JavaScript	-	2025-06-09	2026-10-15	PairOfCleats builds a hybrid semantic index for a repo (code + docs) and exposes a CLI/MCP server for fast, filterable search. It is designed for agent workflows, with artifacts stored outside the repo by default so they can be shared across runs, containers, and CI while keeping working trees clean.	https://github.com/doublemover/PairOfCleats
+dorkitude/embedding-local-cpu-vs-hosted	4	0	HTML	-	2026-10-12	2026-10-13	Embedding retrieval study: local EmbeddingGemma vs hosted OpenAI/Qwen and accessible models; Go/Cobra + turbopuffer	https://github.com/dorkitude/embedding-local-cpu-vs-hosted
+dmmdea/offload-harness	4	1	Go	-	2026-06-14	2026-10-17	Delegate summarize/classify/extract/triage to a FREE local Gemma-4 cascade via llama.cpp. Go CLI + MCP server; never calls a cloud model. Includes a turnkey setup skill for Claude Code.	https://github.com/dmmdea/offload-harness
+btech-software/agent-lab	4	0	Jupyter Notebook	-	2025-01-06	2026-10-17	Build, simulate and test LLM agents.  A cloud-native Python framework on FastAPI, LangGraph and PostgreSQL.	https://github.com/btech-software/agent-lab
+borikinternet/sip-bot	4	1	Python	-	2026-09-24	2026-09-29	-	https://github.com/borikinternet/sip-bot
+barni007-pro/ollama_desktop_client	4	0	Visual Basic .NET	-	2026-01-02	2026-10-12	A feature-rich desktop GUI for Ollama with Vision, RAG, and JSON support.	https://github.com/barni007-pro/ollama_desktop_client
+antonpictures/ANTON-SIFTA	4	3	Python	-	2026-04-05	2026-10-16	#SIFTA Swarm Robotics: Crypto Stigmergic Organism 	https://github.com/antonpictures/ANTON-SIFTA
+ThakiCloud/thakicloud.github.io	4	3	JavaScript	-	2025-05-20	2026-10-17	ThakiCloud Tech Blog	https://github.com/ThakiCloud/thakicloud.github.io
+Sunwood-ai-labs/embeddinggemma2-nekoneko-search	4	0	Python	-	2026-10-10	2026-10-10	Google EmbeddingGemma 2 を架空企業の社内資料14点（Word・PDF・Excel・PowerPoint・音声・動画）と75問で実測した記録と再現用コード	https://github.com/Sunwood-ai-labs/embeddinggemma2-nekoneko-search
+Soulmove/daily-news-ai	4	1	HTML	-	2025-12-13	2026-10-17	-	https://github.com/Soulmove/daily-news-ai
+RaihanulHaque/kiln	4	0	Dart	-	2026-10-10	2026-10-15	On-device LLM runtime for Android and Flutter. Honest about what it runs on.	https://github.com/RaihanulHaque/kiln
+Podcast72/local-knowledge-layer	4	1	Python	-	2026-10-07	2026-10-07	Local Knowledge Layer for AI. Turn your computer into memory for AI. Full local knowledge layer using EmbeddingGemma 2	https://github.com/Podcast72/local-knowledge-layer
+Obscyra-app/EmbeddingGemma2Swift	4	1	Swift	-	2026-10-06	2026-10-06	Native MLX Swift text, image and audio embeddings for EmbeddingGemma 2, with validated 8-bit weights and Mac/iOS examples.	https://github.com/Obscyra-app/EmbeddingGemma2Swift
+Nuu-maan/omarchy-digup	4	0	QML	-	2026-10-15	2026-10-15	Search your files by what's in them from the Omarchy shell, powered by DigUp and EmbeddingGemma 2. Runs on your computer.	https://github.com/Nuu-maan/omarchy-digup
+NikolayGusev-astra/channel-materials	4	1	Python	-	2026-09-04	2026-10-16	Материалы канала @hermesagentru: статьи, харнессы, артефакты (зеркало на GitFlic)	https://github.com/NikolayGusev-astra/channel-materials
+Narcoleptic-Fox/foxstash	4	0	Rust	-	2026-02-01	2026-10-17	High-performance local RAG library for Rust - SIMD-accelerated vector search, HNSW indexing, ONNX embeddings, WASM support	https://github.com/Narcoleptic-Fox/foxstash
+Gmpho/strike-tips-autonomous-	4	1	Python	-	2026-03-25	2026-10-17	🏇Strike Tips Racing Bot AI-powered South African horse racing intelligence system. Scrapes live odds from Betway, analyzes form/ratings via local LLMs (Ollama) with Gemini/Groq fallback identifies value bets using Kelly criterion, auto-settles results, and pushes alerts via Telegram. Backend on Modal, HUD on Vercel, state in Redis Cloud + ChromaDB	https://github.com/Gmpho/strike-tips-autonomous-
+AtomicBot-ai/atomic-chat-conf	4	4	Makefile	-	2026-04-29	2026-10-16	-	https://github.com/AtomicBot-ai/atomic-chat-conf
+Anemll/anemll-embeddings	4	0	Python	-	2026-10-06	2026-10-09	EmbeddingGemma 2 → Core ML / Apple Neural Engine (ANEMLL-forge-style)	https://github.com/Anemll/anemll-embeddings
+AlienWalker1995/Ordo-AI-Stack	4	1	Python	-	2026-02-15	2026-10-17	All in one AI stack that detects hardware, pulls models, and manages all services + MCP. Entirely local -- Entirely Free. 	https://github.com/AlienWalker1995/Ordo-AI-Stack
+yunusserhat/GeoAI-VLM	3	0	Python	-	2026-01-06	2026-10-11	-	https://github.com/yunusserhat/GeoAI-VLM
+yoselabs/insights-trail	3	1	-	-	2026-04-04	2026-10-16	Daily AI research briefings	https://github.com/yoselabs/insights-trail
+yashvasudeva1/Production-oriented-adaptive-RAG	3	0	Python	-	2026-09-10	2026-10-16	A production-ready Retrieval-Augmented Generation (RAG) pipeline optimized for scalability, accuracy, and enterprise deployment.	https://github.com/yashvasudeva1/Production-oriented-adaptive-RAG
+tamnd/hn-daily-index	3	0	Python	-	2026-04-02	2026-10-16	Daily archive of the top 10 Hacker News stories, organized by date	https://github.com/tamnd/hn-daily-index
+smoketurner/quack	3	0	Rust	-	2026-09-12	2026-10-17	One offline agent that answers across your tables, your documents, and the knowledge graph between them.	https://github.com/smoketurner/quack
+simplito/deepfellow-infra	3	3	Python	-	2025-10-31	2026-10-15	Privacy-First AI Infrastructure Framework	https://github.com/simplito/deepfellow-infra
+sass-maker/free-ai	3	1	TypeScript	-	2026-02-15	2026-10-16	OpenAI-compatible gateway across free-tier model providers with health-aware routing on Cloudflare Workers.	https://github.com/sass-maker/free-ai
+rodrigobnogueira/faker-ai-provider	3	0	Python	-	2025-12-27	2026-10-17	🤖 Faker provider for generating AI/ML fake data - models, companies, frameworks, datasets	https://github.com/rodrigobnogueira/faker-ai-provider
+radimsem/omafind	3	0	Python	-	2026-10-12	2026-10-17	Omarchy plugin allowing you to search your photos, PDFs, documents, videos and recordings by what's in them. Runs on your machine with Google DeepMind's EmbeddingGemma 2.	https://github.com/radimsem/omafind
+pbz134/LocalYT	3	0	HTML	-	2026-02-15	2026-10-14	Self-hostable and feature-rich video library	https://github.com/pbz134/LocalYT
+nehcuh/vibesop-py	3	1	Python	-	2026-04-01	2026-10-16	VibeSOP - Python Edition: AI-powered workflow SOP with 5-layer skill routing	https://github.com/nehcuh/vibesop-py
+melpomenex/Plethora	3	0	TypeScript	-	2026-08-17	2026-10-17	A cross-platform learning and reading app that turns PDFs, EPUBs, articles, videos, and notes into an active learning system with flashcards, spaced repetition, TTS, and powerful study tools.	https://github.com/melpomenex/Plethora
+lucasmella-stack/misMEM	3	0	TypeScript	-	2026-04-25	2026-10-11	-	https://github.com/lucasmella-stack/misMEM
+kintopp/rijksmuseum-iconclass-mcp	3	1	JavaScript	-	2026-04-02	2026-10-17	Iconclass MCP server for the Rijksmuseum with support for semantic search and ArtResearch consortium queries.	https://github.com/kintopp/rijksmuseum-iconclass-mcp
+jonas-lomholdt/rosa	3	0	Swift	-	2026-10-01	2026-10-16	Rosa Browser	https://github.com/jonas-lomholdt/rosa
+johnrobinsn/gemma-lens	3	0	Python	-	2026-10-07	2026-10-12	A multimodal search engine for text, voice, and images — powered by Google's EmbeddingGemma 2. Localhost demo in ~300 lines, no FAISS.	https://github.com/johnrobinsn/gemma-lens
+john-rocky/eg2-transcribe	3	0	Kotlin	-	2026-10-14	2026-10-15	Speech-to-text built on the EmbeddingGemma 2 audio encoder with a trained reader: Android on LiteRT, iOS and macOS on Core AI	https://github.com/john-rocky/eg2-transcribe
+hieptran1812/my-website	3	1	TypeScript	-	2025-05-27	2026-10-17	-	https://github.com/hieptran1812/my-website
+hemanth/xkcd-search	3	0	HTML	-	2026-03-17	2026-10-06	Reverse lookup XKCD comics using Gemini multimodal embeddings (gemini-embedding-2-preview)	https://github.com/hemanth/xkcd-search
+harsheetamorey/mediaindex	3	0	Python	-	2026-10-07	2026-10-16	Chat with your photos, search and edit them, 100% on your Mac. Built on EmbeddingGemma 2 and Gemma 4.	https://github.com/harsheetamorey/mediaindex
+gyng/album	3	1	TypeScript	-	2022-08-14	2026-10-17	Filesystem-based static photography gallery generator	https://github.com/gyng/album
+durableprogramming/durable-llm-registry	3	0	HTML	-	2025-10-11	2026-10-17	Registry for LLM provider models, pricing, and API details.	https://github.com/durableprogramming/durable-llm-registry
+abhishek085/Nodemind	3	0	Rust	-	2026-03-22	2026-10-17	🎤→✅ Talk out your messy thoughts, get a clean checklist. A free, open-source voice-to-checklist app that runs 100% in your browser. By Nokast.	https://github.com/abhishek085/Nodemind
+YoannAubineau/HackerNewsBestWithSummary	3	0	Python	-	2026-04-21	2026-10-17	Hacker News Best RSS feed republished with LLM-generated summaries: factual rewritten titles, article digest, and pro/con synthesis of the HN discussion.	https://github.com/YoannAubineau/HackerNewsBestWithSummary
+SwonDev/gamemaker-biblioteca	3	0	Python	-	2026-09-06	2026-10-15	GameMaker y GML en español: biblioteca verificada y skill para tu IA. Desarrollo con especificación, pruebas, revisión y búsqueda semántica local.	https://github.com/SwonDev/gamemaker-biblioteca
+Paimonshen/IPEX-Ollama	3	0	Go	-	2026-08-07	2026-10-17	Ollama Windows build with Intel oneAPI (SYCL) GPU backend	https://github.com/Paimonshen/IPEX-Ollama
+Mengbooo/whistle	3	0	HTML	-	2026-05-13	2026-10-17	A lightweight daily brief project for internet and tech work signals.	https://github.com/Mengbooo/whistle
+DevelopmentDummy/claude-play	3	0	TypeScript	-	2026-04-09	2026-10-07	AI character roleplay web app bridging Claude Code, Codex, and Gemini CLI	https://github.com/DevelopmentDummy/claude-play
+DeepBlueDynamics/shivvr	3	0	Rust	-	2026-02-28	2026-10-15	Ephemeral semantic memory and multimodal embeddings in one container.	https://github.com/DeepBlueDynamics/shivvr
+AtomicBot-ai/atomic-chat-core	3	1	TypeScript	-	2026-09-17	2026-10-16	-	https://github.com/AtomicBot-ai/atomic-chat-core
+47thtechcorner/RayCodes_EmbeddingGemma2	3	4	Python	-	2026-10-08	2026-10-08	Google's New 500MB 4-Modality AI That Runs on Phones! (EmbeddingGemma 2 Review) - On-device 740M multimodal embedding model for semantic search, codebase indexing, and cross-modal media retrieval.	https://github.com/47thtechcorner/RayCodes_EmbeddingGemma2
+0spura/dotfiles	3	0	Go Template	-	2023-05-08	2026-10-16	😺 My personal tweaks for development environment	https://github.com/0spura/dotfiles
+vieenrose/PrimeMinutes	2	0	Swift	-	2026-06-23	2026-10-17	Fully offline, on-device Android port of VoxSum Studio (transcribe + summarize audio).	https://github.com/vieenrose/PrimeMinutes
+tc3oliver/meowcoder.com	2	0	TypeScript	-	2026-08-08	2026-10-17	Bilingual portfolio for Oliver Yu — AI systems engineering, system architecture, products, open source, and research.	https://github.com/tc3oliver/meowcoder.com
+tc3oliver/embed2asr	2	0	Python	-	2026-10-16	2026-10-16	Turning audio embeddings into speech recognition: a frozen EmbeddingGemma 2 audio encoder plus a 9.66M-parameter GRU-CTC reader, no encoder fine-tuning	https://github.com/tc3oliver/embed2asr
+st-all-one/knudge	2	0	Rust	-	2026-09-18	2026-10-15	Project-local memory optimized for LLM	https://github.com/st-all-one/knudge
+smfworks/aiclearinghouse-site	2	0	HTML	-	2026-06-15	2026-10-17	Ai Clearinghouse website 	https://github.com/smfworks/aiclearinghouse-site
+richginsberg/llama-cpp-ane	2	0	C++	-	2026-03-03	2026-03-13	Integrate Apple Neural Engine ANE into Llama.cpp	https://github.com/richginsberg/llama-cpp-ane
+polygrad/polygrad	2	0	C	-	2026-02-25	2026-10-08	C11 port of tinygrad	https://github.com/polygrad/polygrad
+pixelbadger/Pixelbadger.Toolkit.Rag	2	0	C#	-	2026-01-16	2026-10-08	Multimodal RAG service for text, image and audio, with local EmbeddingGemma 2 embeddings.	https://github.com/pixelbadger/Pixelbadger.Toolkit.Rag
+pestopoppa/epyc-root	2	0	Python	-	2026-02-25	2026-10-08	Cross-repo coordination, governance, and tooling for the EPYC inference project	https://github.com/pestopoppa/epyc-root
+nklmilojevic/Lodge	2	0	Swift	-	2026-02-04	2026-10-14	-	https://github.com/nklmilojevic/Lodge
+mumit/photosearch	2	0	Python	-	2026-10-14	2026-10-17	Semantic search over Apple Photos with EmbeddingGemma 2	https://github.com/mumit/photosearch
+manikanta-kops/kipster	2	1	TypeScript	-	2026-09-30	2026-10-17	Personal AI agents (kips) that run on your own computer. They remember, plan and handle the busywork.	https://github.com/manikanta-kops/kipster
+liukun2634/dev-interview-guide	2	3	PowerShell	-	2026-04-12	2026-10-17	📖程序员面试手册 — 覆盖数据结构与算法、数据库、系统设计、计算机网络、操作系统、工程实践、AI 技术的中文面试复习指南 	https://github.com/liukun2634/dev-interview-guide
+kysan173-arch/Oral-Training	2	1	C++	-	2026-07-15	2026-10-13	-	https://github.com/kysan173-arch/Oral-Training
+kun432/kun432	2	0	-	-	2024-02-06	2026-10-17	-	https://github.com/kun432/kun432
+keejkrej/lisca	2	0	TypeScript	-	2026-04-07	2026-10-16	-	https://github.com/keejkrej/lisca
+karimtn/embeddingGemma2-jeff	2	0	JavaScript	-	2026-10-08	2026-10-08	Ports of jeffhub.ai use cases onto Google's EmbeddingGemma-2 embedding model, with a runnable demo and a latency + quality performance benchmark.	https://github.com/karimtn/embeddingGemma2-jeff
+jwa91/sift-it	2	0	Rust	-	2026-10-14	2026-10-17	Search your files by what's in them, on-device with EmbeddingGemma 2 (Rust, macOS)	https://github.com/jwa91/sift-it
+ismail-codar/local_llm_experiments	2	2	Python	-	2026-04-01	2026-08-18	-	https://github.com/ismail-codar/local_llm_experiments
+ianclemence/ghost	2	0	Go	-	2026-02-11	2026-10-14	A personal AI that lives on a computer you own. It remembers you, does things for you, and keeps your memory, files and logins on your own hardware.	https://github.com/ianclemence/ghost
+hardrave/llama.add	2	0	C++	-	2026-06-26	2026-08-14	llama.add :: Attention Drop Decoder  :: a llama.cpp fork that drops calibrated attention layers at runtime. Up to +13% throughput and 1 GiB less KV-cache memory on Arm CPUs, no retraining, same GGUF.	https://github.com/hardrave/llama.add
+fmadore/iwac-mcp-server	2	2	TypeScript	-	2026-01-22	2026-10-13	Read-only MCP server for the Islam West Africa Collection (IWAC): 37 tools over 12,000+ francophone newspaper articles, Islamic publications, archives and academic references from six West African countries. Claude Desktop extension, Docker image, or hosted endpoint.	https://github.com/fmadore/iwac-mcp-server
+duyet/aidr	2	0	TypeScript	-	2026-09-04	2026-10-17	Automated AI News ranking and summary by Jev/LLM powered by AnyRouter.	https://github.com/duyet/aidr
+djalmaaraujo/ai-wotd	2	0	Python	-	2026-04-13	2026-10-17	A public hub that surfaces the single AI term being hyped each day, built entirely on GitHub	https://github.com/djalmaaraujo/ai-wotd
+dglazkov/isocan	2	7	TypeScript	-	2026-08-15	2026-10-17	An isomorphic canvas experiment	https://github.com/dglazkov/isocan
+defai-digital/axquant	2	0	Python	-	2026-07-31	2026-10-14	Not another flat 4-bit quantizer. AXQuant mixes precision layer by layer for Apple Silicon—smaller MLX models, protected quality-critical layers, production-ready plans.	https://github.com/defai-digital/axquant
+chottokun/embedding_jp_api	2	0	Python	-	2025-09-15	2026-10-15	Ruri-v3・EmbeddingGemma-2・Logit Gateハイブリッド再ランクに対応した、高負荷耐性OpenAI互換 Embedding / Rerank サーバー	https://github.com/chottokun/embedding_jp_api
+ccwq/infocard-pub	2	1	HTML	-	2026-05-24	2026-10-15	-	https://github.com/ccwq/infocard-pub
+byteowlz/vqtrs	2	0	Rust	-	2026-06-10	2026-10-14	just vector embeddings and reranking. nothing else	https://github.com/byteowlz/vqtrs
+blackpr/local-vector-search	2	0	TypeScript	-	2025-11-28	2026-10-16	Explore the space between your thoughts, entirely offline.  A privacy-first, offline-capable semantic search engine running entirely in your browser. Built with React, SQLite WASM, and Transformers.js.	https://github.com/blackpr/local-vector-search
+benn-herrera/go-inference-lab-bench	2	0	Go	-	2026-03-29	2026-09-19	A Go language lab bench for playing with the mechanics of inference 	https://github.com/benn-herrera/go-inference-lab-bench
+bendyline/gezel	2	0	TypeScript	-	2026-07-23	2026-10-17	Gezel is a free, open-source desktop app that puts a crew of AI helpers to work on your own computer. Hand off a job tonight, review it in the morning.	https://github.com/bendyline/gezel
+arthurTemporim/llm-lab	2	2	Jupyter Notebook	-	2024-10-22	2026-10-15	A software lab about LLMs and others hype MLs.	https://github.com/arthurTemporim/llm-lab
+alkinun/leat	2	0	Python	-	2026-10-03	2026-10-13	-	https://github.com/alkinun/leat
+ZW471/daily-ai-research-trends	2	0	TypeScript	-	2026-03-30	2026-10-17	Daily AI/ML research trending analysis - automated daily reviews of the latest papers and trends	https://github.com/ZW471/daily-ai-research-trends
+Takuto-Ando/IMAX3-LLM	2	0	C++	-	2025-11-19	2025-11-19	-	https://github.com/Takuto-Ando/IMAX3-LLM
+StrayDragon/crystalith	2	0	TypeScript	-	2026-01-12	2026-10-16	本地优先的笔记本研究和提炼(RAG)应用	https://github.com/StrayDragon/crystalith
+PolderLabs/PolderGraph	2	0	Python	-	2026-10-07	2026-10-15	-	https://github.com/PolderLabs/PolderGraph
+ManSio/mscodebase-intelligence	2	1	Python	-	2026-06-22	2026-10-10	Intelligent codebase search & indexing for Zed. Async MCP server featuring LanceDB/BM25 hybrid search, multi-bucket RAG, and autonomous self-healing workflows. High-performance, memory-safe, and ready for your production code.	https://github.com/ManSio/mscodebase-intelligence
+Grenzlinie/ai4s-hot	2	0	Python	-	2026-10-09	2026-10-17	Daily AI for Science papers, reports, and model updates with GitHub Actions and GitHub Pages	https://github.com/Grenzlinie/ai4s-hot
+GoodSoftware-Group/zerollama	2	1	Go	-	2026-04-20	2026-10-17	Unlocking your GPU's possibilities	https://github.com/GoodSoftware-Group/zerollama
+Frozen-47/AiVerse	2	0	TypeScript	-	2025-11-27	2026-10-17	Open-source AI encyclopedia. Organizing AI tools & models in one place. Looking for collaborators to help build this together! 🚀	https://github.com/Frozen-47/AiVerse
+FrancescoCiannavei/Multimodal-Vector-Search	2	0	Python	-	2026-10-10	2026-10-16	Multimodal semantic search across text, images, audio and video using Google's EmbeddingGemma 2, PostgreSQL + pgvector and FastAPI. One text query searches every media type in a shared 768-dimensional vector space. Runs locally with Docker Compose.	https://github.com/FrancescoCiannavei/Multimodal-Vector-Search
+Enter-tainer/ai-video-edit-skill	2	0	Python	-	2026-10-11	2026-10-13	从原始素材到成片：AI 辅助长片剪辑的可复用方法论（选片/结构/渲染/量化 QC）	https://github.com/Enter-tainer/ai-video-edit-skill
+CornellDataScience/computecluster	2	0	C++	-	2025-09-20	2026-05-28	CDS Compute Cluster	https://github.com/CornellDataScience/computecluster
+Baltsar/mason	2	0	JavaScript	-	2026-10-04	2026-10-14	Learning by doing, without the forgetting. A local macOS app that remembers how you built it, shows how you work with your coding agents, and hands your habits to every one of them.	https://github.com/Baltsar/mason
+AgenttiX/agx-ai	2	0	Python	-	2026-04-05	2026-10-14	AI server and client configs	https://github.com/AgenttiX/agx-ai
+AesopScott/Aesop	2	0	HTML	-	2026-04-10	2026-10-17	Aesop Academy Files	https://github.com/AesopScott/Aesop
+7155/personal-agent-workbench	2	0	Python	-	2026-06-30	2026-10-17	Local-first personal agent workbench with Rooms, tools, governed memory, and optional input, voice, and browser adapters.	https://github.com/7155/personal-agent-workbench
+26medias/awesome-ai-repos	2	3	-	-	2026-06-02	2026-10-17	-	https://github.com/26medias/awesome-ai-repos
+zwang96-dl/zwang96-dl.github.io	1	0	HTML	-	2026-07-05	2026-10-17	-	https://github.com/zwang96-dl/zwang96-dl.github.io
+zeyxx/CYNIC	1	0	Rust	-	2026-02-23	2026-10-17	Sovereign low-layer Rust runtime, epistemic consensus, and multi-agent coordination organism	https://github.com/zeyxx/CYNIC
+zengzoxiong/MySite	1	0	HTML	-	2026-07-06	2026-10-17	拾光集 —— 个人数字花园：仪表盘 · 在线工具 · 影视 · 播放器 · 数据看板	https://github.com/zengzoxiong/MySite
+yangshun2005/DigUp-cn	1	0	Swift	-	2026-10-13	2026-10-13	[中文化] Search your Mac by what's in your files: photos, PDFs, recordings, videos and code. On-device, built on Google DeepMind's EmbeddingGemma 2.	https://github.com/yangshun2005/DigUp-cn
+xcspl/drive-lens	1	0	Python	-	2026-10-16	2026-10-16	Find any file in a shared Google Drive folder by what it shows. A vision LLM describes every photo, video and PDF; EmbeddingGemma 2 indexes the images locally; hybrid search (vectors + FTS5) in one SQLite file, with an offline desktop app. No Google login, any OpenAI- or Anthropic-compatible model.	https://github.com/xcspl/drive-lens
+xbill9/gemma4-dev	1	0	Python	-	2026-08-06	2026-10-17	Gemma 4 on Google Cloud TPU: a monorepo of accelerator rigs (vLLM, JAX, PyTorch/torch_xla) each shipping a tpu-devops MCP server.	https://github.com/xbill9/gemma4-dev
+xafold/SpotLite	1	0	Rust	-	2026-10-14	2026-10-14	Search your Linux files by what's in them: photos, screenshots, PDF pages, video moments and code. A Spotlight-style panel, local and GPU-accelerated (EmbeddingGemma 2 + llama.cpp).	https://github.com/xafold/SpotLite
+weisberg/agile_agentic_analytics	1	0	Python	-	2026-03-19	2026-10-14	-	https://github.com/weisberg/agile_agentic_analytics
+vikramcse/glint	1	0	Swift	-	2026-10-11	2026-10-17	On-device multimodal search for macOS: photos, video moments, audio, PDFs and docs, by meaning. MLX + EmbeddingGemma 2, with an MCP server for agents.	https://github.com/vikramcse/glint
+va-desai-dev/ENGRAISERVER	1	0	JavaScript	-	2026-09-30	2026-10-17	A comprehensive and easy to use local LLM and StableDiffusions model downloader, loader, and server for Unix based kernels.	https://github.com/va-desai-dev/ENGRAISERVER
+tutti-os/daily-tech-radar	1	0	TypeScript	-	2026-06-05	2026-10-16	-	https://github.com/tutti-os/daily-tech-radar
+tommarques56/memo-universel	1	0	Python	-	2026-10-11	2026-10-11	Mémo Universel — recherche sémantique personnelle (API + indexeur desktop multi-OS)	https://github.com/tommarques56/memo-universel
+thomd/git-scrape-hacker-news	1	1	Python	-	2025-04-28	2026-10-17	scrape hacker news metadata for data analysis	https://github.com/thomd/git-scrape-hacker-news
+teng-lin/open-foresight	1	0	Dart	-	2026-10-16	2026-10-17	Offline AI meeting notes and transcription for Linux and macOS. Open-source Google AI Edge Foresight and Granola alternative with local Gemma LLM, Whisper, RAG and MCP.	https://github.com/teng-lin/open-foresight
+tatsat3mutee/devpulse	1	0	TypeScript	-	2026-04-26	2026-10-17	DevPulse - AI Developer Portal. One-stop hub for Copilot, Claude Code, Codex, OpenRouter, Hugging Face & all AI dev tools.	https://github.com/tatsat3mutee/devpulse
+strmt7/simple_ai_trading	1	0	Python	-	2026-04-11	2026-10-08	-	https://github.com/strmt7/simple_ai_trading
+starlinghq/starling	1	0	C#	-	2026-10-13	2026-10-17	Local AI models for .NET: embeddings, entity extraction, image & video search and chat on ONNX Runtime (CPU/CUDA), via Microsoft.Extensions.AI, verified against the Python reference.	https://github.com/starlinghq/starling
+sirerun/serenity	1	0	Go	-	2026-08-27	2026-10-17	Privacy-first personal memory for agents: Git-backed context, citations, constraints, and a hosted HTTP/MCP path under qualification.	https://github.com/sirerun/serenity
+sirerun/gist	1	0	Go	-	2026-03-14	2026-10-17	Go context intelligence library for LLM applications	https://github.com/sirerun/gist
+siddharth1825/llama.cpp-flash-expert	1	1	C++	-	2026-04-07	2026-04-17	llama.cpp fork with flash-expert SSD streaming for MoE models	https://github.com/siddharth1825/llama.cpp-flash-expert
+semaj90/deeds_web_app	1	0	TypeScript	-	2026-04-25	2026-10-17	legal ai contextual chat	https://github.com/semaj90/deeds_web_app
+sampath017/jarvis	1	0	Python	-	2025-06-06	2026-10-13	An autonomous, stateful AI assistant powered by LangGraph, FastAPI, Firebase, and Google Cloud Run for intelligent multi-agent workflow and context orchestration	https://github.com/sampath017/jarvis
+sai-prakash/ui-screenshot-search	1	0	TypeScript	-	2026-10-07	2026-10-15	Browser-based multimodal design-system screenshot search with EmbeddingGemma 2 + Transformers.js + WebGPU	https://github.com/sai-prakash/ui-screenshot-search
+ryaker/KMSmcp	1	1	TypeScript	-	2025-08-02	2026-10-10	Unified KMS MCP: Cross-AI Memory System - Give any MCP-compatible AI persistent memory across all tools and sessions. Intelligent routing to Mem0, Neo4j, and MongoDB with sub-100ms caching. One unified API replaces    multiple MCP servers. Works with Claude Desktop, Cursor, Windsurf, and more.	https://github.com/ryaker/KMSmcp
+reducm/hugo-jasjojo	1	0	SCSS	-	2022-06-26	2026-10-17	hugo的站点	https://github.com/reducm/hugo-jasjojo
+rebalap/local-file-finder	1	0	Python	-	2026-10-08	2026-10-08	Offline semantic search over your photos, voice notes, videos and PDFs, powered by Google's EmbeddingGemma 2, ChromaDB and Streamlit.	https://github.com/rebalap/local-file-finder
+ranjankndev/embeddinggemma2-search	1	0	Python	-	2026-10-09	2026-10-10	One search box for photos, videos, sounds and chats: a minimal multimodal search example with Google's open EmbeddingGemma 2	https://github.com/ranjankndev/embeddinggemma2-search
+rainforest-dev/rainforest-monorepo	1	0	TypeScript	-	2023-09-23	2026-10-16	Nx and pnpm monorepo behind rainforest.tools. Holds the Astro site and its MCP server, a LINE mini-app, an ebook server, a photo album, an RSS manager, and the UI and data libraries they share.	https://github.com/rainforest-dev/rainforest-monorepo
+qianxi-00/My_Blog	1	0	TypeScript	-	2026-01-23	2026-10-15	千禧的个人博客	https://github.com/qianxi-00/My_Blog
+pinardy/tldr-summarizer-bot	1	0	Python	-	2026-07-08	2026-10-17	Summarizes news from TLDR blogs in a HTML file and sends summary to Telegram bot	https://github.com/pinardy/tldr-summarizer-bot
+p-potvin/agent-ledger	1	0	HTML	-	2026-04-28	2026-10-17	This is a ledger compiling all the actions undertaken by AI agents, locally or via cloud, including code changes but also plans and any action that doesn't have concrete results.	https://github.com/p-potvin/agent-ledger
+noonr48/qwen36-aeon-ik-llama	1	0	C++	-	2026-04-26	2026-09-21	Specialized ik-llama fork and release notes for the Qwen3.6-27B AEON RYS 15,20 GGUF deployment	https://github.com/noonr48/qwen36-aeon-ik-llama
+nbiish/ainish-coder	1	0	Python	-	2025-03-02	2026-10-11	quick && easy rules for my terminal based on latest prompting research combined together	https://github.com/nbiish/ainish-coder
+nathanwhyte/homelab	1	0	Python	-	2026-01-27	2026-10-16	Because who wants to pay their own AWS bills anyway?	https://github.com/nathanwhyte/homelab
+miqian-nomad/YinyueMobile	1	0	C++	-	2026-08-04	2026-08-04	YinYue Mobile（银月）—— Android 端本地 LLM GUI Agent：无障碍操控 + MNN/llama.cpp 端侧推理	https://github.com/miqian-nomad/YinyueMobile
+mintoriakamoto/Tenselerate	1	0	C++	-	2026-09-26	2026-10-07	LLM inference in C/C++	https://github.com/mintoriakamoto/Tenselerate
+lucemans/dotfiles	1	1	Nix	-	2026-05-30	2026-10-17	-	https://github.com/lucemans/dotfiles
+legetdev/youty	1	0	Swift	-	2026-05-02	2026-10-15	Turn YouTube, Instagram, and TikTok videos into a local, AI-readable knowledge base — 100% on-device. macOS app + CLI + MCP server.	https://github.com/legetdev/youty
+lazyjerry/lazyjerry.github.io	1	0	Shell	-	2025-07-28	2026-10-17	這是一個利用 AI 蒐集科技發布消息的統整系統	https://github.com/lazyjerry/lazyjerry.github.io
+koltregaskes/kols-korner	1	0	HTML	-	2025-12-23	2026-10-17	Personal publishing site for Kol Tregaskes with AI articles and daily digests.	https://github.com/koltregaskes/kols-korner
+khimaros/aimbot	1	0	Jinja	-	2026-08-16	2026-10-14	ai model quality research	https://github.com/khimaros/aimbot
+karagullemazhar-cpu/google-embeddinggemma-2	1	0	Python	-	2026-10-07	2026-10-07	Local multimodal semantic search (text/image/video/audio) with google/embeddinggemma-2	https://github.com/karagullemazhar-cpu/google-embeddinggemma-2
+joshbotts/FRUS-Explorer	1	0	Swift	-	2026-05-05	2026-10-17	A tool to enrich FRUS's value for historical research.	https://github.com/joshbotts/FRUS-Explorer
+jonasneves/pulse	1	0	JavaScript	-	2026-02-28	2026-10-17	GitHub + HuggingFace trending dashboard with AI chat	https://github.com/jonasneves/pulse
+john-rocky/hfmodels-android	1	0	Kotlin	-	2026-09-07	2026-10-17	hfmodels: Hugging Face model ids to LiteRT-LM inference on Android. Independent, third-party library.	https://github.com/john-rocky/hfmodels-android
+jgarr16/factoid	1	0	HTML	-	2026-09-17	2026-10-17	Factoid — memorable ideas, excerpts and takeaways from newsletters, books, seminars and more	https://github.com/jgarr16/factoid
+ianMuchesia/EmbeddingGemma2_Evaluation	1	0	Python	-	2026-10-07	2026-10-07	Does Google's EmbeddingGemma 2 beat Typesense's built-in AI search? A benchmark on a Kenyan electronics shop: 200 products, 71 questions in English, Swahili and Sheng.	https://github.com/ianMuchesia/EmbeddingGemma2_Evaluation
+iamyb/llm-top-news	1	0	Python	-	2026-09-23	2026-10-17	Daily LLM and AI news aggregator combining GitHub Trending, new repositories, Hacker News, Reddit, and Hugging Face Papers into ranked digests and a static website.	https://github.com/iamyb/llm-top-news
+iamartyaa/daemon	1	0	Swift	-	2026-10-14	2026-10-15	Your other self remembers. A free, open-source Mac menu bar app: ⌃⌥S keeps anything, ⌃⌥Space recalls it by meaning. 100% on-device (EmbeddingGemma 2 + llama.cpp).	https://github.com/iamartyaa/daemon
+hope-it-helps-code/simple_image_search_via_embeddinggemma-2	1	0	Python	-	2026-10-11	2026-10-11	Just a simple proof of concept image indexing/search with embeddinggemma-2	https://github.com/hope-it-helps-code/simple_image_search_via_embeddinggemma-2
+himtechsystem/HIM-Code-Lab-Version	1	0	TypeScript	-	2026-04-14	2026-04-15	HIM Code Lab Version (vscode) - vibe coding	https://github.com/himtechsystem/HIM-Code-Lab-Version
+harpreetsahota204/EmbeddingGemma2	1	0	Python	-	2026-10-08	2026-10-09	Integrating EmbeddingGemma2 as a Remote Source Zoo Model in FiftyOne	https://github.com/harpreetsahota204/EmbeddingGemma2
+harishkotra/finder-lite	1	0	Swift	-	2026-10-17	2026-10-17	Search your Mac by what is inside the file, not what the file is called. Text, Markdown, code and PDFs. Everything runs on your machine, offline, with Embedding Gemma 2 by Google	https://github.com/harishkotra/finder-lite
+gabrielcosi/home-ops	1	0	Shell	-	2026-07-20	2026-10-17	Wife approved HomeOps driven by Kubernetes and GitOps using Flux. Mirror from https://git.xcd.dev/gabrielcosi/home-ops	https://github.com/gabrielcosi/home-ops
+ericc-ch/touchgrassdle	1	0	TypeScript	-	2026-10-09	2026-10-13	-	https://github.com/ericc-ch/touchgrassdle
+ehzawad/fine-tune-triplets-gemma-embedding	1	0	Python	-	2025-10-08	2025-12-02	-	https://github.com/ehzawad/fine-tune-triplets-gemma-embedding
+eaglhuang/AI-learning-notes	1	0	HTML	-	2026-05-04	2026-10-11	分享學習AI的文章	https://github.com/eaglhuang/AI-learning-notes
+dryvist/ansible-proxmox-ai	1	1	Python	-	2026-07-16	2026-10-17	Ansible roles for the homelab AI/LLM serving stack (Hermes agent, LLM router, Ollama, Qdrant, RAG, model serving).	https://github.com/dryvist/ansible-proxmox-ai
+drmarcopapa/marcopapa-ai	1	0	HTML	-	2026-03-06	2026-10-17	marcopapa.ai website	https://github.com/drmarcopapa/marcopapa-ai
+denkoushi/RaspberryPiSystem_002	1	0	TypeScript	-	2025-11-18	2026-10-17	-	https://github.com/denkoushi/RaspberryPiSystem_002
+dawningnow/mistyspruce	1	0	Python	-	2026-08-22	2026-10-17	-	https://github.com/dawningnow/mistyspruce
+darce/context-alt-text-monorepo	1	0	Python	-	2025-09-20	2026-10-17	-	https://github.com/darce/context-alt-text-monorepo
+cyberluke/nram-beellama.cpp	1	0	C++	-	2026-08-03	2026-09-05	BeeLlama derivative with native NRAM cvector steering and token evidence	https://github.com/cyberluke/nram-beellama.cpp
+crollins18/botornot	1	0	Python	-	2026-10-11	2026-10-11	Determine if a YouTube account is likely a bot.	https://github.com/crollins18/botornot
+christopherwoodall/silent-locus	1	0	HTML	-	2026-09-28	2026-10-17	-	https://github.com/christopherwoodall/silent-locus
+chrisaq/dotfiles	1	0	Shell	-	2015-03-09	2026-10-17	Configuration files (dotfiles) for linux	https://github.com/chrisaq/dotfiles
+chik4ge-homelab/homelab-applications	1	0	Python	-	2025-01-11	2026-10-17	-	https://github.com/chik4ge-homelab/homelab-applications
+captain-balung/20260512-newsCollector-gemini	1	0	Python	-	2026-05-12	2026-10-17	-	https://github.com/captain-balung/20260512-newsCollector-gemini
+btroussel/SemanticSearchMCP	1	0	Python	-	2026-10-06	2026-10-06	Local semantic search over your code, documents and images for macOS, with an MCP server for AI assistants (EmbeddingGemma 2)	https://github.com/btroussel/SemanticSearchMCP
+brianreborn/familia	1	0	Python	-	2026-10-06	2026-10-17	Topology coordinator for local LLM agents on machines you own. Declarative multi-host graph, pinned runtimes, measured model/hardware registry — your models and data stay local.	https://github.com/brianreborn/familia
+bemlerlabs/ephe	1	0	Python	-	2026-10-16	2026-10-17	Ephe — a local-first agentic workspace. An ephemeral SI agent on your own machine. Source-available under BUSL-1.1.	https://github.com/bemlerlabs/ephe
+bangsaenai/embeddinggemma-koopman-guardrail	1	0	Python	-	2026-10-09	2026-10-14	Sub-millisecond, 100% precision AI safety guardrail using EmbeddingGemma-2 & 3072D Koopman Space Lifting. Zero false positives on consumer CPUs.	https://github.com/bangsaenai/embeddinggemma-koopman-guardrail
+ayutaz/unity-embeddinggemma-2	1	0	C#	-	2026-10-07	2026-10-17	Run EmbeddingGemma 2 (text, image, audio embeddings) on Unity Sentis	https://github.com/ayutaz/unity-embeddinggemma-2
+awano27/ai-news-site	1	0	HTML	-	2025-08-11	2026-10-17	AI Intelligence Hub（visionhub.jp）のソースコード。毎日更新される日本語AIニュースキュレーションサイト。AIの最前線を5分で理解できるスライド形式で配信。	https://github.com/awano27/ai-news-site
+awaku7/llmcapa	1	0	Python	-	2026-06-10	2026-10-17	LLM capabilities registry and CLI tool	https://github.com/awaku7/llmcapa
+aronchick/benchwarmer	1	0	JavaScript	-	2026-08-14	2026-10-06	Rehabilitate benchmark charts into auditable, decision-first layouts.	https://github.com/aronchick/benchwarmer
+api-evangelist/notebooklm	1	0	-	-	2026-05-11	2026-10-16	Google NotebookLM — independent third-party profile of a public API surface, by API Evangelist. Google NotebookLM is an AI-powered research and thinking partner that helps users analyze, summarize, and explore sources such as documents, PDFs, web pages, and notes. It leverages Google's Gemini models to ground responses in user-provided source mater	https://github.com/api-evangelist/notebooklm
+api-evangelist/alphabet	1	0	-	-	2026-03-21	2026-10-16	Alphabet — independent third-party profile of a public API surface, by API Evangelist. The parent company of Google and one of the world's most valuable corporations. Operates the dominant search engine, Android mobile OS, YouTube, Google Cloud, and Waymo autonomous vehicles alongside numerous technology ventures.	https://github.com/api-evangelist/alphabet
+aleutian-ai/depctl	1	0	Go	-	2026-08-30	2026-10-08	A control plane for versioned RAG knowledge	https://github.com/aleutian-ai/depctl
+alarcon7a/codelabs_workshops	1	1	Jupyter Notebook	-	2026-06-27	2026-10-09	-	https://github.com/alarcon7a/codelabs_workshops
+aivisionslab-studios/phoenix-platform	1	1	C++	-	2026-09-04	2026-09-18	Plataforma de orquestração de IA local. Detecta o hardware, provisiona a stack e roda LLMs e geração de imagem via Vulkan — sem CUDA, sem ROCm, sem nuvem. Nasceu de testes reais numa AMD RX 580 8GB de 2017. Windows, Linux e Ubuntu.	https://github.com/aivisionslab-studios/phoenix-platform
+aflin/rampart_docs	1	1	HTML	-	2022-02-25	2026-10-13	Documentation for Rampart	https://github.com/aflin/rampart_docs
+aflin/rampart-langtools	1	0	C	-	2025-09-28	2026-10-09	llama.cpp, sentencepiece and faiss for rampart.  More to come.	https://github.com/aflin/rampart-langtools
+adelvillar1/agnostic-router-kit	1	0	JavaScript	-	2026-10-06	2026-10-14	Harness-neutral multi-provider LLM router and workflow runner: run API, loop library, and grants sandbox	https://github.com/adelvillar1/agnostic-router-kit
+abc-lee/niu-agent	1	1	Python	-	2026-04-06	2026-10-17	本地优先的个人知识助理	https://github.com/abc-lee/niu-agent
+aaarkai/vllm_weekly_track	1	0	-	-	2025-08-07	2026-10-16	-	https://github.com/aaarkai/vllm_weekly_track
+a303990366/semsearch	1	0	Python	-	2026-10-14	2026-10-14	Lightweight AI file finder for Windows: search photos, PDFs, audio & video by describing them. 100% offline, powered by EmbeddingGemma 2.	https://github.com/a303990366/semsearch
+Yumeno/vlm-decision-classifier	1	0	Python	-	2026-09-30	2026-10-07	ローカルVLMに選択肢の記号1文字で答えさせ、1トークン目の確率で画像を分類する Jev 風の選択式判定の技術検証(llama.cpp / Windows)	https://github.com/Yumeno/vlm-decision-classifier
+Xeven777/xreenshoty	1	0	TypeScript	-	2026-10-11	2026-10-16	📸 Local-first screenshots you can actually find again. Fully offline. using EmbeddingGemma2, Tesseract OCR, Whistle STT, Rust  & React	https://github.com/Xeven777/xreenshoty
+Weidows/embeddinggemma2-zh	1	0	Python	-	2026-10-08	2026-10-08	C-MTEB (MTEB(cmn, v1)) evaluation of google/embeddinggemma-2 — 31 Chinese tasks, with same-harness bge-m3 baseline and a text-modality fix	https://github.com/Weidows/embeddinggemma2-zh
+WalidHadri-Iron/dowse	1	0	Python	-	2026-10-16	2026-10-16	Find anything on your PC by what's in it: local, private semantic search for Windows. Photos, screenshots, PDFs, documents, recordings and videos, in 100+ languages, with EmbeddingGemma 2 on llama.cpp.	https://github.com/WalidHadri-Iron/dowse
+Vincenthsiehisme/ai-pulse	1	0	Python	-	2026-07-24	2026-10-17	-	https://github.com/Vincenthsiehisme/ai-pulse
+VedantJadhav701/AgriEdge-AI	1	0	Jupyter Notebook	-	2026-09-22	2026-10-14	-	https://github.com/VedantJadhav701/AgriEdge-AI
+Vedangbarman/RyCA	1	0	Jupyter Notebook	-	2026-08-20	2026-10-17	Regulatory Compliance Agents that reads Notification ( NBFC ) and then determines if it's applicable to your company or not.	https://github.com/Vedangbarman/RyCA
+T-Damer/MiniMed	1	1	TypeScript	-	2026-07-17	2026-10-17	-	https://github.com/T-Damer/MiniMed
+Srikanthdongalajsr/embeddinggemma-2-tutorial	1	0	Jupyter Notebook	-	2026-10-08	2026-10-16	Practical EmbeddingGemma 2 notebook: multimodal embeddings, semantic search over images, audio and text, Matryoshka dimensions, sentence-transformers	https://github.com/Srikanthdongalajsr/embeddinggemma-2-tutorial
+SoraKumo001/zenn	1	0	-	-	2021-08-22	2026-10-16	-	https://github.com/SoraKumo001/zenn
+Smart-Pixel-PL/lupa-search	1	0	Python	-	2026-10-07	2026-10-14	🔎 Find any file on your Mac by describing it — local, private, multimodal file search powered by Google EmbeddingGemma 2	https://github.com/Smart-Pixel-PL/lupa-search
+Singularity-Layer/sgl-network-sdk	1	0	Python	-	2026-05-24	2026-10-10	-	https://github.com/Singularity-Layer/sgl-network-sdk
+ScyLxynFycus/Scypheon-Private	1	0	C++	-	2026-04-28	2026-09-21	"A zero-trust Edge Intelligence Platform executing Gemma 4 completely offline. Scypheon provides deterministic safety, kernel-level resilience, and absolute data sovereignty to protect human life in   disconnected disaster zones." 	https://github.com/ScyLxynFycus/Scypheon-Private
+Scoheart/free-models	1	0	JavaScript	-	2026-10-09	2026-10-17	免费 AI 模型额度与活动汇总	https://github.com/Scoheart/free-models
+Rheosoph/any-embedding	1	0	Python	-	2026-03-15	2026-10-08	Unified embedding API for any MTEB model. One interface, every model. Ships with deployment scripts for AWS, GCP, Azure, Cloudflare, and Docker Compose.	https://github.com/Rheosoph/any-embedding
+RavindraSSK/ravindra-ssk-site	1	0	TypeScript	-	2026-06-13	2026-10-15	-	https://github.com/RavindraSSK/ravindra-ssk-site
+Ramakrishnan-235/ats-system	1	0	Python	-	2026-08-15	2026-10-17	ATS system	https://github.com/Ramakrishnan-235/ats-system
+PixelML/sea-asr	1	0	Python	-	2026-10-16	2026-10-17	sea_asr: fast CTC speech recognition for Southeast Asian languages on EmbeddingGemma 2 (inference)	https://github.com/PixelML/sea-asr
+NINE-99-nine/prism-knowledge-base	1	1	Python	-	2026-10-11	2026-10-13	Prism 棱镜 —— 本地多模态知识库：图片/视频/音频/文本进同一个向量空间，用一句话凭感觉找到任何东西。基于 llama.cpp 承载的 EmbeddingGemma-2。	https://github.com/NINE-99-nine/prism-knowledge-base
+Mohammed123-najeh/EmbeddingGemma-2	1	0	Python	-	2026-10-10	2026-10-10	A lightweight, fully local multimodal semantic search engine powered by Google's EmbeddingGemma 2. Supports text-to-image, image-to-image, and hybrid search using embeddings, with fast retrieval, low GPU memory usage, and no cloud APIs.	https://github.com/Mohammed123-najeh/EmbeddingGemma-2
+MatriscianoSalvatore/ai-pantry	1	0	Kotlin	-	2026-07-11	2026-10-13	-	https://github.com/MatriscianoSalvatore/ai-pantry
+M4yankkkk/sift	1	0	Rust	-	2026-10-12	2026-10-16	-	https://github.com/M4yankkkk/sift
+KimEJ/Galpium	1	0	Swift	-	2026-10-05	2026-10-13	A native macOS personal wiki with preserved originals, offline search and MCP integration	https://github.com/KimEJ/Galpium
+JayceDugan/Devbox-AI-Lab	1	2	Lua	-	2026-08-16	2026-10-11	Not a product. Not a framework. Nothing here is packaged for you to deploy. This is my house, my desk, my power bill, and the machine that thinks in it. It exists so I can point at something on my wall and say that box runs my world.	https://github.com/JayceDugan/Devbox-AI-Lab
+HassanAiolio/AI-Agent-Digest	1	0	Python	-	2026-07-14	2026-10-17	Every night a pipeline reads ~150 items from arXiv, lab blogs, Hacker News, Hugging Face, GitHub Trending, LWN, Hackaday and Codeforces. It throws away ~85% of them and writes the rest up as a morning newsletter for engineers into AI/ML, embedded systems, competitive programming and CS research. There's no server to run and it costs $0 a month.	https://github.com/HassanAiolio/AI-Agent-Digest
+Gaubee/gaubee.com	1	0	TypeScript	-	2021-12-20	2026-10-17	-	https://github.com/Gaubee/gaubee.com
+GGGODLIN/daily-topic-radar	1	0	HTML	-	2026-04-26	2026-10-17	Daily multi-topic raw aggregator: GitHub Actions cron pipeline → structured Markdown for downstream Claude Code consumption. Currently configured for AI ecosystem signals; swap sources.yml to track any topic.	https://github.com/GGGODLIN/daily-topic-radar
+FutureGadget/ai-sota-feed-bot	1	0	HTML	-	2026-02-14	2026-10-17	-	https://github.com/FutureGadget/ai-sota-feed-bot
+Edwin1719/Motor_DATABiQ	1	0	Python	-	2026-10-09	2026-10-09	Convierte PDFs, fotos, audios y videos en una memoria consultable. Un solo índice, cero OCR, todo en tu equipo. Responde citando o no responde.	https://github.com/Edwin1719/Motor_DATABiQ
+Eden-Polaris/eden.cpp	1	0	C++	-	2026-07-25	2026-08-06	Sovereign inference engine — frozen fork of llama.cpp with native Blackwell FP4, custom NVFP4 quantization, and a fleet of distilled models. MIT licensed.	https://github.com/Eden-Polaris/eden.cpp
+DosesAI/mortar.cpp	1	0	C++	-	2026-08-06	2026-08-15	Doses AI local inference runtime for Pestle-27B-Ternary on Metal, CUDA, and CPU	https://github.com/DosesAI/mortar.cpp
+Dorkside/scrap-hackernews-top	1	0	JavaScript	-	2024-12-30	2026-10-17	-	https://github.com/Dorkside/scrap-hackernews-top
+Dalailalama/embeddinggemma2-rust	1	1	Rust	-	2026-10-16	2026-10-16	Unofficial Rust port of Google's EmbeddingGemma 2: text, image, audio & video embeddings on CPU or CUDA (bf16 tensor cores, flash attention). 2-19x faster than PyTorch.	https://github.com/Dalailalama/embeddinggemma2-rust
+CERES-Sorbonne/PanopticML	1	1	Python	-	2024-10-24	2026-10-16	The default plugin for panoptic containing most ML like clustering and image similarity search	https://github.com/CERES-Sorbonne/PanopticML
+Audi14-2005/Haya	1	1	C++	-	2026-04-08	2026-10-12	-	https://github.com/Audi14-2005/Haya
+ArtomYuan/strix.cpp	1	1	C++	-	2026-08-28	2026-10-17	ROCmFPX + multimodal vision fusion engine for Strix Halo (based on llama.cpp)	https://github.com/ArtomYuan/strix.cpp
+AnassKartit/embeddinggemma2-photo-sweep	1	0	Python	-	2026-10-13	2026-10-13	EmbeddingGemma 2 on a Mac, measured: clean WhatsApp photos, find your family from one photo, ask your files offline (30/30 vs Spotlight 5/30), analyze bills locally.	https://github.com/AnassKartit/embeddinggemma2-photo-sweep
+Allternit/allternit-platform	1	0	TypeScript	-	2025-12-18	2026-10-17	Core platform monorepo — source of truth for the Allternit stack.	https://github.com/Allternit/allternit-platform
+AlbertHakobyan070/Advanced-Obsidian-RAG	1	0	Python	-	2026-07-04	2026-10-14	Grounded, cited question-answering over a large personal Obsidian vault. Hybrid retrieval (dense + BM25 + RRF), scope routing, a code lane, cross-encoder reranking, and citation-audited generation. Runs free/local.	https://github.com/AlbertHakobyan070/Advanced-Obsidian-RAG
+AGvin/ai-lab	1	0	Python	-	2026-07-01	2026-10-17	Practical notes, setups, benchmarks, and workflows for AI models, tools, and local inference.	https://github.com/AGvin/ai-lab
+12YHY21/AI-Insights-Update	1	0	Python	-	2026-07-17	2026-10-12	-	https://github.com/12YHY21/AI-Insights-Update
+0xPD33/mmsearch	1	0	Rust	-	2026-10-16	2026-10-16	Multimodal search overlay for Wayland: find files by name, text and meaning, locally with EmbeddingGemma 2	https://github.com/0xPD33/mmsearch
+zzm921/my-note	0	0	Python	-	2024-01-22	2026-10-17	-	https://github.com/zzm921/my-note
+zz-plant/bookkit	0	0	TypeScript	-	2026-01-29	2026-10-14	A book compiler: a book is a specification with hard structure, validated and rendered into a verified Astro site. AI may propose; the compiler decides.	https://github.com/zz-plant/bookkit
+zolgear/gakei	0	0	Python	-	2026-09-27	2026-10-17	Self-hosted web UI for the OpenAI image API (Generate/Edit) with a 4K viewer, lineage and run history	https://github.com/zolgear/gakei
+zkwi/local-photo-search	0	0	JavaScript	-	2026-10-08	2026-10-08	Offline AI photo search powered by Google EmbeddingGemma 2: find photos on your PC by describing them in natural language. Private, local, free and open source. 本地离线 AI 以文搜图，基于 EmbeddingGemma 2。	https://github.com/zkwi/local-photo-search
+zhazhongshizi/embeddinggemma2-intel-npu	0	0	Python	-	2026-10-10	2026-10-10	Validated EmbeddingGemma 2 text and image inference on Intel NPU, with explicit CPU references and a stable Python API.	https://github.com/zhazhongshizi/embeddinggemma2-intel-npu
+zenlm/zen-blog	0	0	MDX	-	2025-09-30	2026-10-17	Zen Blog 4B - Blog and article writing	https://github.com/zenlm/zen-blog
+zenHeart/evals	0	0	HTML	-	2026-08-28	2026-10-12	大模型评估入门：从前端工程师视角看 Eval。一本面向初级前端工程师的 LLM 评估电子书。	https://github.com/zenHeart/evals
+zeljkoobrenovic/genai-inventory	0	0	HTML	-	2025-07-23	2026-10-10	-	https://github.com/zeljkoobrenovic/genai-inventory
+yz5166-byte/Agent-Signal	0	0	Python	-	2026-08-05	2026-10-17	AI agent that collects the most cutting-edge information, news, and project in the AI industry	https://github.com/yz5166-byte/Agent-Signal
+yuyyuyswallowtail/yuy-router	0	0	Python	-	2026-10-10	2026-10-12	embeddinggemma 2 router for task calling	https://github.com/yuyyuyswallowtail/yuy-router
+yurivict/ollama	0	0	Go	-	2026-01-04	2026-10-15	-	https://github.com/yurivict/ollama
+yurii-mysak/scala-training-docs	0	0	Python	-	2025-05-23	2026-10-17	-	https://github.com/yurii-mysak/scala-training-docs
+yuchn/embeddinggemma2	0	1	Python	-	2026-10-07	2026-10-07	Twelve concise EmbeddingGemma 2 demos for text, image, audio, and video embeddings, using uv and offline Docker.	https://github.com/yuchn/embeddinggemma2
+yasinmiran/sift	0	0	TypeScript	-	2026-07-03	2026-10-17	-	https://github.com/yasinmiran/sift
+yashneil75/AcornDB	0	0	Python	-	2026-10-07	2026-10-11	A lightweight, embeddable database for .NET that makes data persistence simple. Store, query, and sync data directly in your app without managing a database server or wrestling with complex setup.	https://github.com/yashneil75/AcornDB
+yanexr/cog-embedding-gemma-2	0	0	Python	-	2026-10-12	2026-10-12	Cog wrapper for EmbeddingGemma 2 multimodal embeddings	https://github.com/yanexr/cog-embedding-gemma-2
+xueweijian/eg2-media-search	0	0	Kotlin	-	2026-10-07	2026-10-09	Local multimodal media search on Android with EmbeddingGemma 2 — 100%% on-device, zero upload	https://github.com/xueweijian/eg2-media-search
+xiaoqianran/huggingface-docs	0	0	JavaScript	-	2026-08-08	2026-10-17	Hugging Face documentation mirror (Hub, Transformers, Diffusers, Datasets…)	https://github.com/xiaoqianran/huggingface-docs
+xdltek/llama.cpp	0	1	C++	-	2026-06-26	2026-07-16	-	https://github.com/xdltek/llama.cpp
+xbstack/embeddinggemma2-local-retrieval-lab	0	0	Python	-	2026-10-09	2026-10-11	EmbeddingGemma 2 LiteRT-LM on-device text, image, audio, and video-frame retrieval smoke tests with reproducible Mac evidence	https://github.com/xbstack/embeddinggemma2-local-retrieval-lab
+xbill9/embedding-cloudrun	0	0	Python	-	2026-10-12	2026-10-16	EmbeddingGemma 2 text embeddings on Cloud Run: int8 CPU repack vs NVIDIA L4, with tests, demo, benchmarks and cost	https://github.com/xbill9/embedding-cloudrun
+xSakix/ainews	0	0	Python	-	2025-08-05	2026-10-17	-	https://github.com/xSakix/ainews
+wyatt88/AskBaseMac	0	0	Swift	-	2026-10-07	2026-10-13	Open-source native macOS knowledge base with EmbeddingGemma 2, local RAG, source citations, and on-device storage. Apache-2.0.	https://github.com/wyatt88/AskBaseMac
+wxyz-claw/clawd-pages	0	0	HTML	-	2026-02-05	2026-10-17	Clawd's public pages	https://github.com/wxyz-claw/clawd-pages
+wuhy80/llm-news-tracker	0	0	Python	-	2026-08-24	2026-10-17	大模型行业落地、Agent 技术、模型发布与评测的日/周/月静态情报站	https://github.com/wuhy80/llm-news-tracker
+wpsadi/media-sense	0	0	TypeScript	-	2026-10-09	2026-10-10	-	https://github.com/wpsadi/media-sense
+woori73/feel2real-buildit	0	0	Java	-	2026-08-20	2026-10-17	-	https://github.com/woori73/feel2real-buildit
+wolpa29/nextcloud-nextgallery	0	0	Python	-	2026-10-03	2026-10-17	Chronik: fast folder-based Nextcloud photo and video gallery, map and offline previews	https://github.com/wolpa29/nextcloud-nextgallery
+wolfeaustin/the-forefront	0	0	JavaScript	-	2026-08-09	2026-10-16	-	https://github.com/wolfeaustin/the-forefront
+windmaple/GemmaFind	0	0	Swift	-	2026-10-12	2026-10-12	Spotlight on steroids for macOS: search files, photos, videos and voice memos by meaning — EmbeddingGemma 2 on-device via LiteRT-LM	https://github.com/windmaple/GemmaFind
+weknews/ai-term-dictionary	0	0	HTML	-	2026-09-22	2026-10-15	위뉴 AI 용어집 — AI 용어의 정의·업계 뉘앙스·현황	https://github.com/weknews/ai-term-dictionary
+wazeruan/mario-embedding-agent	0	0	Python	-	2026-10-09	2026-10-10	Screenshot-only Super Mario Bros PPO agent on frozen EmbeddingGemma-2 (or distilled CNN) frame embeddings	https://github.com/wazeruan/mario-embedding-agent
+wate/knowledge-base	0	0	JavaScript	-	2026-07-22	2026-10-12	-	https://github.com/wate/knowledge-base
+vuongdat67/star-trend	0	0	Python	-	2026-08-30	2026-10-16	-	https://github.com/vuongdat67/star-trend
+vlad-dexcom/AI-Challenge	0	0	Kotlin	-	2026-09-01	2026-10-17	AI Challenge work	https://github.com/vlad-dexcom/AI-Challenge
+vinmay/doppel	0	0	TypeScript	-	2026-10-11	2026-10-12	Find lookalikes in the real world using on-device image embeddings.	https://github.com/vinmay/doppel
+vieanderes/understory	0	3	TypeScript	-	2026-09-30	2026-10-17	A free, open-source software engineering course for beginners and experienced engineers alike. Seven paths, from your first program to system design and AI engineering, and a simulator for AI-assisted coding tests like the ones hiring companies use. 370 lessons in the browser, with Scout, an AI tutor on your own Claude.	https://github.com/vieanderes/understory
+vicary/recoll-eg2	0	0	Python	-	2026-10-12	2026-10-12	Containerized local filesystem search with Recoll and EmbeddingGemma 2: incremental indexing, hybrid search, and resource-bounded operation.	https://github.com/vicary/recoll-eg2
+vibe-ideas/cloudys-gloss	0	0	TypeScript	-	2026-10-04	2026-10-17	-	https://github.com/vibe-ideas/cloudys-gloss
+vhmaadhav/embeddinggemma-mobile-benchmark	0	0	Python	-	2026-10-07	2026-10-07	Benchmarking EmbeddingGemma 2 on Snapdragon phones via Qualcomm AI Hub: latency, memory and accuracy across a quantization ladder	https://github.com/vhmaadhav/embeddinggemma-mobile-benchmark
+usm8d33/xun-qi	0	0	Python	-	2026-10-09	2026-10-09	相容 LocalSend 協定的 Windows 照片接收工具，用 EmbeddingGemma 2 自動分類、一句話搜尋，全部在本機執行。	https://github.com/usm8d33/xun-qi
+unoyx/pacc-llama.cpp	0	1	C++	-	2026-03-04	2026-05-22	-	https://github.com/unoyx/pacc-llama.cpp
+unitysvc-labs/unitysvc-services-ollama	0	0	Jinja	-	2026-03-09	2026-10-17	-	https://github.com/unitysvc-labs/unitysvc-services-ollama
+ultimatess/smart-wardrobe	0	0	Python	-	2026-10-16	2026-10-16	Private, on-device outfit recommender (EmbeddingGemma 2 + MediaPipe). Photos never leave your device.	https://github.com/ultimatess/smart-wardrobe
+u-code-1029/GemmaScope	0	0	Python	-	2026-10-15	2026-10-15	Local SEM/TEM image training and search with EmbeddingGemma 2	https://github.com/u-code-1029/GemmaScope
+ttxs69/ai-trends	0	0	HTML	-	2026-10-16	2026-10-16	AI Trends Radar - daily arXiv/GitHub/HuggingFace trends, static site	https://github.com/ttxs69/ai-trends
+tsilva/modelarchviz	0	0	Jupyter Notebook	-	2026-05-29	2026-10-16	🧭 Explore model architectures beside the code that defines them 🧭	https://github.com/tsilva/modelarchviz
+tschuehly/ai-engineer	0	0	Python	-	2026-05-06	2026-08-30	-	https://github.com/tschuehly/ai-engineer
+trieuan2204-hue/LLM	0	0	C++	-	2026-07-09	2026-07-09	-	https://github.com/trieuan2204-hue/LLM
+trevorashley/zotgemma	0	0	Python	-	2026-10-08	2026-10-08	A better Zotero search that leverages EmbeddingGemma-2.	https://github.com/trevorashley/zotgemma
+tpiros/embeddinggemma-browser-search	0	0	JavaScript	-	2026-10-07	2026-10-07	Search images, audio, video and notes with EmbeddingGemma 2, entirely in the browser on WebGPU. No backend, works offline.	https://github.com/tpiros/embeddinggemma-browser-search
+tmokmss/my-ambient-agents	0	1	Astro	-	2026-03-06	2026-10-17	public agents	https://github.com/tmokmss/my-ambient-agents
+timblakely/cogito-ops	0	0	JSON	-	2026-03-06	2026-10-16	-	https://github.com/timblakely/cogito-ops
+timatigoogl3-code/llamar.cpp	0	0	C++	-	2026-07-28	2026-07-28	Recurrent LLM inference in C/C++ (llama.cpp fork)	https://github.com/timatigoogl3-code/llamar.cpp
+tianyn1990/ai-weekly	0	0	TypeScript	-	2026-02-13	2026-10-17	-	https://github.com/tianyn1990/ai-weekly
+thisguysiadbas/llama.cpp	0	0	C++	-	2026-08-05	2026-08-05	Fork of Llama.cpp for improving Metal support.	https://github.com/thisguysiadbas/llama.cpp
+thebestbradley/webos-phoenix	0	0	JavaScript	-	2026-09-27	2026-10-16	Back from the firery flames of HP.	https://github.com/thebestbradley/webos-phoenix
+thakurious/trowel	0	0	Rust	-	2026-10-12	2026-10-16	On-device multimodal file search for Omarchy — a Linux port of DigUp (EmbeddingGemma 2, Rust + QML)	https://github.com/thakurious/trowel
+techczech/slidewell	0	0	TypeScript	-	2026-06-18	2026-10-17	SlideWell — desktop slide & image archive (the well), companion to TalkWeaver	https://github.com/techczech/slidewell
+tdesc/embeddinggemma-mlx	0	0	Python	-	2026-10-06	2026-10-06	EmbeddingGemma 2 (740M) text-tower embeddings on Apple Silicon via MLX: fp16 conversion, last-token pooling, Matryoshka 768/512/256/128, OpenAI-compatible /v1/embeddings server	https://github.com/tdesc/embeddinggemma-mlx
+tc3oliver/tingmix	0	0	Python	-	2026-10-16	2026-10-17	Real-time ASR for Taiwanese Mandarin, English and Mandarin-English code-switching	https://github.com/tc3oliver/tingmix
+taylor1355/npc	0	0	Python	-	2023-09-10	2026-10-17	-	https://github.com/taylor1355/npc
+tanzim5/filemind	0	0	Python	-	2026-10-10	2026-10-15	Search your own photos, videos and sounds by what's in them — fully offline, powered by EmbeddingGemma 2. Portable Windows app, no GPU needed.	https://github.com/tanzim5/filemind
+talpai-gk/isomodal	0	0	-	-	2026-10-07	2026-10-07	A typed decision model framework for multimodal decisions and inputs, built upon EmbeddingGemma2.	https://github.com/talpai-gk/isomodal
+t42ji2ji/mailsift	0	0	Swift	-	2026-10-13	2026-10-16	Search all your Apple Mail by meaning, on your Mac	https://github.com/t42ji2ji/mailsift
+szocpaul/governed-conversational-analytics	0	0	Python	-	2026-10-09	2026-10-17	Secure and evaluated conversational analytics over structured ITSM data using DSPy, GraphJin, PostgreSQL, and a local Qwen model.	https://github.com/szocpaul/governed-conversational-analytics
+sylvia-H/tech-radar	0	0	TypeScript	-	2026-07-10	2026-10-17	零維運、全免費的個人科技雷達,每日將 GitHub 熱門專案與科技新聞精選推送到 Discord。Zero-ops, free daily tech radar: GitHub trending + curated AI/dev news to Discord.	https://github.com/sylvia-H/tech-radar
+swanlepeltier/GnomeSearch_Embedding	0	0	Python	-	2026-10-12	2026-10-12	-	https://github.com/swanlepeltier/GnomeSearch_Embedding
+swadeshbalajee/EmbeddingGemma2	0	0	Python	-	2026-10-15	2026-10-15	-	https://github.com/swadeshbalajee/EmbeddingGemma2
+sunholo-data/stapledons-design	0	0	-	-	2026-09-27	2026-10-16	Stapledon's Voyage: engine-independent game design, physics accuracy spec and roadmap	https://github.com/sunholo-data/stapledons-design
+sunboss/DigUp-Windows	0	0	Python	-	2026-10-11	2026-10-11	Windows version of DigUp - semantic file search with EmbeddingGemma 2	https://github.com/sunboss/DigUp-Windows
+sugeerth/Paper_publish	0	0	HTML	-	2026-08-08	2026-10-16	-	https://github.com/sugeerth/Paper_publish
+stevenrredbirdsmith-coder/redbird-embed-vault	0	0	Python	-	2026-10-07	2026-10-07	Local EmbeddingGemma 2 microservice + privacy-walled memory vault for AI agent fleets. No cloud, no API cost, verified by live test (6/6).	https://github.com/stevenrredbirdsmith-coder/redbird-embed-vault
+starlinghq/tokenizers	0	0	C#	-	2026-10-13	2026-10-17	Hugging Face tokenizer.json in pure .NET, matching huggingface/tokenizers case by case (Starling.Tokenizers)	https://github.com/starlinghq/tokenizers
+starkdmi/SwiftSearch	0	0	Swift	-	2026-10-14	2026-10-17	-	https://github.com/starkdmi/SwiftSearch
+ssJvirtually/DigUp-windows	0	0	Java	-	2026-10-12	2026-10-12	-	https://github.com/ssJvirtually/DigUp-windows
+srvkataria/embeddinggemma2-demo	0	0	Python	-	2026-10-17	2026-10-17	-	https://github.com/srvkataria/embeddinggemma2-demo
+speccy88/mia5150	0	0	Python	-	2026-10-10	2026-10-10	SkillRet benchmark studies, pilots, and reproducible evidence.	https://github.com/speccy88/mia5150
+songxitao/gemma-asr	0	0	Python	-	2026-10-14	2026-10-15	Fast, non-autoregressive ASR based on frozen Google EmbeddingGemma 2 audio encoder (supports Chinese, and beyond).基于 Google EmbeddingGemma 2 冻结音频塔的极速 ASR 语音识别引擎	https://github.com/songxitao/gemma-asr
+solo0920/ragdemo.win	0	0	Python	-	2026-09-20	2026-10-14	-	https://github.com/solo0920/ragdemo.win
+social-agent-playground/check-google-embedding-gemma-2	0	0	Python	-	2026-10-11	2026-10-11	A two-step verification of parameter count and cross-modal embedding consistency.	https://github.com/social-agent-playground/check-google-embedding-gemma-2
+snowmerak/oev	0	0	Python	-	2026-09-22	2026-10-17	-	https://github.com/snowmerak/oev
+smkalle/vibe1	0	0	Python	-	2025-07-30	2026-10-14	-	https://github.com/smkalle/vibe1
+smavgs/ailocalclick	0	0	TypeScript	-	2026-08-24	2026-10-17	Fast, beginner-friendly Click & build with ai open models, on your computer . FREE	https://github.com/smavgs/ailocalclick
+smarthi/voice-video-search	0	0	Python	-	2026-08-30	2026-10-15	Large Scale Video Analysis, Captioning and Retrieval	https://github.com/smarthi/voice-video-search
+slafftrosheen/Halo	0	0	Kotlin	-	2026-08-05	2026-10-16	Completely customisable and local  "brain" for all your smart gadgets	https://github.com/slafftrosheen/Halo
+skorotkiewicz/eg2-linux	0	0	Python	-	2026-10-17	2026-10-17	embeddinggemma-2 transcribe on linux	https://github.com/skorotkiewicz/eg2-linux
+sinlam/PhotoFinder	0	0	Python	-	2026-10-16	2026-10-16	 100% local semantic & face recognition photo search powered by Google EmbeddingGemma-2 & InsightFace. Zero cloud, pure privacy.	https://github.com/sinlam/PhotoFinder
+shubham303/meelu	0	0	TypeScript	-	2026-08-03	2026-10-17	Self-hosted AI marketing platform — outreach, content, and SEO with the LLM running on your device, not the server.	https://github.com/shubham303/meelu
+shixi-11/ai-agent-daily	0	0	HTML	-	2026-07-15	2026-10-17	AI Agent Daily — 全球 AI、新模型、智能体与有趣产品日报。	https://github.com/shixi-11/ai-agent-daily
+shivanathd/embeddinggemma2-vs-gemini-bench	0	0	HTML	-	2026-10-11	2026-10-11	Reproducible benchmark: local EmbeddingGemma 2 vs Gemini Embedding 2 across 19 use cases (text, code, languages, photos, voice, sounds, PDFs, video), with results, logs and report	https://github.com/shivanathd/embeddinggemma2-vs-gemini-bench
+shawalkhan1/AI-624-LLM-Compression-Project	0	0	C++	-	2025-12-25	2025-12-25	On the Structural Pruning of Large Language Models	https://github.com/shawalkhan1/AI-624-LLM-Compression-Project
+sethsaler/dedupe	0	0	Python	-	2026-07-17	2026-10-15	Local Gemini-style finder for duplicate images, videos, and GIFs	https://github.com/sethsaler/dedupe
+serkan-uslu/ollama-explorer	0	0	TypeScript	-	2026-02-25	2026-10-17	Find, filter and compare 200+ Ollama AI models fast. Built with Next.js 16, React 19 & TypeScript 5.	https://github.com/serkan-uslu/ollama-explorer
+senlyu/hexoBlog	0	0	Stylus	-	2020-11-19	2026-10-12	-	https://github.com/senlyu/hexoBlog
+selvin-paul-raj/daily-ai-digest	0	0	Python	-	2026-09-30	2026-10-17	Archive of daily AI and technology news digests, with published LinkedIn posts, source links, and engagement records for engineers building agents, LLM apps, and RAG systems.	https://github.com/selvin-paul-raj/daily-ai-digest
+seeARMS/appears	0	0	Swift	-	2026-10-15	2026-10-17	Appears: the files you forgot you had, when they matter. A Mac menu bar app, and appea.rs.	https://github.com/seeARMS/appears
+seabnavin19/newsletter_ui	0	0	HTML	-	2026-05-10	2026-10-17	-	https://github.com/seabnavin19/newsletter_ui
+schoolofai/embeddinggemma2-cpu-search	0	0	Python	-	2026-10-12	2026-10-12	EmbeddingGemma 2 on a plain CPU: offline search over text, photos, speech and video (ProAI Clips)	https://github.com/schoolofai/embeddinggemma2-cpu-search
+sbstndalton/noevia	0	0	JavaScript	-	2026-09-03	2026-10-17	noevia — a self-hosted workspace for project-aware chat and durable diary capture (web UI + diary sidecar)	https://github.com/sbstndalton/noevia
+savethebeesandseeds/non-verba	0	0	JavaScript	-	2026-09-24	2026-10-16	Nonverba is an open protocol and marketplace for verifiable tasks. Agents and humans exchange signed offers, evidence, and outcomes that either side can verify.	https://github.com/savethebeesandseeds/non-verba
+saugataroyarghya/ielts-speaking-scorer	0	0	Python	-	2026-10-11	2026-10-11	Training, Kaggle notebooks, evaluation and PyTorch inference for a weakly supervised IELTS speaking research scorer.	https://github.com/saugataroyarghya/ielts-speaking-scorer
+satyajitghana/ai	0	0	TypeScript	-	2026-05-29	2026-10-17	-	https://github.com/satyajitghana/ai
+sass-maker/knowledge-base	0	0	TypeScript	-	2026-05-27	2026-10-16	Private agent search over specialized corpora with cited answers, provenance, and schema-aware retrieval.	https://github.com/sass-maker/knowledge-base
+sasacheese/news-curator	0	0	TypeScript	-	2026-07-30	2026-10-17	関心のあるトピックの最新情報を収集するAIツール	https://github.com/sasacheese/news-curator
+sanyzrn/DbsNex	0	0	Dart	-	2026-07-24	2026-10-17	Local-first capture app for Android — Persian & English, full RTL. Capture in seconds, find in seconds.	https://github.com/sanyzrn/DbsNex
+sanjeevafk/retrieval-architectures-benchmark	0	0	Jupyter Notebook	-	2026-10-10	2026-10-10	-	https://github.com/sanjeevafk/retrieval-architectures-benchmark
+samxiang2011/ai-track-news	0	0	Python	-	2026-06-10	2026-10-17	AI and other news tracking system	https://github.com/samxiang2011/ai-track-news
+samirpatil2000/embeddinggemma-studio	0	0	HTML	-	2026-10-08	2026-10-08	-	https://github.com/samirpatil2000/embeddinggemma-studio
+ryuu-la/NoteBookLm	0	0	Python	-	2026-09-16	2026-10-11	-	https://github.com/ryuu-la/NoteBookLm
+rteoo/snipvoice	0	0	Python	-	2026-09-15	2026-10-17	Local-first voice dictation and meeting recorder for Windows and macOS, with separate microphone and system-audio tracks.	https://github.com/rteoo/snipvoice
+rozgo/doom-sandbox	0	0	Python	-	2026-10-07	2026-10-07	Language and embedding models playing ViZDoom: ModernBERT policy, GLiNER2.5, and zero-shot EmbeddingGemma 2	https://github.com/rozgo/doom-sandbox
+royalcat/burn-rocket	0	0	Rust	-	2026-10-06	2026-10-16	-	https://github.com/royalcat/burn-rocket
+rooty/local-emb-rag	0	0	Go	-	2026-10-07	2026-10-07	-	https://github.com/rooty/local-emb-rag
+rockrxf78/tiny-embgemma2	0	0	C++	-	2026-10-13	2026-10-13	customize embedded gemma2 for mcu	https://github.com/rockrxf78/tiny-embgemma2
+robertcdawson/ai-briefing	0	0	TypeScript	-	2026-05-04	2026-10-16	AI Briefing is a fully automated weekday AI-news podcast.	https://github.com/robertcdawson/ai-briefing
+riziqalbab/kufinder	0	0	Rust	-	2026-10-14	2026-10-14	-	https://github.com/riziqalbab/kufinder
+ritikbadiya/EdgeAI-Project	0	1	C++	-	2026-05-02	2026-05-02	-	https://github.com/ritikbadiya/EdgeAI-Project
+rishendraane/iqoo-performance-studio	0	0	C++	-	2026-09-08	2026-09-08	iQOO Performance Studio - On-Device AI Powered Android Performance Intelligence	https://github.com/rishendraane/iqoo-performance-studio
+rider05/karen	0	0	Kotlin	-	2026-10-04	2026-10-17	-	https://github.com/rider05/karen
+rei0623/AFNJP	0	0	HTML	-	2025-10-06	2026-10-17	海外のAIニュースを一次情報から確認し、出典リンク付きの日本語記事として毎日届けるDiscordコミュニティ「AI Frontier News JP」の公式サイト	https://github.com/rei0623/AFNJP
+rdlassoe/PDFAnalyst	0	0	Python	-	2026-10-13	2026-10-15	Software potenciado con LLM para revisión de PDF (ChatPDF)	https://github.com/rdlassoe/PDFAnalyst
+rdarder/fastref	0	0	Python	-	2026-09-25	2026-10-07	-	https://github.com/rdarder/fastref
+ravisankarg/NEAR	0	0	Python	-	2026-10-13	2026-10-14	NEAR on EmbeddingGemma2: a reproducible SciFact benchmark, interactive geometry, and the limits of residual similarity.	https://github.com/ravisankarg/NEAR
+rajishere9/rkjdev	0	0	HTML	-	2026-09-26	2026-10-17	rkjdev — personal portfolio website of Rajan Krishnan: projects, games, and more	https://github.com/rajishere9/rkjdev
+rafaelchagas9/video_backend	0	0	TypeScript	-	2026-01-06	2026-10-13	-	https://github.com/rafaelchagas9/video_backend
+rabimba/Prism	0	0	Rust	-	2026-10-13	2026-10-13	Prism: Cross-platform (Linux & macOS) multimodal search, EmbeddingGemma 2 768-D Semantic-Space ASR, and Part-of-File containment engine in Rust	https://github.com/rabimba/Prism
+rabe1028/suwop	0	0	Rust	-	2026-09-29	2026-10-17	-	https://github.com/rabe1028/suwop
+r-firth/vecgra	0	0	Rust	-	2026-08-20	2026-10-15	A vector-native embedded graph database. One graph. One vector space. One file.	https://github.com/r-firth/vecgra
+qonto/qonto-faq-benchmark	0	0	HTML	-	2025-11-20	2026-10-13	-	https://github.com/qonto/qonto-faq-benchmark
+qnguyen3/gemma-asr	0	0	Python	-	2026-10-13	2026-10-13	Vietnamese speech-to-text from EmbeddingGemma 2: frozen audio encoder + small CTC reader	https://github.com/qnguyen3/gemma-asr
+qmahmoudi74/danesh	0	0	JavaScript	-	2026-10-09	2026-10-10	-	https://github.com/qmahmoudi74/danesh
+pxp888/ragdoll	0	0	Python	-	2026-10-14	2026-10-15	Jev powered chunking for better embedding and RAG 	https://github.com/pxp888/ragdoll
+proyectotestbuk/radar-ia	0	0	Python	-	2026-07-14	2026-10-17	Aplicación que consulta curadores de contenido de IA	https://github.com/proyectotestbuk/radar-ia
+principalwater/SwiftyToys	0	0	Swift	-	2026-10-05	2026-10-14	Native Swift Windows tools for Mac keyboard habits, integrated brightness control and Homebrew in WSL	https://github.com/principalwater/SwiftyToys
+pretty-manageable-servers/slopbot	0	0	TypeScript	-	2026-10-08	2026-10-17	vibecoded Enterprise AI	https://github.com/pretty-manageable-servers/slopbot
+praveenvijayan/footage-finder-embeddingGemma2	0	0	TypeScript	-	2026-10-11	2026-10-11	-	https://github.com/praveenvijayan/footage-finder-embeddingGemma2
+prady2909/morning-news-agent	0	0	Python	-	2026-07-04	2026-10-17	My personal daily news agent	https://github.com/prady2909/morning-news-agent
+pmh10401/cs-excel-rag	0	0	Python	-	2026-09-27	2026-10-15	CS Excel RAG: multilingual case review, hybrid retrieval, and local model evaluation	https://github.com/pmh10401/cs-excel-rag
+plaktoz/kb	0	0	HTML	-	2026-07-25	2026-10-17	knowledge base implemented in obsidian x karpathy wiki style	https://github.com/plaktoz/kb
+phureewat29/drawdy-janitor	0	0	TypeScript	-	2026-10-09	2026-10-10	Drawdy.io: Extension that sort, search and connect elements on board with EmbeddingGemma 2	https://github.com/phureewat29/drawdy-janitor
+philiprollins/llama-cpp-turboquant	0	0	C++	-	2026-09-14	2026-09-14	-	https://github.com/philiprollins/llama-cpp-turboquant
+philippyt/nd-lens	0	0	Python	-	2026-10-16	2026-10-17	probing whether a speech encoder normalizes Norwegian dialects layer by layer	https://github.com/philippyt/nd-lens
+phanmn/vemma_ex	0	0	Elixir	-	2026-10-14	2026-10-14	Vietnamese speech-to-text for Elixir: QUAN-Transcribe (EmbeddingGemma 2 + CTC) on ONNX Runtime via Ortex, with streaming and Nx.Serving	https://github.com/phanmn/vemma_ex
+petermousses/kubernetes	0	0	Python	-	2026-09-05	2026-10-17	-	https://github.com/petermousses/kubernetes
+petermousses/inference	0	0	Python	-	2026-10-09	2026-10-17	Experiments in going from weights to production	https://github.com/petermousses/inference
+permitzip/embeddinggemma-lab	0	0	Python	-	2026-10-17	2026-10-17	Local EmbeddingGemma 2 search lab for text, images, PDFs, audio, and video.	https://github.com/permitzip/embeddinggemma-lab
+pchi1606/embeddinggemma2-crossmodal-alignment	0	0	-	-	2026-10-10	2026-10-10	Reproduction package: cross-modal alignment audit of EmbeddingGemma 2	https://github.com/pchi1606/embeddinggemma2-crossmodal-alignment
+paddymac83/llama.cpp	0	0	C	-	2026-03-05	2026-04-07	Experimental llama.cpp with modified RISC-V intrinsics	https://github.com/paddymac83/llama.cpp
+p3psi-boo/EmbeddingGemma2-on-titan-xp	0	0	C++	-	2026-10-16	2026-10-16	[S1] I got a free Nvidia Titan XP, so ...	https://github.com/p3psi-boo/EmbeddingGemma2-on-titan-xp
+p3psi-boo/EmbeddingGemma2-AMDKFD	0	0	Python	-	2026-10-17	2026-10-17	-	https://github.com/p3psi-boo/EmbeddingGemma2-AMDKFD
+oyasumiaiko/bilibili-ai-danmaku-filter	0	0	Python	-	2026-10-17	2026-10-17	Local-first Bilibili semantic danmaku filtering with EmbeddingGemma 2, lookahead and in-sidebar diagnostics	https://github.com/oyasumiaiko/bilibili-ai-danmaku-filter
+oveku/mygithubpage	0	0	HTML	-	2026-02-24	2026-10-17	My github homepage	https://github.com/oveku/mygithubpage
+ottobunge/ro-bots	0	0	C++	-	2026-10-05	2026-10-05	-	https://github.com/ottobunge/ro-bots
+oskar-szulc/obsidian-embeddings	0	0	TypeScript	-	2026-10-16	2026-10-16	Related notes and semantic search for Obsidian with EmbeddingGemma 2 running locally in Ollama	https://github.com/oskar-szulc/obsidian-embeddings
+oorona/cve-central	0	0	Python	-	2026-08-31	2026-10-13	Vulnerability-intelligence site: full NVD CVE stream enriched with CISA KEV and FIRST EPSS, BM25 + pgvector hybrid search, on-demand LLM deep assessments — Next.js 16 + FastAPI	https://github.com/oorona/cve-central
+ommgh/sift	0	0	Python	-	2026-10-15	2026-10-16	Search your files by what's in them, on Omarchy. On-device, with EmbeddingGemma 2.	https://github.com/ommgh/sift
+omarfh111/C.R.A.T.E.R	0	0	Python	-	2026-10-10	2026-10-11	AI-powered lunar rover simulation featuring local hazard detection, calibrated spatial mapping, resilient radio telemetry, live Mission Control, and GPU-accelerated mission intelligence.	https://github.com/omarfh111/C.R.A.T.E.R
+ocminer/llama.cpp	0	0	C++	-	2026-08-02	2026-08-02	Own modified fork of llama.cpp for mining	https://github.com/ocminer/llama.cpp
+nunez/monica	0	0	Python	-	2026-09-23	2026-10-13	-	https://github.com/nunez/monica
+npone25/LlamaIndex_RAG_Tech	0	0	Python	-	2026-10-02	2026-10-15	-	https://github.com/npone25/LlamaIndex_RAG_Tech
+norandom/npu_rag_from_folder	0	0	Python	-	2026-09-06	2026-10-12	NPU embeddings for Retrieval Augmented Generation to feed context to AI agents. Windows. AMD SoC.	https://github.com/norandom/npu_rag_from_folder
+noamvb/ParTake	0	0	Dart	-	2026-09-24	2026-10-17	Unofficial personal viewer for ParlVU (House of Commons of Canada video): Android + web	https://github.com/noamvb/ParTake
+nipunbatra/dl-colab-assignment	0	0	Python	-	2026-10-13	2026-10-13	Small Colab exercises: CLIP loss, embedding search, tiny VLM adaptation, and concept intervention	https://github.com/nipunbatra/dl-colab-assignment
+nipunbatra/attention	0	0	HTML	-	2026-09-03	2026-10-15	Interactive single-file lesson: self-attention from first principles for next-token prediction	https://github.com/nipunbatra/attention
+nil2013/llama.cpp	0	0	C++	-	2026-05-26	2026-05-27	llama.cpp with my customize	https://github.com/nil2013/llama.cpp
+nguyenlevel/data_moitruong	0	0	JavaScript	-	2026-09-30	2026-10-17	-	https://github.com/nguyenlevel/data_moitruong
+ngpestelos-mirrors/llama.cpp	0	0	C++	-	2026-08-02	2026-10-17	Mirror of ggerganov/llama.cpp (full history)	https://github.com/ngpestelos-mirrors/llama.cpp
+ngocdb-acbs-com-vn/-embeddinggemma2-envi	0	0	-	-	2026-10-07	2026-10-07	Reproducible pipeline to export EmbeddingGemma 2's text tower to ONNX, trim its vocabulary to English + Vietnamese, quantize to int8, and verify parity with the original model.	https://github.com/ngocdb-acbs-com-vn/-embeddinggemma2-envi
+neuroradiology/koboldcpp	0	0	C++	-	2025-10-12	2025-10-12	-	https://github.com/neuroradiology/koboldcpp
+neostryder/juhandu	0	0	TypeScript	-	2026-10-06	2026-10-17	Self-hosted feed reader that learns your taste: rules, summaries, briefings, and pipes. No runtime dependencies.	https://github.com/neostryder/juhandu
+neocello-ku/neocello-ku.github.io	0	0	TypeScript	-	2026-10-06	2026-10-17	기술 트렌드 노트 — repo2video	https://github.com/neocello-ku/neocello-ku.github.io
+native-agent-stack/native-agent-stack	0	0	Python	-	2026-09-19	2026-10-17	Evidence-led convergence for native Codex and Claude: scoped context, isolated workers, pinned upstream decisions, reproducible qualification and recovery.	https://github.com/native-agent-stack/native-agent-stack
+mysteryholic/gemma-local-search	0	0	Python	-	2026-10-13	2026-10-13	Offline desktop search, embeddings and chat for macOS and Windows using EmbeddingGemma 2	https://github.com/mysteryholic/gemma-local-search
+mutomasa/embeddinggemma-multimodal-lab	0	0	Python	-	2026-10-15	2026-10-16	Local multimodal semantic search & Matryoshka-dimension evaluation demo with google/embeddinggemma-2 (Streamlit + uv)	https://github.com/mutomasa/embeddinggemma-multimodal-lab
+musalser/life-logs	0	0	Python	-	2026-09-08	2026-10-16	-	https://github.com/musalser/life-logs
+msghik/embeddinggemma2-speech-retrieval	0	0	Python	-	2026-10-16	2026-10-17	EmbeddingGemma 2 for speech-to-text retrieval: English keyword spotting and a Persian speech/sentence matching fine-tune	https://github.com/msghik/embeddinggemma2-speech-retrieval
+mrllama123/dotfiles	0	0	Lua	-	2025-10-04	2026-10-15	-	https://github.com/mrllama123/dotfiles
+moxin-org/ominix-runtime	0	1	C++	-	2026-01-09	2026-01-12	-	https://github.com/moxin-org/ominix-runtime
+mophead64/ollama-model-manager	0	0	Go	-	2026-09-23	2026-10-15	A self-hosted, signed-in web app for running your Ollama models: find and queue downloads that fit your hardware, see what you actually use, test models against each other, and keep a record of the ones that weren't worth keeping.	https://github.com/mophead64/ollama-model-manager
+mootezbh/vidseek	0	0	TypeScript	-	2026-10-10	2026-10-10	-	https://github.com/mootezbh/vidseek
+montoyitadevelp/EmbeddingGemma2Multimodal	0	0	Jupyter Notebook	-	2026-10-08	2026-10-08	Gemma 2 multimodal	https://github.com/montoyitadevelp/EmbeddingGemma2Multimodal
+moirai-internal/vllm	0	0	Python	-	2025-06-18	2026-10-17	-	https://github.com/moirai-internal/vllm
+moirai-internal/sglang	0	3	Python	-	2025-06-18	2026-10-17	-	https://github.com/moirai-internal/sglang
+mofumail/embeddinggemma-2-candle	0	0	Rust	-	2026-10-12	2026-10-12	Rust implementation of google/embeddinggemma-2 via Candle	https://github.com/mofumail/embeddinggemma-2-candle
+modootoday/pmcp	0	0	TypeScript	-	2026-09-06	2026-10-17	An MCP server that finds the skills your installed packages already ship.	https://github.com/modootoday/pmcp
+mnmly/mlx-swift-embeddinggemma-2	0	0	Swift	-	2026-10-06	2026-10-06	EmbeddingGemma 2 on Apple silicon with mlx-swift: one embedding space for text, images, audio and video	https://github.com/mnmly/mlx-swift-embeddinggemma-2
+miztiik/yen-idhazh	0	0	Python	-	2026-08-20	2026-10-17	A news digest summarized with an open-weights model.	https://github.com/miztiik/yen-idhazh
+minhmuot7cu0niw-sudo/ai-engineering-career-digest	0	0	Python	-	2026-08-04	2026-10-17	Personal AI engineering and career digest	https://github.com/minhmuot7cu0niw-sudo/ai-engineering-career-digest
+mikolaj92/embeddinggemma-typed-decisions-coreml	0	0	Python	-	2026-10-12	2026-10-14	Core ML CPU/Apple Neural Engine adaptation of mrm8488 EmbeddingGemma 2 typed decisions. No retraining; original head and attribution retained.	https://github.com/mikolaj92/embeddinggemma-typed-decisions-coreml
+michael-mayo/autolabelling_via_embeddings	0	0	Python	-	2026-10-12	2026-10-13	-	https://github.com/michael-mayo/autolabelling_via_embeddings
+mhl-projects/morning-diff	0	0	HTML	-	2026-10-16	2026-10-17	-	https://github.com/mhl-projects/morning-diff
+meth04/scene-search	0	0	Python	-	2026-10-16	2026-10-16	Local video scene search with face/plate redaction. Windows CPU or NVIDIA installer and pinned models.	https://github.com/meth04/scene-search
+mcxen/AvaMedia	0	0	C#	-	2026-10-05	2026-10-16	Avalonia + C# 多媒体桌面客户端，支持转换、快速剪辑与 Mac OS 9 Platinum 皮肤	https://github.com/mcxen/AvaMedia
+mcp-tool-shop-org/rnd	0	0	Python	-	2026-10-07	2026-10-17	The studio's research bench: tiered-source Markdown entries, rig experiments, a searchable SQLite index, an instrument registry and rated catalogues. Verified topics graduate to readouts.	https://github.com/mcp-tool-shop-org/rnd
+mcp-tool-shop-org/offrig	0	0	Rust	-	2026-10-02	2026-10-15	Run big models and GPU jobs on rented RunPod GPUs, never your own. A Windows app, CLI and MCP side-car: priced plans, a recipe ready only when it can answer, and an exact host CUDA pin.	https://github.com/mcp-tool-shop-org/offrig
+mazhewitt/shoebox	0	0	Python	-	2026-10-11	2026-10-16	-	https://github.com/mazhewitt/shoebox
+maximum2974/ai-daily	0	0	Python	-	2026-09-28	2026-10-17	AI 每日观察：每天北京时间 10:00 自动归档 AI 官方资讯与开源项目更新，保留来源链接和检查记录。	https://github.com/maximum2974/ai-daily
+matu79go/reflex-2	0	0	Python	-	2026-10-08	2026-10-09	Fast, local judgments on video. 740M parameters, one GPU, no cloud. Built on Google EmbeddingGemma 2.	https://github.com/matu79go/reflex-2
+matoship/Daily_AI_Assistant	0	0	Python	-	2026-07-15	2026-10-17	-	https://github.com/matoship/Daily_AI_Assistant
+matheustavarestrindade/mtt-harness	0	0	Go	-	2026-09-27	2026-10-16	Mtt Harness	https://github.com/matheustavarestrindade/mtt-harness
+matbeedotcom/llama.cpp-liquid	0	0	C++	-	2026-04-30	2026-04-30	Fork of ggml-org/llama.cpp + LFM2Audio (PR #18641) with library-shaped tools (tts_lib, mtmd_cli_lib) for in-process FFI consumers	https://github.com/matbeedotcom/llama.cpp-liquid
+masseater/msa	0	0	TypeScript	-	2026-10-15	2026-10-17	Masseater agent. based on pi.	https://github.com/masseater/msa
+mapzimus/lab	0	0	HTML	-	2026-07-16	2026-10-17	-	https://github.com/mapzimus/lab
+makepad/llama_nvfp4	0	0	C++	-	2026-04-08	2026-04-10	-	https://github.com/makepad/llama_nvfp4
+madeindigio/llama.cpp	0	0	C++	-	2025-11-12	2025-11-12	A forked llama.cpp for go-llama.cpp	https://github.com/madeindigio/llama.cpp
+m24ih/krunner-semantic-search	0	0	Python	-	2026-10-12	2026-10-12	-	https://github.com/m24ih/krunner-semantic-search
+luftSvensken/CarCrow	0	0	JavaScript	-	2026-10-06	2026-10-08	-	https://github.com/luftSvensken/CarCrow
+lorenblue/local-image-search	0	0	Python	-	2026-06-18	2026-10-07	-	https://github.com/lorenblue/local-image-search
+liuzzle/geopres-grid	0	0	Python	-	2026-09-01	2026-10-15	Combining Dimensionality Reduction and Compression for Efficient Indexing	https://github.com/liuzzle/geopres-grid
+lillycham/akyuu	0	0	Haskell	-	2026-10-05	2026-10-17	A content-addressed memory store for AI agents	https://github.com/lillycham/akyuu
+lighter265/claude-news	0	0	Python	-	2026-05-16	2026-10-17	-	https://github.com/lighter265/claude-news
+leonardoeloy/embedding-gemma-2-research	0	0	Python	-	2026-10-11	2026-10-11	Reproducible study of requirement satisfaction, vector compression, and structured filtering in EmbeddingGemma 2 and contemporary embedding models.	https://github.com/leonardoeloy/embedding-gemma-2-research
+lentmiien/lentmiien-site	0	0	JavaScript	-	2023-02-07	2026-10-17	-	https://github.com/lentmiien/lentmiien-site
+learningsam20/attach-surfer	0	0	JavaScript	-	2026-09-22	2026-10-11	-	https://github.com/learningsam20/attach-surfer
+lazarofhn/busca-semantica-arquivos	0	0	Python	-	2026-10-06	2026-10-07	Busca semântica local nos seus arquivos (PDF/Word/Excel/MD) com EmbeddingGemma 2: barra estilo Spotlight no Windows (Alt+Espaço), tela no navegador e conector MCP para o Claude.	https://github.com/lazarofhn/busca-semantica-arquivos
+laurieainley/shooot	0	0	TypeScript	-	2025-08-31	2026-10-16	-	https://github.com/laurieainley/shooot
+kyonHuO/review-classifier-demo	0	0	HTML	-	2026-10-07	2026-10-17	Display prototype with fictional sample reviews only. No API connection or production service.	https://github.com/kyonHuO/review-classifier-demo
+kyonHuO/nagiport-preview	0	0	HTML	-	2026-10-15	2026-10-16	Nagiport static preview (design review)	https://github.com/kyonHuO/nagiport-preview
+kylebrodeur/modal-embedding-server	0	0	Python	-	2026-10-03	2026-10-15	A high-performance, generic GPU embedding stack on Modal with synthetic query generation, retrieval evaluation, and a monotonic vector sync protocol for offline-first search.	https://github.com/kylebrodeur/modal-embedding-server
+kuchris/embeddinggemma2asr-cantonese	0	0	Python	-	2026-10-13	2026-10-15	Fast Cantonese speech recognition (~800x real time) from a frozen EmbeddingGemma 2 audio encoder + a 20M-parameter CTC reader. 粵語（廣東話）語音識別	https://github.com/kuchris/embeddinggemma2asr-cantonese
+krish1236/lodestar	0	0	Python	-	2026-07-09	2026-10-17	-	https://github.com/krish1236/lodestar
+kotadymo/openclip-gemma	0	0	Python	-	2026-10-17	2026-10-17	OpenCLIP-compatible API for EmbeddingGemma 2	https://github.com/kotadymo/openclip-gemma
+kleithegreat/dotfiles	0	0	Rust	-	2026-02-18	2026-10-17	-	https://github.com/kleithegreat/dotfiles
+kkhys/me	0	0	TypeScript	-	2025-04-15	2026-10-17	My personal website.	https://github.com/kkhys/me
+kiycoh/silica-agent	0	0	Python	-	2026-10-09	2026-10-17	-	https://github.com/kiycoh/silica-agent
+kimsutto/forest_match	0	0	Svelte	-	2026-10-11	2026-10-17	EmbeddingGemma2 + WebGPU	https://github.com/kimsutto/forest_match
+khawjaahmad/embeddinggemma-2	0	0	TypeScript	-	2026-10-07	2026-10-11	EmbeddingGemma 2 multimodal embeddings running in the browser on WebGPU	https://github.com/khawjaahmad/embeddinggemma-2
+kevinuehara/webgpu-semantic-search	0	0	HTML	-	2026-10-11	2026-10-11	Client-side semantic search in the browser with WebGPU — text search over articles (Embedding Gemma 2 / LiteRT) and multimodal visual search (CLIP), no backend.	https://github.com/kevinuehara/webgpu-semantic-search
+kevinozer/ai-news	0	1	Python	-	2026-04-21	2026-10-17	AI NA MÍRU – denní AI news pipeline: fetch + digest PDF + IG/LinkedIn posty	https://github.com/kevinozer/ai-news
+kevinalliswell/kevinalliswell.github.io	0	0	HTML	-	2026-03-05	2026-10-17	-	https://github.com/kevinalliswell/kevinalliswell.github.io
+kenhuangus/embeddinggemma2-multimodal-studio	0	0	HTML	-	2026-10-08	2026-10-09	-	https://github.com/kenhuangus/embeddinggemma2-multimodal-studio
+kemaladlig/code-rag	0	0	JavaScript	-	2026-10-07	2026-10-14	Local semantic code search MCP server (EmbeddingGemma v1 via Ollama), one install for every MCP client.	https://github.com/kemaladlig/code-rag
+keigo1110/kAIgi-download	0	0	HTML	-	2026-06-28	2026-10-08	Public website and downloads for kAIgi	https://github.com/keigo1110/kAIgi-download
+keejkrej/lisca-killing-assay	0	0	Python	-	2026-06-28	2026-10-10	-	https://github.com/keejkrej/lisca-killing-assay
+kasparovabi/embeddinggemma2-rag-test	0	0	Python	-	2026-10-08	2026-10-08	Testing EmbeddingGemma 2 GGUF settings for RAG: 4-bit vs BF16, 768-128d truncation, forgotten query prefix, vs BM25	https://github.com/kasparovabi/embeddinggemma2-rag-test
+kai-prince-sfhea/knowledge-graph-extraction	0	0	TypeScript	-	2026-10-09	2026-10-14	Experimental Quarto extension for scoped knowledge graph extraction, reviewed authoring, weighted navigation and FAIR-oriented exports.	https://github.com/kai-prince-sfhea/knowledge-graph-extraction
+kaewTori/minikun_agent	0	0	Java	-	2026-08-03	2026-10-08	-	https://github.com/kaewTori/minikun_agent
+k4ditano/sonda	0	0	Rust	-	2026-10-16	2026-10-17	A file manager for pleamar-wm that finds your files by what is in them: photos, PDFs, recordings, videos and code, on EmbeddingGemma 2, all local	https://github.com/k4ditano/sonda
+juliuszhang/ai-daily	0	0	-	-	2026-07-03	2026-10-17	-	https://github.com/juliuszhang/ai-daily
+jrubiosainz/Biblo	0	0	Swift	-	2026-10-14	2026-10-17	Busca en los archivos de tu Mac por lo que muestran, dicen o suenan. App nativa de macOS con EmbeddingGemma 2, llama.cpp y SQLite: nada sale del Mac.	https://github.com/jrubiosainz/Biblo
+jossion12/embeddinggemma-2	0	0	Python	-	2026-10-09	2026-10-09	-	https://github.com/jossion12/embeddinggemma-2
+joshfermano/liora-local	0	0	TypeScript	-	2026-10-09	2026-10-10	-	https://github.com/joshfermano/liora-local
+josephkirk/DecisionNarrative	0	0	JavaScript	-	2026-10-14	2026-10-14	DecisionNarrative is a local authoring and playtest studio for nonlinear, storylet-driven narrative games. It is designed to scale from a compact detective scenario to a large systemic RPG without imposing a built-in setting or cast.	https://github.com/josephkirk/DecisionNarrative
+joseluissaorin/scholaris-v2	0	0	TypeScript	-	2026-10-06	2026-10-07	Scholaris: tu biblioteca, leída y citable. Un SPDF de cualquier cosa, en Cloudflare o en casa.	https://github.com/joseluissaorin/scholaris-v2
+joseluissaorin/amanuensis	0	0	Python	-	2026-10-17	2026-10-17	Lee cualquier página de la historia y escribe lo que le dictan: OCR, HTR de manuscritos y voz a texto, en local (EmbeddingGemma 2)	https://github.com/joseluissaorin/amanuensis
+joeblau/choff	0	0	Swift	-	2026-10-07	2026-10-12	-	https://github.com/joeblau/choff
+joaopalmeiro/skill-la-skill	0	0	Python	-	2026-04-11	2026-10-08	-	https://github.com/joaopalmeiro/skill-la-skill
+jjiisub/trendsit	0	0	Python	-	2026-10-07	2026-10-15	-	https://github.com/jjiisub/trendsit
+jinqiu193/trace	0	0	Python	-	2026-10-17	2026-10-17	Local multimodal semantic search for your files - powered by Google EmbeddingGemma 2 (ONNX). Text/PDF/image/screenshot/video, mixed Chinese-English queries, 100% offline.	https://github.com/jinqiu193/trace
+jingwuduzhi/polkadot-solochain	0	0	Tcl	-	2026-10-13	2026-10-13	-	https://github.com/jingwuduzhi/polkadot-solochain
+jethac/embeddinggemma2-jetha.c	0	0	C	-	2026-10-08	2026-10-10	Experimental native EmbeddingGemma 2 port: full multimodal support and optimized CPU/GPU inference for upstream adoption	https://github.com/jethac/embeddinggemma2-jetha.c
+jeiang/.dotfiles	0	0	Python	-	2022-10-18	2026-10-17	My dotfiles for NixOS. A backup in case I accidentally nuke the system.	https://github.com/jeiang/.dotfiles
+javi23ruiz/localLens	0	0	Python	-	2026-10-11	2026-10-12	search content of any modality (audio, video, image, text) by using the Google Gemma-2 embedding model	https://github.com/javi23ruiz/localLens
+jakubpradzynski/przegladai.news	0	0	HTML	-	2025-12-30	2026-10-16	-	https://github.com/jakubpradzynski/przegladai.news
+jairofilho79/coldigom	0	0	TypeScript	-	2026-01-10	2026-10-16	Application for Object (assets) Manager for Coletânea Digital	https://github.com/jairofilho79/coldigom
+jaguridi/doble-click-blog	0	0	HTML	-	2026-06-01	2026-10-17	Doble Click — blog diario de IA con perspectiva latinoamericana	https://github.com/jaguridi/doble-click-blog
+jagorun/motomov-py	0	0	HTML	-	2026-09-17	2026-10-17	py.motomov.ru — учебный сайт Python и RAG. Отдельно от визитки motomov.ru	https://github.com/jagorun/motomov-py
+jSwords91/lets-build-llms	0	0	Python	-	2025-08-27	2026-10-08	Various LLMs written from scratch, for pedagogical purposes only	https://github.com/jSwords91/lets-build-llms
+izyuumi/everything	0	0	Rust	-	2026-10-15	2026-10-17	-	https://github.com/izyuumi/everything
+iwaitu/textservice-gemma-2	0	0	Python	-	2026-10-10	2026-10-10	EmbeddingGemma 2 ONNX 文本嵌入/重排序/分块服务，REST 与 gRPC 接口兼容 TextServiceQwen3	https://github.com/iwaitu/textservice-gemma-2
+ikcore/gaise	0	0	Rust	-	2026-02-21	2026-10-17	Generative AI Service (GAISe) Is an embeddable GenAI abstraction service for major providers written in high performance rust!	https://github.com/ikcore/gaise
+ikcore/ai-embeddinggemma-2	0	0	Rust	-	2026-10-10	2026-10-10	A rust based EmbeddingGemma 2 (Google's open-weights Gemini Embedding 2 sibling) multimodal embeddings SDK / Server - text, image, video, PDF and audio - that supports CPU, CUDA, Metal and MLX	https://github.com/ikcore/ai-embeddinggemma-2
+ideadude/flints-crier-blog	0	0	HTML	-	2026-02-13	2026-10-17	Flint is an AI agent living in Jason's basement. This is his blog.	https://github.com/ideadude/flints-crier-blog
+iannellomarco/concordance	0	0	Swift	-	2026-10-14	2026-10-14	A launcher for macOS that finds things by what they mean — EmbeddingGemma 2 on the Neural Engine, in Everpaper's palette.	https://github.com/iannellomarco/concordance
+ianMuchesia/multilingual-ai-banking-assistant	0	0	Python	-	2026-10-09	2026-10-09	AI banking assistant for English, Kiswahili and Sheng. A local EmbeddingGemma model and a classifier route messages, rules handle bank facts, an LLM steps in only when unsure, and money never moves without confirmation.	https://github.com/ianMuchesia/multilingual-ai-banking-assistant
+iampuero/EmbeddingGemma2Explorer	0	0	Python	-	2026-10-12	2026-10-12	-	https://github.com/iampuero/EmbeddingGemma2Explorer
+iamdainwi/codemind	0	0	Python	-	2026-10-12	2026-10-15	-	https://github.com/iamdainwi/codemind
+iamarifalam/ai-intelligence-tracker	0	0	Python	-	2026-08-29	2026-10-17	Automated pipeline tracking daily AI research papers, trending models, and dataset snapshots.	https://github.com/iamarifalam/ai-intelligence-tracker
+iagenerativa/SARAi_v2	0	0	Python	-	2025-10-27	2025-11-04	-	https://github.com/iagenerativa/SARAi_v2
+iNViTiON/nix-config	0	0	Nix	-	2026-09-29	2026-10-15	My personal Nix config, currently only one single NixOS machine.	https://github.com/iNViTiON/nix-config
+hzlatarski/symfony-claude-context-engine	0	0	Python	-	2026-04-12	2026-10-13	A long-term memory system for Claude Code, purpose-built for Symfony projects. 	https://github.com/hzlatarski/symfony-claude-context-engine
+hyunsungko/local-file-kit	0	0	Python	-	2026-10-16	2026-10-16	Claude Code skill: find and organize files on your PC by name or meaning (Everything, DigUp + EmbeddingGemma 2, WizTree, Czkawka, ExifTool, 7-Zip, robocopy) with preview and undo.	https://github.com/hyunsungko/local-file-kit
+hyukkyukang/SPLADE	0	0	Python	-	2026-01-24	2026-06-05	-	https://github.com/hyukkyukang/SPLADE
+hyoseo837/hn-scroller	0	0	Python	-	2026-09-21	2026-10-17	Hacker News as a vertical swipe feed — know what happened in tech today in two minutes	https://github.com/hyoseo837/hn-scroller
+hxri/embedgemma	0	0	Python	-	2026-10-15	2026-10-15	EmbeddingGemma 2 demos: video to sound effect, spoken video search, steer and decode, SFX finder, words codec, sentence arithmetic	https://github.com/hxri/embedgemma
+huzjie/embedforge	0	0	Python	-	2026-10-08	2026-10-08	Unified multimodal embedding + retrieval framework (EmbeddingGemma 2 direction): one 768-dim space for text/code/image/audio, Matryoshka any-width embeddings, ColBERT late interaction, INT4 on-device quantization. Zero-dependency.	https://github.com/huzjie/embedforge
+humancto/retrace	0	0	Rust	-	2026-10-14	2026-10-17	Ask your cameras what happened, then retrace their steps. A fully local video investigator: natural-language search over your own footage, playable clips, standing rules. Nothing leaves the machine.	https://github.com/humancto/retrace
+hugocornellier/mediapipe_flutter	0	0	Dart	-	2026-09-11	2026-10-16	MediaPipe Tasks for Flutter. Independent continuation of google/flutter-mediapipe.	https://github.com/hugocornellier/mediapipe_flutter
+hrushiaswar/Multimodal_AI_Assistant	0	0	Python	-	2026-10-15	2026-10-15	Multimodal AI Assistant: A hybrid Edge-AI RAG pipeline running EmbeddingGemma 2 on local GPU with ChromaDB. Features live camera perception, push-to-talk voice I/O, and Gemini reasoning wrapped in a dynamic Streamlit dashboard for grounded engineering doc QA.	https://github.com/hrushiaswar/Multimodal_AI_Assistant
+hr231/stt-gemma-emb-2	0	0	Python	-	2026-10-16	2026-10-16	-	https://github.com/hr231/stt-gemma-emb-2
+hoadulieu2003-lang/antigravity-skill	0	0	TypeScript	-	2026-09-12	2026-10-17	-	https://github.com/hoadulieu2003-lang/antigravity-skill
+hmjn023/dghs-imgutils-rs	0	0	Rust	-	2026-05-26	2026-10-12	-	https://github.com/hmjn023/dghs-imgutils-rs
+hiouchiy/model-embeddinggemma-2-on-databricks	0	0	Python	-	2026-10-14	2026-10-15	EmbeddingGemma 2 multimodal embeddings on Databricks: serverless GPU notebook, AI Runtime batch, Model Serving (env_pack)	https://github.com/hiouchiy/model-embeddinggemma-2-on-databricks
+henryliang3027/vlm_20251030	0	0	C++	-	2025-10-30	2026-01-23	-	https://github.com/henryliang3027/vlm_20251030
+haumacher/valbum2	0	0	Java	-	2023-03-03	2026-10-17	VAlbum - the friendly home for all your digital memories	https://github.com/haumacher/valbum2
+hanzoai/engine	0	1	Rust	-	2025-09-13	2026-10-17	Hanzo AI native inference engine - Rust-based LLM & embedding engine for foundational models	https://github.com/hanzoai/engine
+hanhy06/source-rag-mcp	0	0	TypeScript	-	2026-06-28	2026-10-07	-	https://github.com/hanhy06/source-rag-mcp
+h1bomb/horizon-news	0	0	TypeScript	-	2026-07-13	2026-10-17	-	https://github.com/h1bomb/horizon-news
+gurugangadhar/AI-News	0	0	Python	-	2026-10-04	2026-10-17	-	https://github.com/gurugangadhar/AI-News
+guarismo/openclaw-plugin-multimodal-embeddings	0	0	TypeScript	-	2026-10-07	2026-10-08	OpenClaw memory embedding provider for OpenAI-compatible endpoints, with local image and audio indexing (e.g. EmbeddingGemma 2 on llama.cpp)	https://github.com/guarismo/openclaw-plugin-multimodal-embeddings
+gqy20/feed	0	0	HTML	-	2026-09-29	2026-10-17	-	https://github.com/gqy20/feed
+govindarajanv/AgentWire	0	0	Python	-	2018-01-19	2026-10-11	-	https://github.com/govindarajanv/AgentWire
+gopalasubramanium/modelsaar	0	0	Python	-	2026-10-11	2026-10-16	ModelSaar — intelligent routing for local AI models. One OpenAI-compatible endpoint that picks the most suitable local deployment per request.	https://github.com/gopalasubramanium/modelsaar
+gitSITTI/Avana02	0	0	Python	-	2026-05-23	2026-10-15	-	https://github.com/gitSITTI/Avana02
+gh-code/text-to-image-search	0	0	Python	-	2026-10-11	2026-10-11	Text-to-Image Search with EmbeddingGemma 2 as default.	https://github.com/gh-code/text-to-image-search
+getofferhelp/ollama-hot-models	0	0	Python	-	2025-02-27	2026-10-17	-	https://github.com/getofferhelp/ollama-hot-models
+georgeslane/athena	0	0	Python	-	2026-10-03	2026-10-16	Code for a lightweight personal assistant setup that runs on my Raspberry pi and on my MacBook Pro (used as a model server)	https://github.com/georgeslane/athena
+garykhfung/daily_brief	0	0	JavaScript	-	2026-10-08	2026-10-17	Daily news	https://github.com/garykhfung/daily_brief
+gaffar273/imageStudio	0	0	Python	-	2026-10-11	2026-10-15	-	https://github.com/gaffar273/imageStudio
+froodx/prism-ml-llama.cpp	0	0	C++	-	2026-06-03	2026-06-04	Bonsai 1-bit llama.cpp fork with Windows build scripts and DuckDuckGo MCP search	https://github.com/froodx/prism-ml-llama.cpp
+frankfika/notestodo	0	0	TypeScript	-	2026-10-12	2026-10-17	-	https://github.com/frankfika/notestodo
+fmadore/IWAC-Hugging-Face	0	0	Python	-	2025-05-23	2026-10-13	Python pipeline mirroring the Islam West Africa Collection from Omeka S into Hugging Face datasets: semantic embeddings, LDA topic models, lexical metrics, Islamic-calendar dates and a multi-model sentiment panel	https://github.com/fmadore/IWAC-Hugging-Face
+filament-dm/llama-cpp-bug	0	0	C++	-	2025-11-10	2025-11-10	-	https://github.com/filament-dm/llama-cpp-bug
+felixtea/ai-digest	0	0	HTML	-	2026-03-14	2026-10-17	-	https://github.com/felixtea/ai-digest
+felixrivasuxdesigner/video-library-classifier	0	0	Python	-	2026-04-30	2026-10-13	A Claude Code / Cowork plugin for videographers who need to organize large libraries of footage before editing in Final Cut Pro.	https://github.com/felixrivasuxdesigner/video-library-classifier
+fdschmidt93/rcp-ndcg	0	0	Python	-	2026-10-15	2026-10-15	-	https://github.com/fdschmidt93/rcp-ndcg
+fdb/embedding-tests	0	0	HTML	-	2026-10-14	2026-10-14	embedding tests	https://github.com/fdb/embedding-tests
+fcanas574/kiwi	0	0	Python	-	2026-10-12	2026-10-15	Identificación de herramientas de electrónica con VLM Qwen3, Colab, ngrok y Gradio	https://github.com/fcanas574/kiwi
+ezabhishek1/Wordle-for-objects	0	0	TypeScript	-	2026-10-12	2026-10-12	-	https://github.com/ezabhishek1/Wordle-for-objects
+ezabhishek1/Wordle	0	0	TypeScript	-	2026-10-12	2026-10-12	-	https://github.com/ezabhishek1/Wordle
+eulogik/Bharat-Embed	0	0	Python	-	2026-10-07	2026-10-14	Bharat-Embed 270M: text-only EmbeddingGemma-2 fork for Hinglish Hindi retrieval	https://github.com/eulogik/Bharat-Embed
+eugeoh/daily-news	0	0	TypeScript	-	2026-08-06	2026-10-16	-	https://github.com/eugeoh/daily-news
+erendikmenn/rag-benchmark	0	0	Python	-	2026-10-06	2026-10-17	Offline Turkish RAG benchmark: BM25, BGE-M3, EmbeddingGemma 2, Laya and Gemma 4 on audited RAGTurk data	https://github.com/erendikmenn/rag-benchmark
+emgucv/emgu_litert	0	0	C#	-	2026-09-02	2026-10-17	Emgu TF Lite backed by Google's LiteRT (google-ai-edge/LiteRT)	https://github.com/emgucv/emgu_litert
+emanuelealbertosi/h3-chat	0	0	Python	-	2026-09-13	2026-10-11	Chat multimodale locale per Windows: testo, immagini, codice, LaTeX, grafici e canvas. Motori integrati e profili low VRAM.	https://github.com/emanuelealbertosi/h3-chat
+eduardpaul/PaperGo	0	0	Go	-	2026-10-07	2026-10-17	-	https://github.com/eduardpaul/PaperGo
+edp1096/dgx_spark_init	0	0	Python	-	2026-02-08	2026-10-13	-	https://github.com/edp1096/dgx_spark_init
+edgeimpulse/embedding-gemma2-ventuno-q	0	0	Python	-	2026-10-08	2026-10-08	EmbeddingGemma 2 on VENTUNO Q: zero-shot/few-shot camera classification, dataset curation and search for Edge Impulse projects (App Lab app)	https://github.com/edgeimpulse/embedding-gemma2-ventuno-q
+edgebird-lab/lernsystem-modelle	0	0	Python	-	2026-10-08	2026-10-09	Model release assets (Gemma 4 E2B, EmbeddingGemma 2; Apache 2.0) for the RAG-Lernsystem Android app	https://github.com/edgebird-lab/lernsystem-modelle
+eauesque/yu-hailo-infer	0	0	Rust	-	2026-07-20	2026-10-16	Unofficial Rust inference microservice for the Hailo-10H NPU — CLIP embeddings, WD-Tagger tagging, YOLO detection, LLM/VLM generation, and speech-to-text over HTTP. Not affiliated with Hailo.	https://github.com/eauesque/yu-hailo-infer
+earlydreamer/jhf-novel-reader	0	0	TypeScript	-	2026-10-04	2026-10-15	일본 웹소설 사이트에 업로드된 소설을 LLM을 통해 번역해 읽을 수 있게 하는 뷰어 프로젝트	https://github.com/earlydreamer/jhf-novel-reader
+dzervas/vresto	0	0	HTML	-	2026-10-16	2026-10-16	-	https://github.com/dzervas/vresto
+dwbimstr/context-foundry	0	0	Rust	-	2026-09-29	2026-10-17	A Rust context-engineering toolkit for coding agents: cited retrieval, graph context, explicit memory, and bounded token delivery.	https://github.com/dwbimstr/context-foundry
+dungdq4/embeddinggemma-2-webgpu	0	0	TypeScript	-	2026-10-13	2026-10-13	-	https://github.com/dungdq4/embeddinggemma-2-webgpu
+dtak-upc/IDUN	0	1	TypeScript	-	2026-09-11	2026-10-13	IDUN: Integrating Data-lake of Unstructured Nature	https://github.com/dtak-upc/IDUN
+dryvist/mlx-benchmarks	0	0	Python	-	2026-04-11	2026-10-17	Benchmark harness for MLX and local LLMs on Apple Silicon (results: hf.co/datasets/JacobPEvans/mlx-benchmarks)	https://github.com/dryvist/mlx-benchmarks
+dryvist/homelab-contracts	0	0	Python	-	2026-05-10	2026-10-17	Versioned JSON Schemas for the dryvist homelab inventory contract	https://github.com/dryvist/homelab-contracts
+drwjkirkpatrick-web/jetson-8gb-ai-stack	0	0	Python	-	2026-10-08	2026-10-09	Granite 4.0-3B + EmbeddingGemma 2 + Serena MCP + Hermes agent coexisting on 8GB Jetson — verified RAG stack with 1GB headroom	https://github.com/drwjkirkpatrick-web/jetson-8gb-ai-stack
+drcongo/digger.fyi	0	0	Rust	-	2026-10-10	2026-10-11	Free sample library manager for macOS	https://github.com/drcongo/digger.fyi
+dmmdea/agentic-memory-stack-for-claude-code	0	0	Python	-	2026-06-16	2026-10-14	Persistent, multi-tier, measurably-faithful memory backend for Claude Code on Windows + WSL2 (mem0 + Qdrant + EmbeddingGemma + Codex). Self-contained, operator-agnostic installer skill.	https://github.com/dmmdea/agentic-memory-stack-for-claude-code
+devsura3939/embeddinggemma2-pipeline	0	0	HTML	-	2026-10-12	2026-10-13	Google EmbeddingGemma 2 Multimodal Document Intelligence Studio (Zero-OCR Scanned Photos & PDF Search, MRL 128d-768d, Transcription & Translation)	https://github.com/devsura3939/embeddinggemma2-pipeline
+devstar9981/embeddinggemma2-benchmark	0	0	Python	-	2026-10-12	2026-10-12	-	https://github.com/devstar9981/embeddinggemma2-benchmark
+devmauriciopineda/ai-news	0	0	Python	-	2026-10-17	2026-10-17	-	https://github.com/devmauriciopineda/ai-news
+depletionmode/omarchy-semsearch	0	0	Python	-	2026-10-11	2026-10-11	Omarchy shell plugin: find documents, source code and pictures by what they say, do or show, with a local EmbeddingGemma 2 index	https://github.com/depletionmode/omarchy-semsearch
+debanjanbasu/local-ai	0	0	Rust	-	2026-05-21	2026-10-16	-	https://github.com/debanjanbasu/local-ai
+dbuldum4/zsearch	0	0	TypeScript	-	2026-10-08	2026-10-17	Fast, full-file search across the disk.	https://github.com/dbuldum4/zsearch
+dborberg/ai-research-pipeline	0	0	Python	-	2026-03-18	2026-10-17	Daily, weekly, monthly AI Research	https://github.com/dborberg/ai-research-pipeline
+davidak4799/Gemma-2-Embedding-One-Click-Package	0	0	Python	-	2026-10-12	2026-10-12	-	https://github.com/davidak4799/Gemma-2-Embedding-One-Click-Package
+danisss9/ASKII	0	0	TypeScript	-	2026-01-30	2026-10-14	ASKII (ask+ascii) is an AI code assistant with style (⌐■_■)	https://github.com/danisss9/ASKII
+danielcaldas/danielcaldas.github.io	0	0	Astro	-	2024-09-21	2026-10-17	-	https://github.com/danielcaldas/danielcaldas.github.io
+daniel-xelix/news-feeds	0	0	Python	-	2026-09-30	2026-10-17	-	https://github.com/daniel-xelix/news-feeds
+daidaiJ/embedchunk	0	0	Go	-	2026-10-10	2026-10-10	Chunk text for EmbeddingGemma 2 embedding endpoints so no request ever exceeds the server's token budget	https://github.com/daidaiJ/embedchunk
+daaku/eg2npu	0	0	Go	-	2026-10-15	2026-10-17	EmbeddingGemma 2 server backed by OpenVino meant to run on the NPU. Limited to text embeddings.	https://github.com/daaku/eg2npu
+cyberdid/archive-index-public	0	0	Python	-	2026-10-14	2026-10-14	Local multimodal hybrid search (EmbeddingGemma 2 + SQLite FTS5) over notes, docs, tables, git, sessions, images, audio & video	https://github.com/cyberdid/archive-index-public
+cradle8810/ansible_hayaworld	0	0	Jinja	-	2020-11-07	2026-10-16	-	https://github.com/cradle8810/ansible_hayaworld
+clarencechien/jevlike	0	0	Python	-	2026-09-23	2026-10-16	-	https://github.com/clarencechien/jevlike
+ckindle-42/portal-5	0	0	Python	-	2026-09-30	2026-10-17	-	https://github.com/ckindle-42/portal-5
+chiraleo2000/tor-generator	0	0	Python	-	2026-08-18	2026-10-15	TOR Generator — ระบบร่างและตรวจสอบ TOR ภาครัฐ	https://github.com/chiraleo2000/tor-generator
+chik4ge-homelab/immich-ml-adapter	0	0	Python	-	2026-10-06	2026-10-06	-	https://github.com/chik4ge-homelab/immich-ml-adapter
+chik4ge-homelab/embeddinggemma-api	0	0	Python	-	2026-10-06	2026-10-10	-	https://github.com/chik4ge-homelab/embeddinggemma-api
+chasebridgible/foundation	0	0	JavaScript	-	2026-05-10	2026-10-17	A foundation for building compounding systems by following the unchanging principles of particular domains.	https://github.com/chasebridgible/foundation
+chaowang15/chaowang15.github.io	0	0	HTML	-	2024-01-30	2026-10-17	-	https://github.com/chaowang15/chaowang15.github.io
+changtimwu/embedding-gemma-exp	0	0	Python	-	2026-10-16	2026-10-16	OpenAI-compatible EmbeddingGemma 2 embedding server on MLX (Apple Silicon)	https://github.com/changtimwu/embedding-gemma-exp
+ch4jkej/moe-predictive-streaming	0	0	C++	-	2026-10-15	2026-10-17	Memory-efficient MoE inference with predictive expert prefetching across GPU, RAM, and NVMe.	https://github.com/ch4jkej/moe-predictive-streaming
+cgoat/DigUp-Windows	0	0	Python	-	2026-10-12	2026-10-13	DigUp for Windows: search the files on your PC by what's in them, with EmbeddingGemma 2 on llama.cpp (CUDA, Vulkan or CPU). A port of ARahim3/DigUp.	https://github.com/cgoat/DigUp-Windows
+ccl125/photo-cleaner-prototype	0	0	Python	-	2026-10-12	2026-10-13	iOS AI 相册清理技术验证原型：EmbeddingGemma 2 + Core ML 端侧相似照片检测（Apple Silicon benchmark）	https://github.com/ccl125/photo-cleaner-prototype
+canija2000/mineria_youtube	0	0	Jupyter Notebook	-	2026-10-09	2026-10-17	-	https://github.com/canija2000/mineria_youtube
+calebweixun/tea-asr-service	0	0	Python	-	2026-09-18	2026-10-14	-	https://github.com/calebweixun/tea-asr-service
+byte-pipe/tech-news	0	0	Python	-	2025-04-04	2026-10-17	-	https://github.com/byte-pipe/tech-news
+burkiuze/EmbeddingGemma2-Reranker	0	0	Python	-	2026-10-07	2026-10-07	-	https://github.com/burkiuze/EmbeddingGemma2-Reranker
+bsbodden/models-deep-dive	0	0	Java	-	2026-10-15	2026-10-17	-	https://github.com/bsbodden/models-deep-dive
+bsbarkur/twitter-bookmarks	0	0	HTML	-	2026-10-10	2026-10-10	Download your X bookmarks & likes, sort them into topics on-device (EmbeddingGemma 2 on the Apple Neural Engine), browse offline	https://github.com/bsbarkur/twitter-bookmarks
+brt-rj/brt-public-state	0	0	JavaScript	-	2026-04-16	2026-10-17	Headless CMS | Shared assets	https://github.com/brt-rj/brt-public-state
+bpstr/petaflop	0	0	TypeScript	-	2025-10-16	2026-10-17	Artifical intelligence themed magazine website	https://github.com/bpstr/petaflop
+bonjohen/portal	0	0	HTML	-	2026-03-28	2026-10-16	-	https://github.com/bonjohen/portal
+bogdan-d/strix-halo-inference	0	0	Python	-	2026-10-10	2026-10-14	Qwen3.8-Flash-Next on AMD Strix Halo with separate Halogen and Gufo Podman containers	https://github.com/bogdan-d/strix-halo-inference
+bocxx/besteaitools	0	0	Python	-	2026-03-27	2026-10-17	Platform to find the beste AI tools for your usecase	https://github.com/bocxx/besteaitools
+bmoricz-dal/ai-business-insight-briefing	0	0	Python	-	2026-05-11	2026-10-17	A lightweight research workflow for producing practical AI adoption and market intelligence briefs.	https://github.com/bmoricz-dal/ai-business-insight-briefing
+bmartel/enclave	0	0	TypeScript	-	2026-09-27	2026-10-10	AI agents that run in your user's browser: answers from documents, SQL over local data, and your own tools, with nothing sent to a server.	https://github.com/bmartel/enclave
+bhc6/superembedding	0	0	Python	-	2026-10-10	2026-10-12	Reusable attribute embeddings from OmniJev: reproducible architecture comparisons and training on an 8GB GPU.	https://github.com/bhc6/superembedding
+bharathvbcr/tessl	0	0	Rust	-	2026-08-31	2026-10-15	Metal 4 GEMM and GPU tensor runtime for Apple silicon. MPP TensorOps, on-device Qwen3.5 training, EmbeddingGemma 2, BERT, and PyTorch bindings.	https://github.com/bharathvbcr/tessl
+berkyycl/yoney	0	0	Astro	-	2026-10-10	2026-10-17	-	https://github.com/berkyycl/yoney
+benweru/morning-briefing	0	0	HTML	-	2026-10-07	2026-10-16	Ben's Morning Briefing: remote roles open to Kenya + today in tech	https://github.com/benweru/morning-briefing
+benrben/symbiknow	0	0	Python	-	2026-09-27	2026-10-17	Make knowledge together. An infinite canvas for people and AI.	https://github.com/benrben/symbiknow
+benjiyaya/gemma-2-rag	0	0	Python	-	2026-10-07	2026-10-07	Example of using Python using embeddinggemma-2 as RAG system	https://github.com/benjiyaya/gemma-2-rag
+bankenichi/atomic-llama-cpp-turboquant	0	0	C++	-	2026-06-15	2026-08-22	-	https://github.com/bankenichi/atomic-llama-cpp-turboquant
+bangsaenai/Thai-Embedding-Koopman-Space-Benchmark	0	0	Python	-	2026-10-07	2026-10-07	Enterprise Thai semantic precision benchmark comparing BGE-M3, All-MiniLM, and EmbeddingGemma 2 with Koopman Operator Space Lifting.	https://github.com/bangsaenai/Thai-Embedding-Koopman-Space-Benchmark
+b2renger/LlmOnLan	0	0	JavaScript	-	2026-06-29	2026-10-13	-	https://github.com/b2renger/LlmOnLan
+az9713/yt-to-podcast	0	0	TypeScript	-	2026-10-08	2026-10-10	Turn one YouTube URL into an HTML summary and a single-host audio episode. Demystified workflow, two example episodes.	https://github.com/az9713/yt-to-podcast
+ayumitra/ayumitra	0	0	Dart	-	2026-10-12	2026-10-14	Open-source on-device medical companion for Android and iOS. Early development; English UX preview.	https://github.com/ayumitra/ayumitra
+ayu-sh-kr/ayu-sh-kr-portfolio	0	0	TypeScript	-	2026-07-19	2026-10-17	This repos contains the portfolio and blogs of mine over the time	https://github.com/ayu-sh-kr/ayu-sh-kr-portfolio
+axiomofmind/MoSA-Sparse-Network	0	0	Python	-	2026-10-08	2026-10-09	Local-first sparse model orchestration, routing, retrieval, OCR, and evaluation network	https://github.com/axiomofmind/MoSA-Sparse-Network
+austery/thought-foundry-content	0	0	Python	-	2026-02-28	2026-10-17	Content layer for thought-foundry digital garden — notes, posts, books, raw subtitles	https://github.com/austery/thought-foundry-content
+austery/austery.github.io	0	0	HTML	-	2026-04-06	2026-10-17	Thought Foundry — deployed site	https://github.com/austery/austery.github.io
+aswinal22/test-embedding-gemma2	0	0	Python	-	2026-10-07	2026-10-14	-	https://github.com/aswinal22/test-embedding-gemma2
+arrase/semsearch	0	0	Python	-	2026-10-13	2026-10-17	Fast, 100% local, multimodal semantic search engine for the Linux desktop powered by Ollama	https://github.com/arrase/semsearch
+armanabrahamyan/ai-vector-newsletter	0	0	Python	-	2026-05-24	2026-10-16	Daily AI newsletter with a financial services lens. AI-drafted, human released. 	https://github.com/armanabrahamyan/ai-vector-newsletter
+arindampradhan/subway-surfer-autopilot	0	0	Rust	-	2026-10-05	2026-10-15	Training Subway surfer	https://github.com/arindampradhan/subway-surfer-autopilot
+app-furqan/quran-semantic-search	0	0	-	-	2026-10-13	2026-10-13	On-device semantic ayah search model (EmbeddingGemma 2) for the Quran - Furqan app	https://github.com/app-furqan/quran-semantic-search
+antmm2605/IUSENTRA	0	0	Python	-	2022-01-08	2026-10-17	-	https://github.com/antmm2605/IUSENTRA
+anshkapuriya01/SmartSort	0	0	Python	-	2026-10-07	2026-10-07	Organize messy folders by what's inside the files — offline, with EmbeddingGemma 2. macOS & Windows.	https://github.com/anshkapuriya01/SmartSort
+aniketsoni1/aniketsoni1.github.io	0	0	HTML	-	2023-10-23	2026-10-17	Personal site and research portfolio at aniketsoni.com;  a Jekyll site on GitHub Pages, plus The Daily Tech Signal: an automated tech-news blog built by a Python + GitHub Actions pipeline that collects, validates, and AI-summarizes sources daily.	https://github.com/aniketsoni1/aniketsoni1.github.io
+anammari/ai-dev-prj-hermes-football	0	0	Python	-	2026-10-09	2026-10-16	Telegram football agent on Hermes, grounded in football-data.org, fully containerised (AI Dev Tools Zoomcamp 2026 final project)	https://github.com/anammari/ai-dev-prj-hermes-football
+amidg/dockerfiles	0	2	Dockerfile	-	2025-01-04	2026-10-16	Collection of my own dockerfiles for various needs. Mostly targeting podman, so docker compatibility is not guaranteed	https://github.com/amidg/dockerfiles
+amd3057/gemma-companion-android	0	0	Kotlin	-	2026-10-07	2026-10-08	-	https://github.com/amd3057/gemma-companion-android
+alvagante/alvagante.com	0	1	TypeScript	-	2026-05-24	2026-10-17	Alvagante. Links and news on the stuff I matter	https://github.com/alvagante/alvagante.com
+allienna/le-veilleur	0	0	Python	-	2026-09-02	2026-10-17	Daily tech-watch article, written and published without me	https://github.com/allienna/le-veilleur
+alicechua/DailyPulse	0	0	JavaScript	-	2025-12-09	2026-10-17	-	https://github.com/alicechua/DailyPulse
+alexderz/agentic-model-testing	0	0	HTML	-	2026-10-15	2026-10-16	Local LLM bake-off for agentic coding on a single RTX 3090: harnesses, graders, reports, model cards, and the pagoda and orrery one-shot work	https://github.com/alexderz/agentic-model-testing
+alex123321-maker/butler	0	0	Go	-	2026-03-18	2026-10-15	-	https://github.com/alex123321-maker/butler
+aleoqi/embeddinggemma-engine	0	0	Python	-	2026-10-10	2026-10-10	Zero-idle VRAM on-demand text embedding & semantic search engine powered by Google EmbeddingGemma-2 with MRL 256d compression.	https://github.com/aleoqi/embeddinggemma-engine
+alenabelium/so-yesterday-data	0	0	HTML	-	2026-05-12	2026-10-17	Knowledge database of https://so-yesterday.ai	https://github.com/alenabelium/so-yesterday-data
+aktsmm/ai-trend-radar	0	0	Python	-	2026-10-14	2026-10-16	Weekly AI / local LLM trend keyword radar with infographic slides	https://github.com/aktsmm/ai-trend-radar
+akoita/draft-loop	0	0	TypeScript	-	2026-08-21	2026-10-17	Local-first agentic CV workspace with cross-provider author–critic review	https://github.com/akoita/draft-loop
+ajisrawi/DigUp-Windows	0	0	Swift	-	2026-10-13	2026-10-14	Search the files on your PC by what's in them: pictures, PDFs, documents, audio and video. Private and offline, with EmbeddingGemma 2. Windows build of ARahim3/DigUp.	https://github.com/ajisrawi/DigUp-Windows
+ai-frendly-datahub/TrendRadar	0	0	HTML	-	2025-11-24	2026-10-17	트렌드 라이더 프로젝트	https://github.com/ai-frendly-datahub/TrendRadar
+agentic-inquisit/QuickEmbed	0	0	Python	-	2026-10-12	2026-10-12	Quick, local embedding inference for google/embeddinggemma-2 (740M, multimodal, Apache 2.0), with an optional cloud/GPU fallback and a terminal dashboard for watching queries and live compute usage on one screen.	https://github.com/agentic-inquisit/QuickEmbed
+agent-sh/tacit	0	0	Go	-	2026-10-13	2026-10-17	Local or shared agent memory in plain Markdown, with source-grounded retrieval and review.	https://github.com/agent-sh/tacit
+afiqrosdi260/embeddinggemma2-playground	0	0	Python	-	2026-10-13	2026-10-13	-	https://github.com/afiqrosdi260/embeddinggemma2-playground
+aeld13/embeddinggemma2-explorer	0	0	JavaScript	-	2026-10-16	2026-10-16	-	https://github.com/aeld13/embeddinggemma2-explorer
+adelvillar1/dev-decisions	0	0	Python	-	2026-09-26	2026-10-14	Decision-model gates for git + ZCode workflows: scan secrets/PII, classify diffs with Jev/GLiNER/Decide, and log every decision to JSONL for calibration	https://github.com/adelvillar1/dev-decisions
+adelvillar1/blend1	0	0	Python	-	2026-10-13	2026-10-14	The blended lane: Liquid d1 route gate + EmbeddingGemma-2 (local) + TabPFN (hosted) + LFM2.5-24B synthesis + GLiDE validation gate	https://github.com/adelvillar1/blend1
+ad1rie1/Mika-IA-Companion	0	0	Python	-	2026-02-07	2026-10-16	-	https://github.com/ad1rie1/Mika-IA-Companion
+abhishek085/microlog	0	0	Swift	-	2026-10-17	2026-10-17	On-device ambient reading-journal menu bar app for macOS — captures, dedupes, and summarizes your reading locally with EmbeddingGemma 2 + Qwen3.5, no cloud calls.	https://github.com/abhishek085/microlog
+aarora79/meru	0	1	Go	-	2026-09-23	2026-10-17	A personal AI assistant that runs on a machine you control, with local models only. Go binaries, Ollama, MCP tools, hybrid search over your files, and no telemetry leaves your machine.	https://github.com/aarora79/meru
+aarontmaher/Lauburu-Monorepo	0	0	Python	-	2026-06-17	2026-10-15	-	https://github.com/aarontmaher/Lauburu-Monorepo
+aHappend/anvil-e	0	0	SystemVerilog	-	2026-10-14	2026-10-15	Open embedding accelerator RTL series (Anvil-E) forged with Vulcan. Gen-1: Anvil-E1 for Google EmbeddingGemma-2 (Text-Only).	https://github.com/aHappend/anvil-e
+Ziyuan-Yang/EEP564-Final-Project	0	0	C++	-	2026-06-06	2026-06-06	-	https://github.com/Ziyuan-Yang/EEP564-Final-Project
+ZiChenWang114514/ai-x-daily	0	0	Python	-	2026-08-15	2026-10-16	Five-channel AI x science research digest.	https://github.com/ZiChenWang114514/ai-x-daily
+ZanMervic/Allnighter	0	0	Python	-	2026-10-16	2026-10-17	-	https://github.com/ZanMervic/Allnighter
+Yuuqq/PulseRadar	0	0	HTML	-	2026-02-04	2026-10-17	-	https://github.com/Yuuqq/PulseRadar
+Yukk1No/kinshoko	0	0	HTML	-	2026-09-30	2026-10-17	An artist-focused reference image workflow, currently in domain discovery.	https://github.com/Yukk1No/kinshoko
+YoonJaeKeun/AI-tech	0	0	Python	-	2026-07-09	2026-10-15	최신 AI 기술동향에 대해 분석하고 방향성을 고민하기 위한 저장소	https://github.com/YoonJaeKeun/AI-tech
+YasRordrigues/embeddinggemma2-audio-search-ptbr	0	0	Python	-	2026-10-11	2026-10-11	Dá pra buscar dentro do áudio sem transcrever? Teste do EmbeddingGemma 2 com fala espontânea em português (CORAA), comparado com Whisper + texto.	https://github.com/YasRordrigues/embeddinggemma2-audio-search-ptbr
+Vishwajeetsrk/Team	0	0	TypeScript	-	2026-10-15	2026-10-15	-	https://github.com/Vishwajeetsrk/Team
+VIDEdegi/sakuloca	0	0	Rust	-	2026-10-10	2026-10-11	SakuLoca（サクロカ）— 無料のローカルAI写真検索アプリ（Windows 11 x64）	https://github.com/VIDEdegi/sakuloca
+Unknorienov/llama.cpp	0	0	C++	-	2026-08-05	2026-08-05	Fork of Llama.cpp for improving Metal support.	https://github.com/Unknorienov/llama.cpp
+TyrelCB/langbang	0	0	Python	-	2026-09-16	2026-10-17	-	https://github.com/TyrelCB/langbang
+TimoLassmann/andamentum	0	0	Python	-	2026-04-12	2026-10-11	-	https://github.com/TimoLassmann/andamentum
+Thrizzio/PhysioEvidence	0	0	Python	-	2026-09-02	2026-10-15	PhysioEvidence is a RAG-based research assistant designed to help physiotherapists explore scientific literature and retrieve evidence relevant to clinical questions	https://github.com/Thrizzio/PhysioEvidence
+TheBrainAir/vault-semantic-search	0	0	TypeScript	-	2026-10-15	2026-10-15	Search your Obsidian vault by meaning: hybrid semantic + keyword search, related notes and image search with Google EmbeddingGemma 2, running locally.	https://github.com/TheBrainAir/vault-semantic-search
+TheAngryPit/mailcrawl	0	0	Python	-	2026-10-10	2026-10-17	Local-first archive for all your Gmail, across every inbox. Backs up mail into one searchable SQLite index with full-text search, privacy classes, provenance and a read-only MCP for agents. No LLM in the crawl path. Built by a storyteller who builds the worlds he imagines.	https://github.com/TheAngryPit/mailcrawl
+ThatOneShortGuy/embedding-api	0	0	Python	-	2026-10-12	2026-10-12	Simple api for creating embeddings with text, images, video, and audio. Designed specifically for embeddinggemma-2.	https://github.com/ThatOneShortGuy/embedding-api
+ThakiCloud/eg2-l2v1	0	0	Python	-	2026-10-13	2026-10-14	Low-memory CUDA runtime for ThakiCloud/eg2-hybrid-w4-media (EmbeddingGemma 2 hybrid W4). B200 only. Code only, no weights.	https://github.com/ThakiCloud/eg2-l2v1
+TedTschopp/rss.tedt.org	0	0	Python	-	2025-05-29	2026-10-17	-	https://github.com/TedTschopp/rss.tedt.org
+SulavAdhikari/embgem2	0	0	Python	-	2026-10-13	2026-10-13	Embedding Gemma 2 model	https://github.com/SulavAdhikari/embgem2
+Subhankar-Patra1/trovara	0	0	Rust	-	2026-10-14	2026-10-16	Semantic file search for Windows. Find photos, screenshots, PDFs, documents, audio, video and code by describing what's in them ("payment error screenshot", "zebra in a video"). Runs fully on your PC with EmbeddingGemma 2 on llama.cpp (GPU via Vulkan). Nothing is uploaded. Press Ctrl+Shift+Space from any app.	https://github.com/Subhankar-Patra1/trovara
+StrayDragon/maas-embeddinggemma2	0	0	Python	-	2026-10-13	2026-10-15	Dead-simple deployment of an Google EmbeddingGemma 2 testing API server.	https://github.com/StrayDragon/maas-embeddinggemma2
+Ssrrb/loupe	0	0	Swift	-	2026-10-16	2026-10-16	-	https://github.com/Ssrrb/loupe
+SoTrx/demo-ap-search	0	0	Python	-	2026-10-14	2026-10-15	-	https://github.com/SoTrx/demo-ap-search
+Snorre98/deep-research	0	0	Go	-	2026-08-20	2026-08-27	-	https://github.com/Snorre98/deep-research
+SkyyLegend3/BachelorAIProject	0	0	C++	-	2026-03-12	2026-05-28	-	https://github.com/SkyyLegend3/BachelorAIProject
+Singularity-Layer/sgl-network-sdk-ts	0	0	TypeScript	-	2026-05-25	2026-10-10	TypeScript SDK for the SGL Network confidential compute grid	https://github.com/Singularity-Layer/sgl-network-sdk-ts
+Simlowker/ordner	0	0	Python	-	2026-10-14	2026-10-16	Ordner (team Meotis) — local, sovereign Swiss admin assistant built on Apertus 1.5 (Hack Apertus 2026, Track 2B)	https://github.com/Simlowker/ordner
+ShoubhikBanerjee/blog	0	0	HTML	-	2025-05-25	2026-10-17	-	https://github.com/ShoubhikBanerjee/blog
+ShevinuM/daily-tech-digest	0	0	Python	-	2026-08-05	2026-10-17	Reading Hub 	https://github.com/ShevinuM/daily-tech-digest
+SeonggukJeong/kra-search	0	0	Rust	-	2026-10-12	2026-10-16	공공기관용 로컬 문서 의미 검색 (Rust · EmbeddingGemma 2 · HWP)	https://github.com/SeonggukJeong/kra-search
+Seokwoooo/lucian-ai-chat-exporter	0	0	TypeScript	-	2026-10-16	2026-10-17	One-click AI chat handoff and full-fidelity export (PDF, Markdown, Word, HWPX…) for ChatGPT, Claude, Gemini and Grok — Chrome MV3 extension	https://github.com/Seokwoooo/lucian-ai-chat-exporter
+ScaleXLab/ASPLOS27-FaultMesh	0	0	C	-	2026-09-23	2026-10-02	Artifact Evaluation of ASPLOS27 for FaultMesh: Characterizing and Taming GPU UVM Page Faults 	https://github.com/ScaleXLab/ASPLOS27-FaultMesh
+Samvortex/samvortex.github.io	0	0	Astro	-	2018-06-12	2026-10-17	Samvortex's Pages	https://github.com/Samvortex/samvortex.github.io
+Sambhav242005/Digital-Witness	0	0	Python	-	2026-10-08	2026-10-08	-	https://github.com/Sambhav242005/Digital-Witness
+Sabbir505/Ultimate-workspace	0	0	Rust	-	2026-07-21	2026-10-14	-	https://github.com/Sabbir505/Ultimate-workspace
+Rzq12/DOCS-MCP	0	0	Python	-	2026-09-30	2026-10-12	-	https://github.com/Rzq12/DOCS-MCP
+Rhonstin/llama-cpp-cmp90hx-patch	0	0	C++	-	2026-05-17	2026-07-07	llama.cpp fork: IMAD+BF16x2 patches for NVIDIA CMP 90HX (GA102, sm_86)	https://github.com/Rhonstin/llama-cpp-cmp90hx-patch
+Quackster/radiance	0	0	C++	-	2026-10-10	2026-10-10	-	https://github.com/Quackster/radiance
+PrasadDhend/hinglish-semantic-cache-eval	0	0	Python	-	2026-09-19	2026-10-13	Does semantic caching survive romanized Hinglish? 3-way parallel eval set + harness, 7 embedding models.	https://github.com/PrasadDhend/hinglish-semantic-cache-eval
+Polaris3003/Polaris3003.github.io	0	0	HTML	-	2024-03-12	2026-10-17	my daily or weekly blog	https://github.com/Polaris3003/Polaris3003.github.io
+Parswanadh/jadal-qa	0	0	Python	-	2026-10-10	2026-10-10	Jadal: deterministic QA add-on for crowd-captured head-camera video (Awign Hackathon: Physical AI)	https://github.com/Parswanadh/jadal-qa
+Parm-1/semanticlens-kde	0	0	C++	-	2026-10-12	2026-10-13	Local-first semantic document, PDF and image search for KDE Plasma 6, powered by EmbeddingGemma 2	https://github.com/Parm-1/semanticlens-kde
+PanopticOrg/panopticorg.github.io	0	0	-	-	2025-02-11	2026-10-16	-	https://github.com/PanopticOrg/panopticorg.github.io
+PamelaSprin47685ghall/llama-cpp-turboquant	0	0	C++	-	2026-07-09	2026-07-15	-	https://github.com/PamelaSprin47685ghall/llama-cpp-turboquant
+PakhomovMA/chatbot	0	0	Java	-	2026-09-22	2026-10-10	Local-first RAG / knowledge assistant: Spring Boot 4 + Embabel + Ollama + Lucene, Vue 3 UI	https://github.com/PakhomovMA/chatbot
+PINK1119ZZ/ai-services-site	0	0	HTML	-	2026-04-04	2026-10-17	-	https://github.com/PINK1119ZZ/ai-services-site
+PEEXR/Sift	0	1	Kotlin	-	2026-10-10	2026-10-15	-	https://github.com/PEEXR/Sift
+OwnYourIO/SpencersLab	0	0	Python	-	2023-10-27	2026-10-17	GitOps for a home lab	https://github.com/OwnYourIO/SpencersLab
+OpenCSGs/llama-cpp-assets	0	0	Python	-	2026-08-07	2026-10-14	Versioned llama.cpp converter and gguf-py assets for CSGLite	https://github.com/OpenCSGs/llama-cpp-assets
+Okdusty/finder-plus	0	0	C++	-	2026-08-17	2026-10-11	Android application dedicated to optimizing your gallery browsing experience. Local VLM, OCR, and specialized SEO to instantly find the meme you had in mind, mid-chat.	https://github.com/Okdusty/finder-plus
+Ode-PBLLC/embeddings-gemma-exploration	0	0	Python	-	2026-10-17	2026-10-17	The Embedding Gallery: EmbeddingGemma 2 x Gemma 4 museum demo of embedding search, plus a Moon globe that breaks apart into embedding space	https://github.com/Ode-PBLLC/embeddings-gemma-exploration
+Obscyra-app/EmbeddingGemma2-Reflex	0	0	Swift	-	2026-10-07	2026-10-07	Experimental EmbeddingGemma 2 decision model: Python and MLX Swift inference, V6/V7 results and pinned weights	https://github.com/Obscyra-app/EmbeddingGemma2-Reflex
+OTE22/GOOGLE_GEMMA_2	0	0	TypeScript	-	2026-10-10	2026-10-10	GOOGLE GEMMA EMBEDING	https://github.com/OTE22/GOOGLE_GEMMA_2
+Nshipyard/earthquery	0	0	TypeScript	-	2026-10-08	2026-10-10	Ask the planet a question. Natural-language vector search over satellite imagery embeddings: type 'solar farms in deserts' and get matching locations on a map. Built on AlphaEarth embeddings and EmbeddingGemma 2.	https://github.com/Nshipyard/earthquery
+NoonLicht/MoonApp	0	0	TypeScript	-	2026-08-27	2026-10-13	Персональная панель утилит для Windows — медиа, обход блокировок, мониторинг железа, книги, ИИ-чат и многое другое в одном нативном desktop-приложении.	https://github.com/NoonLicht/MoonApp
+No3371/kura	0	0	Go	-	2026-10-13	2026-10-15	-	https://github.com/No3371/kura
+Nnnsightnnn/web-pulse	0	0	JavaScript	-	2026-04-21	2026-10-17	A live dashboard of what the world is doing on the web — Wikipedia, HN, Reddit, GitHub, Google Trends, Cloudflare Radar. Daily-refreshed, published to GitHub Pages.	https://github.com/Nnnsightnnn/web-pulse
+Nkr1shna/margin	0	0	Rust	-	2026-10-14	2026-10-15	-	https://github.com/Nkr1shna/margin
+Nickeniklas/tech-digest	0	0	HTML	-	2026-04-02	2026-10-17	Daily tech digest generator. Fetches AI and dev tools news from high-signal sources, summarizes with Claude. 	https://github.com/Nickeniklas/tech-digest
+Nick0oo/RenPdf	0	0	TypeScript	-	2026-10-14	2026-10-15	-	https://github.com/Nick0oo/RenPdf
+NatalTiger26/ArXiv_Paper_Suggester-RAG	0	0	Python	-	2026-10-09	2026-10-16	Multi-signal arXiv recommender + full-text RAG with citations. EmbeddingGemma (local) / MiniLM (Cloud), Gemini answers, Streamlit UI + CLI. Managed with uv.	https://github.com/NatalTiger26/ArXiv_Paper_Suggester-RAG
+NadeemAkhtar1947/ModelBenchAI	0	0	TypeScript	-	2026-10-17	2026-10-17	-	https://github.com/NadeemAkhtar1947/ModelBenchAI
+Musawer1214/LATOON	0	0	Python	-	2026-10-09	2026-10-15	Channel Code	https://github.com/Musawer1214/LATOON
+Mraghuvaran/omarchy-file-search	0	0	QML	-	2026-10-15	2026-10-15	Semantic search over your files for Omarchy — local EmbeddingGemma 2 embeddings, unified text/image/video space, animated panel with thumbnails and content previews.	https://github.com/Mraghuvaran/omarchy-file-search
+MrRobot373/Monolith-AI	0	0	TypeScript	-	2026-09-28	2026-10-16	-	https://github.com/MrRobot373/Monolith-AI
+MrRobot373/GMS-AI	0	0	TypeScript	-	2026-10-16	2026-10-17	-	https://github.com/MrRobot373/GMS-AI
+MrNquyen/vLLM-custom	0	0	Python	-	2026-10-16	2026-10-16	Custom vLLM to adapt to custom model code	https://github.com/MrNquyen/vLLM-custom
+Mohibullah16/voices-of-the-wild	0	0	TypeScript	-	2026-10-08	2026-10-09	Photograph something outdoors and it talks back. On-device EmbeddingGemma 2, step-counted quest walks, 91 voiced characters, offline-first PWA.	https://github.com/Mohibullah16/voices-of-the-wild
+Miguel2604/Earshot	0	1	Python	-	2026-10-09	2026-10-10	-	https://github.com/Miguel2604/Earshot
+Mehdiest/techtally	0	0	Python	-	2026-09-16	2026-10-17	Daily AI-curated tech news digest: 16+ sources -> smart ranking -> LLM summaries with expert commentary -> 9 language editions       (EN/AR/FA/FR/DE/ES/ZH/हिन्दी / Русский). Fully automated with Python, GitHub Actions & Jekyll on GitHub Pages. Curated by Mehdi Esteghlal.	https://github.com/Mehdiest/techtally
+McGeeLee/Lightrove	0	0	Kotlin	-	2026-10-17	2026-10-17	Lightrove · 拾光 — On-device multimodal gallery search for Android, powered by EmbeddingGemma 2.	https://github.com/McGeeLee/Lightrove
+Maxdesigna7x/brujula	0	0	Python	-	2026-10-13	2026-10-14	Buscador semántico local para Linux/Zorin: texto, imágenes y audio con EmbeddingGemma 2	https://github.com/Maxdesigna7x/brujula
+Manooj72/Frigade_Repo	0	0	Python	-	2026-10-14	2026-10-14	-	https://github.com/Manooj72/Frigade_Repo
+Ma-san229/personal-ai-news-hub	0	0	TypeScript	-	2026-08-20	2026-10-17	-	https://github.com/Ma-san229/personal-ai-news-hub
+MINEGHOST007/MINEGHOST007	0	0	HTML	-	2023-05-01	2026-10-17	Config files for my GitHub profile.	https://github.com/MINEGHOST007/MINEGHOST007
+Lychee-Technology/LTEmbed	0	0	Python	-	2026-03-16	2026-10-17	Lighting fast engine for BERT embedding models.	https://github.com/Lychee-Technology/LTEmbed
+Lucaskk/daily-news	0	0	HTML	-	2026-05-28	2026-10-17	codex daily news	https://github.com/Lucaskk/daily-news
+LogicDump/themis	0	0	JavaScript	-	2026-09-26	2026-10-17	Themis - Engenharia Jurídica	https://github.com/LogicDump/themis
+LinTzuTang/Local_LLM	0	0	Python	-	2026-10-13	2026-10-16	-	https://github.com/LinTzuTang/Local_LLM
+LeiShi-rocks/LeiShi-rocks.github.io	0	1	HTML	-	2020-03-16	2026-10-17	A repository for my git pages	https://github.com/LeiShi-rocks/LeiShi-rocks.github.io
+LazyCat420/lazy-agent-service	0	0	TypeScript	-	2026-05-23	2026-10-17	-	https://github.com/LazyCat420/lazy-agent-service
+Lazarus-AI-Research/sovereign-vllm	0	1	Python	-	2026-07-13	2026-10-13	-	https://github.com/Lazarus-AI-Research/sovereign-vllm
+Laysi/trustiot-v2	0	0	Rust	-	2026-10-09	2026-10-15	-	https://github.com/Laysi/trustiot-v2
+KunihiroS/vvc-generated	0	0	HTML	-	2026-05-22	2026-10-17	Generated files	https://github.com/KunihiroS/vvc-generated
+KiraIch/PsyTest	0	0	Python	-	2026-10-16	2026-10-16	-	https://github.com/KiraIch/PsyTest
+Keistar/dashboard_news	0	0	Python	-	2026-06-23	2026-10-17	Get a news from everywhere!	https://github.com/Keistar/dashboard_news
+KB01111/WinSearch	0	0	Rust	-	2026-10-12	2026-10-16	Native Windows 11 Spotlight-style launcher with local multimodal semantic search (EmbeddingGemma 2, WinUI 3 + Rust)	https://github.com/KB01111/WinSearch
+K0IN/self	0	0	Go	-	2026-09-29	2026-10-15	Test models with established runtimes (llama.cpp, stable-diffusion.cpp, ggmlc) while having a simple cli.	https://github.com/K0IN/self
+JohnCMcDonough/radiance-glm53-mxfp4	0	1	C++	-	2026-10-16	2026-10-16	Radiance GLM-5.3-Flash MXFP4 support for TP4 Radeon R9700: native MTP, expert offload, tests and performance handoff	https://github.com/JohnCMcDonough/radiance-glm53-mxfp4
+JoakimCarlsson/model-sync	0	0	Go	-	2026-08-12	2026-10-08	Scrapes AI provider documentation into a machine-readable model catalog. One JSON file per model, plus a single aggregate. Chat, embeddings, rerankers, speech, image and video.	https://github.com/JoakimCarlsson/model-sync
+JerryMouseZ/jerrymousez.github.io	0	0	HTML	-	2020-07-20	2026-10-17	-	https://github.com/JerryMouseZ/jerrymousez.github.io
+JaimeStill/spike-model-hosting	0	0	Go	-	2026-10-09	2026-10-16	Spike: serving platforms, host-class profiles, and gateways for local models across Strix Halo and Dell NVIDIA hosts	https://github.com/JaimeStill/spike-model-hosting
+JaimeStill/personal-agents	0	0	Shell	-	2026-09-09	2026-10-09	-	https://github.com/JaimeStill/personal-agents
+Jacquelineplj/ps04-harness-notes	0	0	Python	-	2026-10-14	2026-10-15	MIT 1.125 PS4: Harness Notes evidence-grounded intelligence pipeline	https://github.com/Jacquelineplj/ps04-harness-notes
+JackInSightsV2/AI-Takeover	0	0	HTML	-	2026-07-24	2026-10-11	-	https://github.com/JackInSightsV2/AI-Takeover
+JR-Academy-Omni/jr-wiki	0	0	HTML	-	2026-03-29	2026-10-17	-	https://github.com/JR-Academy-Omni/jr-wiki
+J1mmyLau/minicam-o4.5-acc	0	0	C++	-	2026-09-02	2026-09-10	-	https://github.com/J1mmyLau/minicam-o4.5-acc
+IrPt-baiyi/by1	0	0	Python	-	2026-10-09	2026-10-17	用声明式语法描述大模型架构，并由机器验证描述是否正确 · A declarative language for describing LLM architectures, with machine verification	https://github.com/IrPt-baiyi/by1
+IceBerg-coder/popdb	0	0	Python	-	2026-10-09	2026-10-10	High-performance embedded vector database engine optimized for Google EmbeddingGemma 2	https://github.com/IceBerg-coder/popdb
+Henry03224/embeddinggemma-match	0	0	Python	-	2026-10-14	2026-10-14	Local product match checker using Google's EmbeddingGemma 2 (no API)	https://github.com/Henry03224/embeddinggemma-match
+Hassan01-dev/GithubGalaxy	0	0	TypeScript	-	2026-10-16	2026-10-16	-	https://github.com/Hassan01-dev/GithubGalaxy
+HasNate618/ferret	0	0	Rust	-	2026-10-12	2026-10-15	Local-first semantic search over text, images and PDFs in Rust: hybrid vector, FTS5 and filename search fused with RRF.	https://github.com/HasNate618/ferret
+HariharanV04/newspaper-groki	0	0	-	-	2026-10-14	2026-10-17	news update from grok and insights gathering	https://github.com/HariharanV04/newspaper-groki
+Hari31416/search-anything	0	0	Python	-	2026-10-10	2026-10-14	Search Anything indexes personal documents and media (image, audio, video) for local multimodal search.	https://github.com/Hari31416/search-anything
+Hari31416/embeddinggemma-api	0	0	Python	-	2026-10-14	2026-10-14	Standalone FastAPI embedding service for embeddinggemma-2 using Sentence Transformers.	https://github.com/Hari31416/embeddinggemma-api
+Han-taz/nunchi	0	0	Python	-	2026-10-12	2026-10-14	-	https://github.com/Han-taz/nunchi
+Haderach-Ram/openclaw-radar	0	4	HTML	-	2026-05-10	2026-10-17	Daily ecosystem intelligence digest: OpenClaw + top competitor activity, issues, releases	https://github.com/Haderach-Ram/openclaw-radar
+HGskrd/gpullmusagemodeler	0	0	Python	-	2026-05-06	2026-10-17	-	https://github.com/HGskrd/gpullmusagemodeler
+GoodOlClint/Athena	0	0	Swift	-	2026-07-07	2026-10-15	-	https://github.com/GoodOlClint/Athena
+Gokul7904231/embeddinggemma-api	0	0	Shell	-	2026-10-14	2026-10-14	Free OpenAI-compatible embeddings API using EmbeddingGemma 2	https://github.com/Gokul7904231/embeddinggemma-api
+Giton22/hermes-gemma-memory	0	0	Python	-	2026-10-08	2026-10-08	Long-term memory for Hermes Agent with EmbeddingGemma 2: hybrid passage recall, pictures, optional facts	https://github.com/Giton22/hermes-gemma-memory
+Giton22/code-search-mcp	0	0	Python	-	2026-10-10	2026-10-10	Local semantic code search MCP server for Codex and Claude Code, powered by EmbeddingGemma 2	https://github.com/Giton22/code-search-mcp
+GentzofGod/flutter_gguf	0	0	C++	-	2026-10-09	2026-10-09	-	https://github.com/GentzofGod/flutter_gguf
+Flo5k5/neuron-times	0	0	HTML	-	2026-05-20	2026-10-17	Quotidien broadsheet de l'intelligence artificielle. Édition multilingue (FR/EN/DE/IT/LMO), publiée chaque matin à 7h CET, récap hebdo le lundi. All the AI that's fit to print.	https://github.com/Flo5k5/neuron-times
+Fatih-Haslak/scenescout	0	0	Python	-	2026-10-10	2026-10-10	Find the moment you remember. Local visual video search with EmbeddingGemma 2, text and image queries, timecodes, and a bilingual UI.	https://github.com/Fatih-Haslak/scenescout
+FarisZR/GSeek	0	0	Rust	-	2026-10-14	2026-10-16	Embedding powered file content search for gnome, acting as a replacement for the standard gnome search index.	https://github.com/FarisZR/GSeek
+FaberDS/embeddinggemma-2-vector	0	1	Kotlin	-	2026-10-06	2026-10-12	-	https://github.com/FaberDS/embeddinggemma-2-vector
+FaberDS/embedding-gemma-2-vector	0	0	-	-	2026-10-06	2026-10-06	-	https://github.com/FaberDS/embedding-gemma-2-vector
+FRSOURCE/digestweb	0	0	TypeScript	-	2026-03-06	2026-10-17	-	https://github.com/FRSOURCE/digestweb
+EngrAhmadHsn/JobPilot-Autonomous-Job-Search-Application-Agent	0	0	Python	-	2026-09-12	2026-10-17	Your autonomous AI job-search pilot.	https://github.com/EngrAhmadHsn/JobPilot-Autonomous-Job-Search-Application-Agent
+EndeavoringOrb/tensor_graphs	0	0	C++	-	2026-01-21	2026-10-16	-	https://github.com/EndeavoringOrb/tensor_graphs
+DrStang/Ollama-UI	0	0	TypeScript	-	2025-10-28	2026-10-17	-	https://github.com/DrStang/Ollama-UI
+DownAtTheBottomOfTheMoleHole/ollama-tokeniser	0	0	Python	-	2026-08-29	2026-10-17	Local model-aware tokenizer proxy for Ollama and VS Code Chat	https://github.com/DownAtTheBottomOfTheMoleHole/ollama-tokeniser
+DigiBugCat/WorkScribe	0	0	Swift	-	2026-10-04	2026-10-17	Local macOS meeting recorder: on-device NVIDIA speech, diarization, MCP, and Plaud Note Pro handoff	https://github.com/DigiBugCat/WorkScribe
+Dhaneshvar/smriti_iQoo	0	0	Kotlin	-	2026-10-09	2026-10-11	-	https://github.com/Dhaneshvar/smriti_iQoo
+Develata/AI-Barking	0	0	Rust	-	2026-09-25	2026-10-17	AI 吠点｜Develata 主理。聊 AI 沸点，轻松识破吠点。正文、配图、来源、完整工作材料与历史归档。	https://github.com/Develata/AI-Barking
+Devarajan2355/sanya_llama	0	0	C++	-	2026-10-14	2026-10-16	-	https://github.com/Devarajan2355/sanya_llama
+DevAgarwal2/dl-proj	0	0	Python	-	2026-10-12	2026-10-13	-	https://github.com/DevAgarwal2/dl-proj
+Derekwang2002/ai-intelligence	0	0	Astro	-	2026-08-15	2026-10-17	-	https://github.com/Derekwang2002/ai-intelligence
+Deepender25/121-tutor	0	0	Python	-	2026-10-10	2026-10-12	-	https://github.com/Deepender25/121-tutor
+Danzsu/Danzsu-Research-Hub	0	0	TypeScript	-	2026-09-22	2026-10-17	-	https://github.com/Danzsu/Danzsu-Research-Hub
+DRcarmona/llama.cpp	0	0	C++	-	2026-03-17	2026-03-18	Fork of Llama.cpp for improving Metal support.	https://github.com/DRcarmona/llama.cpp
+DA0806/ToolLightHouse	0	0	Python	-	2026-10-14	2026-10-15	-	https://github.com/DA0806/ToolLightHouse
+CyberMagician/Project_Golem2	0	0	Python	-	2026-10-07	2026-10-07	-	https://github.com/CyberMagician/Project_Golem2
+Cyb3rb1ade/PLUR1BUS-Host-Addons	0	0	JavaScript	-	2026-10-02	2026-10-10	PLUR1BUS host add-ons: installers, bootstraps and feed tooling for OpenClaw and Hermes (split from openclaw-plur1bus-memory)	https://github.com/Cyb3rb1ade/PLUR1BUS-Host-Addons
+CreateIntelligens/openVman	0	0	Python	-	2026-03-11	2026-10-16	2026虛擬人	https://github.com/CreateIntelligens/openVman
+CodeMasterGohan/new_sage	0	0	Python	-	2026-10-08	2026-10-16	-	https://github.com/CodeMasterGohan/new_sage
+CodeMasterGohan/new_DRUID	0	0	Python	-	2026-10-08	2026-10-17	-	https://github.com/CodeMasterGohan/new_DRUID
+ChiaYuChang/prism	0	0	Go	-	2026-02-25	2026-08-08	-	https://github.com/ChiaYuChang/prism
+CanadaApollo6/omafind	0	0	Rust	-	2026-10-14	2026-10-15	Local semantic file search for Linux: find files by what is in them, powered by EmbeddingGemma 2	https://github.com/CanadaApollo6/omafind
+Brishen/taconite	0	0	Rust	-	2026-09-23	2026-10-14	-	https://github.com/Brishen/taconite
+Borisz42/Quanta	0	0	Python	-	2026-08-28	2026-10-15	QUANTA is a neuro-symbolic framework that replaces traditional continuous floating-point LLM embeddings with a cryptographically hash-addressed, strongly-typed semantic metalanguage.	https://github.com/Borisz42/Quanta
+Boost-Panda/Chrysalis	0	0	TypeScript	-	2026-09-03	2026-10-16	Chrysalis — Botterfly's home on the web: demos and quick artifacts, Next.js + Carbon, on Vercel	https://github.com/Boost-Panda/Chrysalis
+Bhavya-Dhoot/Ustaad	0	0	Kotlin	-	2026-10-09	2026-10-13	-	https://github.com/Bhavya-Dhoot/Ustaad
+Benjamin-taro/news-catchup	0	0	Python	-	2026-09-28	2026-10-17	-	https://github.com/Benjamin-taro/news-catchup
+BarakaSoka/variabe-search	0	0	Swift	-	2026-10-13	2026-10-14	Describe it. Find it. Search everything on your Mac by what's inside it — documents, slides, spreadsheets, screenshots, audio and video — privately, with EmbeddingGemma 2.	https://github.com/BarakaSoka/variabe-search
+BASSAT-BASSAT/Benchmarking-Video-Image-language-models-for-Tracklet-retrieval-	0	0	Jupyter Notebook	-	2026-09-15	2026-10-16	-	https://github.com/BASSAT-BASSAT/Benchmarking-Video-Image-language-models-for-Tracklet-retrieval-
+Azilone/truffle	0	0	Rust	-	2026-10-15	2026-10-15	Find any file by name, content or meaning. Instantly, offline. One Rust binary for macOS and Linux.	https://github.com/Azilone/truffle
+AyeniOluwatosinOlawale/embeddinggemma2-local-api	0	0	Python	-	2026-10-06	2026-10-06	Self-hosted EmbeddingGemma 2 API server for Apple Silicon with auto-start	https://github.com/AyeniOluwatosinOlawale/embeddinggemma2-local-api
+Audiofool934/latent	0	0	Python	-	2026-10-07	2026-10-13	A macOS workspace for browsing, searching, and curating a large personal photo archive	https://github.com/Audiofool934/latent
+Aryan1092raj/Loopers	0	0	Python	-	2026-09-29	2026-10-15	-	https://github.com/Aryan1092raj/Loopers
+Arnabest/embeddinggemma-2-jev	0	0	Python	-	2026-10-09	2026-10-09	Non-destructive Multimodal Base with 7KB Modular Causal Decision Adapter for EmbeddingGemma-2	https://github.com/Arnabest/embeddinggemma-2-jev
+Arabinda07/Reflections	0	0	TypeScript	-	2026-04-12	2026-10-16	A note taking app suited for mental health tracking	https://github.com/Arabinda07/Reflections
+April2040/ai_news	0	0	JavaScript	-	2025-12-21	2026-10-17	collect latest ai_news from website	https://github.com/April2040/ai_news
+AmrKhalil9/frozen-embeddinggemma2-arabic-asr	0	0	Python	-	2026-10-14	2026-10-16	Frozen EmbeddingGemma 2 speech encoder + small CTC reader for Saudi/Gulf Arabic ASR: code, public-set results, speed benchmark	https://github.com/AmrKhalil9/frozen-embeddinggemma2-arabic-asr
+AmanKadam-16/embeddinggemma-2	0	0	TypeScript	-	2026-10-07	2026-10-07	-	https://github.com/AmanKadam-16/embeddinggemma-2
+Alvinotuya84/embeddinggemma2-room-annotator	0	0	TypeScript	-	2026-10-06	2026-10-06	Point your phone camera at an item and it recognizes it by name. Expo/React Native app running EmbeddingGemma 2 fully on device with react-native-executorch, plus a script that exports the model to ExecuTorch.	https://github.com/Alvinotuya84/embeddinggemma2-room-annotator
+Alraeeini/VidSeek	0	0	Python	-	2026-10-14	2026-10-14	VidSeek is an experimental, local-first Python library built on Google's `google/embeddinggemma-2` model. It lets an application index local video files and retrieve relevant clips from natural-language queries. Results include file paths, timestamps, metadata, and a cosine-similarity score, so an AI agent can decide which clips to inspect or open	https://github.com/Alraeeini/VidSeek
+Ali-Cerna-Enciso/catalogo-match	0	0	Python	-	2026-10-13	2026-10-13	Emparejador local de catálogo de productos (proveedor → maestro de SKUs) con EmbeddingGemma 2: top-3 con puntaje, abstención, sustitutos y foto de etiqueta	https://github.com/Ali-Cerna-Enciso/catalogo-match
+Alexlovereading/AI-Radar	0	0	JavaScript	-	2026-08-30	2026-10-17	-	https://github.com/Alexlovereading/AI-Radar
+AlbertLi255/Susan	0	0	Go	-	2026-08-12	2026-10-15	-	https://github.com/AlbertLi255/Susan
+AgentDuet/agentduet-desktop	0	1	Python	-	2026-07-31	2026-10-16	-	https://github.com/AgentDuet/agentduet-desktop
+Aert8/chat-local	0	0	C++	-	2026-10-13	2026-10-13	Aplicacion movil de chat en la cual corre un modelo de forma local y privada	https://github.com/Aert8/chat-local
+Adityuhh11/AGI	0	0	Python	-	2026-10-09	2026-10-17	-	https://github.com/Adityuhh11/AGI
+Abraham2106/Sanctum-II	0	0	TypeScript	-	2026-07-08	2026-10-09	-	https://github.com/Abraham2106/Sanctum-II
+AZ-innovation-labs/Qurix	0	0	-	-	2026-10-17	2026-10-17	Instant semantic search for your local filesystem with Google's EmbeddingGemma 2	https://github.com/AZ-innovation-labs/Qurix
+AIrisu-072/knowledge-platform	0	0	Rust	-	2026-09-14	2026-10-17	-	https://github.com/AIrisu-072/knowledge-platform
+AIProjectLab/FindIt	0	0	Kotlin	-	2026-10-07	2026-10-07	Find real-world objects with your camera using Google EmbeddingGemma 2 — completely offline and on-device.	https://github.com/AIProjectLab/FindIt
+973212983/mmsearch	0	0	Python	-	2026-10-14	2026-10-14	基于 EmbeddingGemma 2 的本地多模态快速搜索（Windows）：用一句话、图片或音频搜索本机文本/代码/PDF/图片/音频/视频	https://github.com/973212983/mmsearch
+88daxiong/xhot	0	0	HTML	-	2026-10-13	2026-10-17	-	https://github.com/88daxiong/xhot
+2qjckdknjf-ctrl/Aistroyka-web	0	0	TypeScript	-	2026-02-22	2026-10-15	-	https://github.com/2qjckdknjf-ctrl/Aistroyka-web
+1nsharma/Hive	0	0	HTML	-	2026-10-15	2026-10-15	-	https://github.com/1nsharma/Hive
+1chris2many/morrowai.com	0	0	HTML	-	2026-05-11	2026-10-17	Morrow AI Consulting — AI product strategy from someone who builds it every day	https://github.com/1chris2many/morrowai.com
+1760hwy/RDKX5_EmbeddingGemma2	0	0	Python	-	2026-10-10	2026-10-10	Quantized Deployment of Google's Gemma 2 Embedding Model on RDK X5	https://github.com/1760hwy/RDKX5_EmbeddingGemma2
+13LSR/TrendRadar	0	0	HTML	-	2025-11-28	2026-10-17	-	https://github.com/13LSR/TrendRadar
+0xzapata/omniroute	0	0	TypeScript	-	2026-04-29	2026-10-17	-	https://github.com/0xzapata/omniroute
