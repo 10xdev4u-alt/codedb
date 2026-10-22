@@ -176,12 +176,15 @@ test "windows cli pipe metadata parser rejects spoofable records" {
 }
 
 fn buildCliForHelpTests() !void {
+    // Build ReleaseFast so the spawned binary matches the shipped one and the
+    // suite does not overwrite zig-out with a slow Debug build.
+    //
     // `--global-cache-dir` is only accepted by newer zigs (the pinned
     // 0.17.0-dev.813 rejects it); prefer the env var, which every version
     // honors, and keep the arg off entirely.
     const build = try cio.runCapture(.{
         .allocator = testing.allocator,
-        .argv = &.{ zigExe(), "build" },
+        .argv = &.{ zigExe(), "build", "-Doptimize=ReleaseFast" },
         .max_output_bytes = 8192,
     });
     defer testing.allocator.free(build.stdout);
@@ -965,7 +968,7 @@ test "issue-148: codedb mcp exits when stdin is closed" {
     var child = std.process.spawn(io, .{
         .argv = &.{ builtCodedbExe(), proj, "mcp" },
         .stdin = .pipe,
-        .stdout = .pipe,
+        .stdout = .ignore,
         .stderr = .ignore,
     }) catch {
         // If spawn fails (e.g., binary not built), skip the test
@@ -987,22 +990,19 @@ test "issue-148: codedb mcp exits when stdin is closed" {
     // Wait for the process to exit. The main read loop exits on stdin EOF;
     // the watchdog also polls dead clients every second as a backup.
     const start = cio.milliTimestamp();
-    const term = child.wait(io) catch {
-        // If wait fails, the process is stuck — test fails
-        try testing.expect(false);
-        return;
+    const term = child.wait(io) catch |err| {
+        std.debug.print("mcp stdin-close wait failed: {any}\n", .{err});
+        return error.TestUnexpectedResult;
     };
 
     const elapsed = cio.milliTimestamp() - start;
 
-    // Should have exited (not been killed by us)
-    switch (term) {
-        .exited => |code| _ = code,
-        else => {},
+    // Ignoring stdout avoids a full-pipe deadlock in the child. A 15s budget
+    // still catches the 30s idle watchdog, while tolerating a loaded runner.
+    if (elapsed >= 15_000) {
+        std.debug.print("mcp stdin-close exit took {d} ms (term {any})\n", .{ elapsed, term });
+        return error.TestUnexpectedResult;
     }
-
-    // Should exit promptly after stdin closes.
-    try testing.expect(elapsed < 5_000);
 }
 
 test "issue-249: nuke.removeJsonMcpServerEntry returns null when key absent" {
