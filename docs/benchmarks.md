@@ -46,6 +46,9 @@ From `zig build bench` (500 files, 100K lines, 7MB synthetic content):
 
 Trigram index is **5.5x faster** than brute force substring search.
 
+The [word lookup scaling record](word-lookup-benchmark.md) covers 100 to
+10,000 files on the pinned compiler.
+
 ## codedb vs Raw Tools
 
 Side-by-side comparison on openclaw/openclaw. "Raw" = grep/find/cat (what an AI agent uses without codedb).

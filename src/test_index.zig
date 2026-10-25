@@ -1936,37 +1936,63 @@ test "perf regression: trigram candidate lookup under 1ms per query" {
     try testing.expect(ns_per_query < 1_000_000);
 }
 
-test "perf regression: word index lookup under 100ns per query" {
+/// Min-of-5 cost of one `search` call, in nanoseconds.
+fn wordLookupNs(wi: *WordIndex, word: []const u8, iterations: usize) !u64 {
+    var best: u64 = std.math.maxInt(u64);
+    for (0..5) |_| {
+        var timer = try cio.Timer.start();
+        for (0..iterations) |_| {
+            std.mem.doNotOptimizeAway(wi.search(word));
+        }
+        best = @min(best, timer.read());
+    }
+    return best / iterations;
+}
+
+test "perf regression: word lookup does not scale with corpus size" {
     var arena = std.heap.ArenaAllocator.init(testing.allocator);
     defer arena.deinit();
     const alloc = arena.allocator();
 
-    var wi = WordIndex.init(testing.allocator);
-    defer wi.deinit();
+    const small_files: usize = 100;
+    const large_files: usize = 2_000;
 
-    for (0..100) |i| {
-        const name = try std.fmt.allocPrint(alloc, "src_{d}.zig", .{i});
-        const content = try std.fmt.allocPrint(alloc, "pub fn handleRequest_{d}(ctx: *Context) void {{}}\nconst allocator = getDefaultAllocator();\n", .{i});
-        try wi.indexFile(name, content);
+    var small = WordIndex.init(testing.allocator);
+    defer small.deinit();
+    for (0..small_files) |i| {
+        const name = try std.fmt.allocPrint(alloc, "small_{d}.zig", .{i});
+        const content = try std.fmt.allocPrint(alloc, "pub fn handleSmall_{d}(ctx: *Context) void {{}}\nconst allocator = getDefaultAllocator();\n", .{i});
+        try small.indexFile(name, content);
     }
 
-    const queries = [_][]const u8{ "handleRequest_50", "allocator", "getDefaultAllocator", "Context" };
-
-    const iters: usize = 100_000;
-    // Min-of-3 runs so transient host load can't trip the bound.
-    var best_ns: u64 = std.math.maxInt(u64);
-    for (0..3) |_| {
-        var timer = try cio.Timer.start();
-        for (0..iters) |_| {
-            for (queries) |q| {
-                _ = wi.search(q);
-            }
-        }
-        best_ns = @min(best_ns, timer.read());
+    var large = WordIndex.init(testing.allocator);
+    defer large.deinit();
+    for (0..large_files) |i| {
+        const name = try std.fmt.allocPrint(alloc, "large_{d}.zig", .{i});
+        const content = try std.fmt.allocPrint(alloc, "pub fn handleLarge_{d}(ctx: *Context) void {{}}\nconst allocator = getDefaultAllocator();\n", .{i});
+        try large.indexFile(name, content);
     }
-    const ns_per_query = best_ns / (iters * queries.len);
-    // Word lookup must be under 500ns in debug — typically ~5ns in release
-    try testing.expect(ns_per_query < 500);
+
+    // Correctness: a unique symbol in the largest corpus resolves to exactly
+    // one file, a shared word resolves to every file, and a miss is empty.
+    const tail = "handleLarge_1999";
+    const tail_hits = large.search(tail);
+    try testing.expectEqual(@as(usize, 1), tail_hits.len);
+    try testing.expectEqualStrings("large_1999.zig", large.hitPath(tail_hits[0]));
+    try testing.expectEqual(large_files, large.search("allocator").len);
+    try testing.expectEqual(@as(usize, 0), large.search("not_indexed_anywhere").len);
+
+    // The lookup is a hash probe, so its cost must not grow with the file
+    // count. A linear scan over 2_000 files is >20x the 100-file corpus and
+    // fails; host noise and cache pressure stay inside the 10x band. Timing
+    // is only meaningful in an optimized build, so debug runs assert
+    // correctness and skip the bound. The recorded signal lives in
+    // `zig build bench-word`.
+    if (@import("builtin").mode == .fast) {
+        const small_ns = try wordLookupNs(&small, "handleSmall_99", 200_000);
+        const large_ns = try wordLookupNs(&large, tail, 50_000);
+        try testing.expect(large_ns <= small_ns * 10 + 50);
+    }
 }
 
 test "perf regression: bloom filter reduces scan work" {
