@@ -79,9 +79,11 @@ python3 scripts/e2e_mcp_test.py \
 2. **Normal mode**: explicit positional root (`codedb <path> mcp`), immediate scan
 3. **No-roots client**: spawn from `/` with no roots capability, stays alive gracefully
 
-Use the pinned Zig 0.17.0 from the repository bootstrap (#15), not whatever
-`zig` is on PATH. When measuring, use a stable ReleaseFast binary copy outside
-`zig-out`; the unit suite may rebuild the CLI in debug mode. Run the eval batch
+Use the Zig version pinned in [`build.zig.zon`](build.zig.zon), selected with
+the [`zigup` workflow](docs/zig-0.17-migration.md), not whatever `zig` is on
+PATH. When measuring,
+use a stable ReleaseFast binary copy outside `zig-out`; the unit suite may
+rebuild the CLI in debug mode. Run the eval batch
 runner from its development group and freeze before a new holdout. Keep raw
 outcomes and credentials separate.
 

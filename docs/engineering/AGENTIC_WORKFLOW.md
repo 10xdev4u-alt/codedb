@@ -394,7 +394,7 @@ A decision without an ADR is a preference. A preference can be changed by anyone
 
 | Milestone | Outcome | Exit gate |
 |---|---|---|
-| M1: Baseline and trust | Zig 0.17.0 stable, green suite on three OSes, research dossier, issue tree | CI runs the full suite; the flaky perf test is fixed or moved |
+| M1: Baseline and trust | the pinned Zig, green suite on three OSes, research dossier, issue tree | CI runs the full suite; the flaky perf test is fixed or moved |
 | M2: Local embedding | EG2 sidecar, provider seam, model artifact, eval comparison | The 128-question suite runs on hosted and local; the delta is published |
 | M3: Production release | Signed artifacts, installers, doctor, docs, SBOM | A clean machine installs with one command and passes the smoke test |
 | M4: Launch | Landing page, demo, positioning page, launch checklist | The demo runs offline on a fresh machine |
