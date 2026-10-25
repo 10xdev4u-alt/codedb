@@ -1,14 +1,17 @@
-# Migrating a Zig project to 0.17.0-dev with zigup
+# Migrating a Zig project to 0.17 with zigup
 
 This guide records the migration process used for codedb and is intended to be reusable in other Zig repositories.
 
-The tested compiler is:
+codedb pins the compiler in `build.zig.zon` and mirrors it to `.zigversion`.
+Read the current value with:
 
-```text
-0.17.0-dev.813+2153f8143
+```bash
+python3 scripts/zig_pin.py --print
 ```
 
-Zig development snapshots are moving targets. Pin the full version (including the build metadata) in CI and local setup while migrating. Upgrade to a newer snapshot deliberately, rerun the full matrix, and update the pin only after it passes.
+Zig changes its build API between minor versions. Pin one version in one place,
+rerun the full matrix, and update the pin only after it passes. Regenerate
+`.zigversion` and `zig.lock.json` with `python3 scripts/zig_pin.py --update`.
 
 ## 1. Establish a baseline
 
@@ -30,9 +33,9 @@ This guide uses [`marler8997/zigup`](https://github.com/marler8997/zigup), not a
 Install/select the exact compiler used by codedb:
 
 ```bash
-zigup fetch 0.17.0-dev.813+2153f8143
-zigup default 0.17.0-dev.813+2153f8143
-zigup keep 0.17.0-dev.813+2153f8143
+zigup fetch "$(cat .zigversion)"
+zigup default "$(cat .zigversion)"
+zigup keep "$(cat .zigversion)"
 zig version
 ```
 
@@ -40,7 +43,7 @@ zig version
 
 For exploratory work, `zigup master` selects the latest development compiler. Do not use a moving `master` selection in CI or release automation.
 
-In CI, download the exact host archive from `https://ziglang.org/builds/`, verify a repository-pinned SHA-256 before extraction, and assert that `zig version` equals the pin. A versioned URL alone does not protect a privileged release job from replaced or compromised bytes.
+In CI, read the version from `.zigversion` and the checksum from `zig.lock.json`. Download the official host archive from `https://ziglang.org/download/`, verify the SHA-256 before extraction, and assert that `zig version` equals the pin. A versioned URL alone does not protect a privileged release job from replaced or compromised bytes.
 
 ## 3. Pin the package minimum
 
@@ -49,11 +52,17 @@ Update `build.zig.zon`:
 ```zig
 .{
     // ...
-    .minimum_zig_version = "0.17.0-dev.813+2153f8143",
+    .minimum_zig_version = "0.17.0",
 }
 ```
 
-A full development build pin makes the tested compiler explicit. If a library intentionally supports a wider range of 0.17 snapshots, lower the minimum only after testing the oldest claimed snapshot.
+Then regenerate the derived files:
+
+```bash
+python3 scripts/zig_pin.py --update
+```
+
+`build.zig.zon` is the only hand-edited pin. `.zigversion` selects the compiler for zigup, and `zig.lock.json` carries the verified archive for each supported host. A package that supports a wider range of 0.17 releases should lower the minimum only after testing the oldest claimed version.
 
 ## 4. Migrate the build graph first
 
@@ -338,9 +347,9 @@ compatibility edits from retrieval-sensitive performance work.
 
 | Area | Files | Change |
 |---|---|---|
-| Compiler/package pin | `build.zig.zon`, `README.md`, `.github/copilot-instructions.md`, `docs/agents.md` | Require the exact tested `0.17.0-dev.813+2153f8143` snapshot. |
+| Compiler/package pin | `build.zig.zon` | Set the version once. Generate `.zigversion` and `zig.lock.json` with `scripts/zig_pin.py --update`; CI rejects a stale copy. |
 | Build graph | `build.zig` | Replace removed argument and install-path APIs, keep benchmark argument forwarding, and preserve codesign/install dependencies through emitted lazy paths. |
-| CI and releases | `.github/workflows/bench-regression.yml`, `.github/workflows/release-binaries.yml` | Download verified pinned compilers and assert `zig version`. Release targets use the 0.17 snapshot; transition benchmarks select 0.16 or 0.17 from each revision's `minimum_zig_version` so the cross-compiler regression gate cannot silently skip its base. |
+| CI and releases | `.github/workflows/bench-regression.yml`, `.github/workflows/release-binaries.yml` | Download the archive named in `zig.lock.json`, verify its SHA-256, and assert `zig version`. Transition benchmarks select the base revision's `minimum_zig_version` so the cross-compiler gate cannot silently skip its base. |
 | Dependencies | `build.zig.zon`, `vendor/nanoregex/`, `src/mcp_json.zig` | Vendor the compatible regex implementation and internalize the small JSON protocol helpers formerly taken from `mcp-zig`. |
 
 ### Runtime compatibility inventory

@@ -2,7 +2,7 @@
 
 ## Project
 
-Zig 0.16.x code intelligence server. Tests live in the split `src/test_*.zig` files — one binary per area (see `build.zig`). Build and test with `zig build test`; run a single binary with e.g. `zig build test-index`.
+Zig code intelligence server, pinned in `build.zig.zon`. Tests live in the split `src/test_*.zig` files: one binary per area (see `build.zig`). Build and test with `zig build test`; run a single binary with e.g. `zig build test-index`.
 
 ## Rules
 

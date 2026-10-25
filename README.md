@@ -162,7 +162,7 @@ over stdio, with an optional localhost HTTP server.
 - **[Architecture](docs/architecture.md)** — engine internals, index layout
 - **[Benchmarks](docs/benchmarks.md)** — micro-benchmarks + agentic-eval results vs codegraph, FTS5, lean-ctx
 - **[Raspberry Pi 4](docs/raspberry-pi.md)** — full-performance ARM64 setup, Cortex-A72 build, and on-device benchmark
-- **[Zig 0.17.0-dev migration guide](docs/zig-0.17-migration.md)** — repeatable zigup workflow and API change recipes
+- **[Zig 0.17 migration guide](docs/zig-0.17-migration.md)**: repeatable zigup workflow and API change recipes
 
 | Platform | Binary | Signed |
 |----------|--------|--------|
@@ -587,7 +587,7 @@ rm -f codedb.snapshot      # remove snapshot from current project only
 
 ## 🔨 Building from Source
 
-**Requirements:** Zig `0.17.0-dev.813+2153f8143` (the exact tested development snapshot). See the [migration guide](docs/zig-0.17-migration.md) for reproducible zigup setup.
+**Requirements:** the Zig version pinned in [`build.zig.zon`](build.zig.zon) and mirrored to [`.zigversion`](.zigversion). See the [migration guide](docs/zig-0.17-migration.md) for the zigup workflow.
 
 ```bash
 git clone https://github.com/justrach/codedb.git
