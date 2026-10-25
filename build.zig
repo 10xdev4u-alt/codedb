@@ -209,6 +209,21 @@ pub fn build(b: *std.Build) void {
     const benchmark_step = b.step("benchmark", "Run repo benchmark (use -- --root /path/to/repo)");
     benchmark_step.dependOn(&benchmark_run.step);
 
+    // ── Word-index microbenchmark (O(1) lookup scaling) ──
+    const bench_word = b.addExecutable(.{
+        .name = "bench-word",
+        .root_module = b.createModule(.{
+            .root_source_file = b.path("src/bench_word.zig"),
+            .target = target,
+            .optimize = .fast,
+            .link_libc = true,
+        }),
+    });
+    const bench_word_run = b.addRunArtifact(bench_word);
+    bench_word_run.addPassthruArgs();
+    const bench_word_step = b.step("bench-word", "Run the synthetic word-lookup benchmark");
+    bench_word_step.dependOn(&bench_word_run.step);
+
     // ── WASM build (for Cloudflare Workers) ──
     const wasm = b.addExecutable(.{
         .name = "codedb",
