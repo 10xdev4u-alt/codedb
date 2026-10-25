@@ -68,7 +68,7 @@ Jina path; #17, #18, and #20 replace its assumptions.
 Run these before merging any MCP-related change:
 
 ```bash
-zig build test                                          # unit tests
+python3 scripts/bootstrap.py                            # pinned Zig + ReleaseFast suite
 python3 scripts/e2e_mcp_test.py \
     --binary zig-out/bin/codedb \
     --project /path/to/codedb                          # E2E MCP scenarios
@@ -79,9 +79,10 @@ python3 scripts/e2e_mcp_test.py \
 2. **Normal mode**: explicit positional root (`codedb <path> mcp`), immediate scan
 3. **No-roots client**: spawn from `/` with no roots capability, stays alive gracefully
 
-Use the Zig version pinned in [`build.zig.zon`](build.zig.zon), selected with
-the [`zigup` workflow](docs/zig-0.17-migration.md), not whatever `zig` is on
-PATH. When measuring,
+Use the Zig version pinned in [`build.zig.zon`](build.zig.zon). Run
+`python3 scripts/bootstrap.py` to install that compiler into a disk-backed
+cache and run the suite; do not rely on whatever `zig` is on PATH. When
+measuring,
 use a stable ReleaseFast binary copy outside `zig-out`; the unit suite may
 rebuild the CLI in debug mode. Run the eval batch
 runner from its development group and freeze before a new holdout. Keep raw
