@@ -15,5 +15,12 @@
   },
   "candidate_sha256": "d4731455e2c20d94dc9f341eb3a006f766a7e3f1d4a68833fbe6bd3887f94bce",
   "baseline_sha256": "765675b9a8fc1d2fbff2fa4801655990d0b9a968e6a502a8b499d258e2e9c2f9",
-  "dataset_sha256": "5a4fa75b2fe2ab965c6c8bb0065becb2b6229f80b56f368bb38ec22e5269de44"
+  "dataset_sha256": "5a4fa75b2fe2ab965c6c8bb0065becb2b6229f80b56f368bb38ec22e5269de44",
+  "artifacts": {
+    "dataset_sha256": "evals/datasets/express-jina-accuracy-heldout-v1.json"
+  },
+  "external_artifacts": {
+    "baseline_sha256": "ReleaseFast baseline binary, rebuilt from the pinned source and not stored in the repository",
+    "candidate_sha256": "ReleaseFast candidate binary, rebuilt from the pinned source and not stored in the repository"
+  }
 }
