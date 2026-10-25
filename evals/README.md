@@ -37,6 +37,14 @@ freeze applies only to the recorded binaries, not arbitrary rebuilds. Reports
 are immutable. Source fixture paths are machine-specific; rebuild corpora using
 the pinned public dataset instead of assuming saved scratch directories exist.
 
+Every repository input is named in `artifacts` as a path relative to the
+repository root, and every hash that cannot live in the repository (a compiled
+binary) is declared in `external_artifacts` with a reason. `python3
+evals/verify_freeze.py` recomputes each repository hash and fails with the
+expected and actual digest on a mismatch. It also rejects a freeze that leaves a
+`*_sha256` field unaccounted for, so a new input cannot go unchecked. CI runs
+the verifier and its tests on any change under `evals/`.
+
 The OpenClaw dataset's train and held_out positives have both been used for
 32-question development runs (`--split all --repeats 2`). Express was fresh only
 for the frozen run in ADR 0008; it is now a regression set too. Do not report
