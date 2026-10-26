@@ -99,9 +99,14 @@ command returns the local result and does not run an embedding model on CPU.
 `--semantic` and `--hybrid` remain accepted compatibility aliases for the
 default; `--local` (or `--no-semantic`) is the explicit on-device-only mode.
 
-`semantic-index` is the explicit ANN build trigger. It sends bounded 832-byte
-code chunks using eight concurrent 100-item requests by default (configurable
-from one to eight) and stores a small mapping plus a generation-named,
+`semantic-index` is the explicit ANN build trigger. Before the first embedding
+request it counts the source chunks and estimates the memory and disk the
+build will add. A build that would exceed either configured cap fails with both
+estimates instead of allocating the graph or spending hosted requests. The
+disk estimate includes the previous generation, which remains readable until
+the atomic commit. It then sends bounded 832-byte code chunks using eight
+concurrent 100-item requests by default (configurable from one to eight) and
+stores a small mapping plus a generation-named,
 validated `.hmls` mmap slab under codedb's local per-project data directory
 (0700/0600 on POSIX).
 Queries verify vector-space identity and repository freshness before
@@ -162,6 +167,8 @@ codedb-cli stop                       # stop daemon
 | `CODEDB_EMBEDDINGS_TOKEN` | unset | Optional legacy bearer token for protected/custom endpoints; the hosted lane enrolls automatically |
 | `CODEDB_EMBEDDINGS_TIMEOUT_MS` | `15000` | Per-request deadline in milliseconds (10-120000) |
 | `CODEDB_SEMANTIC_INDEX_CONCURRENCY` | `8` | Parallel 100-item index batches (clamped to 1-8) |
+| `CODEDB_SEMANTIC_BUILD_MAX_MEMORY_BYTES` | `2147483648` (2 GiB) | Estimated peak build memory; `0` disables the cap |
+| `CODEDB_SEMANTIC_BUILD_MAX_DISK_BYTES` | `3221225472` (3 GiB) | Estimated peak build disk, including the previous generation; `0` disables the cap |
 
 ## Performance
 
