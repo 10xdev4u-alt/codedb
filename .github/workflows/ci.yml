@@ -113,5 +113,5 @@ jobs:
           --max-regression 0
           --min-delta 0.005
 
-      - name: Test the gate
-        run: python3 -m unittest discover -s evals -p 'test_eval_gate.py'
+      - name: Test the gate and runners
+        run: python3 -m unittest discover -s evals -p 'test_*.py'

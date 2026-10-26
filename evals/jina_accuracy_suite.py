@@ -25,6 +25,8 @@ def main():
     a = p.parse_args()
     if a.repeats < 1:
         p.error('repeats must be positive')
+    if a.max_regression < 0 or (a.min_delta is not None and a.min_delta < 0):
+        p.error('thresholds must be non-negative')
     base = Path(__file__).resolve().parent
     suite = json.loads(Path(a.suite).read_text())
     repos = [r for r in suite['repositories'] if r['group'] == a.group]
@@ -45,7 +47,10 @@ def main():
                    '--baseline', str(Path(a.baseline).resolve()), '--candidate', str(Path(a.candidate).resolve()),
                    '--dataset', str(base / repo['dataset']), '--corpus-report', str(base / repo['corpus_report']),
                    '--split', 'held_out' if a.group == 'holdout' else 'all',
-                   '--repeats', str(a.repeats), '--out', str(result)]
+                   '--repeats', str(a.repeats), '--out', str(result),
+                   '--max-regression', str(a.max_regression)]
+        if a.min_delta is not None:
+            command += ['--min-delta', str(a.min_delta)]
         if a.freeze:
             command += ['--freeze', str(Path(a.freeze).resolve())]
         with (out / (repo['name'] + '.log')).open('w') as log:
