@@ -97,3 +97,21 @@ jobs:
       - name: Test (platform-neutral)
         shell: pwsh
         run: zig build test-core test-semantic -Doptimize=ReleaseFast --summary all
+
+  eval-gate:
+    name: eval gate (ubuntu-24.04)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Gate the recorded development result
+        run: >-
+          python3 evals/gate.py
+          --summary evals/results/2026-09-05-jina-round3-intent-development/summary.json
+          --max-regression 0
+          --min-delta 0.005
+
+      - name: Test the gate
+        run: python3 -m unittest discover -s evals -p 'test_eval_gate.py'
