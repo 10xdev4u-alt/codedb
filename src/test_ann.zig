@@ -125,6 +125,33 @@ test "ann: payload accounting is checked and dimension aware" {
     try testing.expectError(error.Overflow, ann.vectorPayloadBytes(std.math.maxInt(usize), 512));
 }
 
+test "issue-54: slab estimate covers a real serialized graph" {
+    const records = 300;
+    const dimensions = 64;
+    const payload = try ann.vectorPayloadBytes(records, dimensions);
+    const estimate = try ann.estimatedSlabBytes(records, dimensions);
+    const larger = try ann.estimatedSlabBytes(records * 2, dimensions);
+
+    try testing.expect(estimate > payload);
+    try testing.expect(larger > estimate);
+    try testing.expectEqual(@as(usize, 0), estimate % std.heap.page_size_min);
+    try testing.expectError(error.Overflow, ann.estimatedSlabBytes(std.math.maxInt(usize), dimensions));
+
+    // The estimate mirrors OpenPuffer's private layout. Build a real graph at
+    // the same size so a layout change cannot leave it silently too small.
+    var index = ann.Index.init(testing.allocator, dimensions, .{ .seed = 71 });
+    defer index.deinit();
+    var vector: [dimensions]f32 = undefined;
+    for (0..records) |record| {
+        for (&vector, 0..) |*value, dimension| {
+            value.* = @floatFromInt((record * 31 + dimension * 17) % 97);
+        }
+        _ = try index.insert(&vector);
+    }
+    try testing.expectEqual(@as(usize, records), index.len());
+    try testing.expect(estimate >= try index.slabImageSize());
+}
+
 test "ann: official int8-only library mode omits f32 and remains searchable" {
     var index = ann.Index.init(testing.allocator, 4, .{ .seed = 23, .store_f32 = false });
     defer index.deinit();

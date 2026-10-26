@@ -264,6 +264,7 @@ pub fn runSnapshot(ctx: *RunCtx) void {
 /// create a new sidecar, except for the narrowly recognized hosted-Qwen to
 /// hosted-Jina migration owned by the MCP SearchCache.
 pub fn runSemanticIndex(ctx: *RunCtx) void {
+    var diagnostic = semantic_index.BuildDiagnostic{};
     const stats = semantic_index.build(
         ctx.io,
         ctx.allocator,
@@ -271,8 +272,20 @@ pub fn runSemanticIndex(ctx: *RunCtx) void {
         ctx.store,
         ctx.abs_root,
         ctx.data_dir,
+        .{ .diagnostic = &diagnostic },
     ) catch |err| {
         ctx.out.p("{s}\xe2\x9c\x97{s} semantic index failed: {s}\n", .{ ctx.s.red, ctx.s.reset, @errorName(err) });
+        if (diagnostic.limit) |limit| {
+            ctx.out.p(
+                "  estimate: {d} bytes memory, {d} bytes disk; {s} cap: {d} bytes\n",
+                .{
+                    diagnostic.estimate.memory_bytes,
+                    diagnostic.estimate.disk_bytes,
+                    @tagName(limit),
+                    diagnostic.cap_bytes,
+                },
+            );
+        }
         ctx.out.flush();
         std.process.exit(1);
     };
