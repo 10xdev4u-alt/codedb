@@ -587,16 +587,31 @@ rm -f codedb.snapshot      # remove snapshot from current project only
 
 ## 🔨 Building from Source
 
-**Requirements:** the Zig version pinned in [`build.zig.zon`](build.zig.zon) and mirrored to [`.zigversion`](.zigversion). See the [migration guide](docs/zig-0.17-migration.md) for the zigup workflow.
+From a fresh clone, one command installs the pinned compiler and runs the
+ReleaseFast suite:
+
+```bash
+python3 scripts/bootstrap.py
+```
+
+It downloads the Zig archive named in `zig.lock.json`, verifies its SHA-256,
+refuses a compiler that reports a different version, and keeps the toolchain
+and build caches under a disk-backed path. On Windows it runs `test-core` and
+`test-semantic`, the same subset as CI, until #90-#93 close. Set
+`CODEDB_CACHE_DIR` to move the cache.
+
+If the pinned Zig is already installed, the manual commands still work:
 
 ```bash
 git clone https://github.com/justrach/codedb.git
 cd codedb
 zig build                              # debug build
 zig build -Doptimize=ReleaseFast       # release build
-zig build test                         # run tests
-zig build bench                        # run benchmarks
+zig build test -Doptimize=ReleaseFast  # run tests
+zig build bench-word                   # word-lookup scaling
 ```
+
+See the [migration guide](docs/zig-0.17-migration.md) for the zigup workflow.
 
 Binary: `zig-out/bin/codedb`
 
