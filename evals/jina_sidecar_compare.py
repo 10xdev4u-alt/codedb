@@ -3,8 +3,22 @@
 import argparse,json,math,os,statistics,sys,time
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
+sys.path.insert(0,str(Path(__file__).resolve().parent))
 from e2e_mcp_test import MCPProcess,do_initialize,all_tool_text
 from jina_eval import relevance,sha256
+from gate import evaluate
+
+METRICS=('top1_rate','recall_at_5','ndcg_at_5')
+
+
+def gate(report,scope,max_regression,min_delta):
+    if not report['complete'] or not all(report['summary'].get(arm) for arm in ('baseline','candidate')):
+        return ['run is incomplete; see the report failures'],[]
+    summary={'complete':True,
+        'macro_average':{arm:{metric:report['summary'][arm][metric] for metric in METRICS} for arm in ('baseline','candidate')},
+        'repositories':{scope:{'complete':True,'failures':report['failures'],
+            'recall_regressions':report['recall_regressions'],'summary':report['summary']}}}
+    return evaluate(summary,max_regression,min_delta)
 
 
 def run(a):
@@ -79,8 +93,14 @@ def run(a):
     report['complete'] = len(report['rows']) == len(queries) and all(len(r['samples']) == a.repeats and all(set(s)=={'baseline','candidate'} for s in r['samples']) for r in report['rows'])
     report['recall_regressions'] = [r['id'] for r in report['rows'] if any(s.get('candidate',{}).get('metrics',{}).get('recall_at_5',0) < s.get('baseline',{}).get('metrics',{}).get('recall_at_5',0) for s in r['samples'])]
     report['ranking_regressions'] = [r['id'] for r in report['rows'] if any(s.get('candidate',{}).get('metrics',{}).get('mrr_at_5',0) < s.get('baseline',{}).get('metrics',{}).get('mrr_at_5',0) for s in r['samples'])]
+    failures,verdicts=gate(report,Path(a.dataset).stem,a.max_regression,a.min_delta)
+    report['gate']={'max_regression':a.max_regression,'min_delta':a.min_delta,'failures':failures,'verdicts':verdicts}
     target.write_text(json.dumps(report,indent=2)+'\n');print(json.dumps({'summary':report['summary'],'failures':report['failures']},indent=2))
-    return int(bool(report['failures']) or not report['complete'])
+    for verdict in verdicts:print(verdict)
+    for failure in failures:print('eval gate: '+failure,file=sys.stderr)
+    if failures:print(f'eval gate: FAIL ({len(failures)} findings)',file=sys.stderr)
+    else:print('eval gate: pass')
+    return int(bool(report['failures']) or not report['complete'] or bool(failures))
 
 
 if __name__=='__main__':
@@ -89,6 +109,9 @@ if __name__=='__main__':
     p.add_argument('--repeats',type=int,default=3)
     p.add_argument('--split',choices=('train','held_out','all'),default='train')
     p.add_argument('--freeze',help='Verify candidate and dataset hashes against the pre-evaluation freeze')
+    p.add_argument('--max-regression',type=float,default=0.0,help='Allowed drop below baseline before the gate fails')
+    p.add_argument('--min-delta',type=float,default=None,help='Minimum gain reported as an improvement')
     a=p.parse_args()
     if a.repeats<1:p.error('positive repeats required')
+    if a.max_regression<0 or (a.min_delta is not None and a.min_delta<0):p.error('thresholds must be non-negative')
     raise SystemExit(run(a))

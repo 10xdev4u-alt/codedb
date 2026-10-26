@@ -49,8 +49,24 @@ The OpenClaw dataset's train and held_out positives have both been used for
 32-question development runs (`--split all --repeats 2`). Express was fresh only
 for the frozen run in ADR 0008; it is now a regression set too. Do not report
 repeated calls as extra independent questions. Inspect individual regressions
-alongside aggregate NDCG@5, recall@5 and correct-file-first rates. A successful
-runner exit proves execution, not an accuracy acceptance threshold.
+alongside aggregate NDCG@5, recall@5 and correct-file-first rates.
+
+Both runners treat the comparison as a gate. `--max-regression` is the allowed
+drop below baseline for top-1, recall@5, and nDCG@5; it defaults to 0.
+`--min-delta` is the gain required to report an improvement, so smaller gains
+are labeled noise. A metric beyond the tolerance, an incomplete run, an
+execution failure, or a per-question recall regression exits non-zero and names
+the scope and metric. The same check runs on a saved summary:
+
+```bash
+python3 evals/gate.py \
+  --summary evals/results/2026-09-05-jina-round3-intent-development/summary.json \
+  --max-regression 0 --min-delta 0.005
+```
+
+CI runs that gate on the recorded development summary as a required check. A
+retrieval change still needs a fresh live suite run with the thresholds; the
+committed summary is evidence, not a substitute for the run.
 
 No credentials, vectors, or source snippets are logged. Provider failures and
 fallback calls cannot count as successful sidecar accuracy samples. Dataset
