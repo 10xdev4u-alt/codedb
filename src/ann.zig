@@ -131,3 +131,43 @@ pub fn vectorPayloadBytesWithMode(count: usize, dimensions: u16, store_f32: bool
     const bytes_per_dimension: usize = if (store_f32) 5 else 1;
     return std.math.mul(usize, count, try std.math.mul(usize, dimensions, bytes_per_dimension));
 }
+
+/// Estimate of the serialized HMLS slab for `count` records.
+///
+/// Mirrors OpenPuffer's page-aligned layout without depending on its private
+/// layout type. Higher-layer slots consume two bytes for the degree plus
+/// `m + 1` u32 neighbors each; HNSW assigns a higher layer with probability
+/// about 1/16, so `count / 8` is a two-times margin over the expected count.
+/// The live slab-size check still stops a build whose real graph exceeds the
+/// existing hard bound.
+pub fn estimatedSlabBytes(count: usize, dimensions: u16) !usize {
+    const options = Options{};
+    const m: usize = options.m;
+    const m0_factor: usize = options.m0_factor;
+    const m0 = try std.math.mul(usize, m, m0_factor);
+    const dim: usize = dimensions;
+    const vectors = try std.math.mul(usize, count, dim);
+    const hi_slots = if (count == 0) 0 else count / 8 + 1;
+
+    var offset: usize = try pageAlign(256);
+    offset = try regionEnd(offset, count, @sizeOf(u32)); // levels
+    offset = try regionEnd(offset, count, @sizeOf(f32)); // qscales
+    offset = try regionEnd(offset, vectors, @sizeOf(f32));
+    offset = try regionEnd(offset, vectors, @sizeOf(i8));
+    offset = try regionEnd(offset, count, @sizeOf(u16)); // l0 degree
+    offset = try regionEnd(offset, try std.math.mul(usize, count, m0 + 1), @sizeOf(u32));
+    offset = try regionEnd(offset, count, @sizeOf(u32)); // hi_start
+    offset = try regionEnd(offset, hi_slots, @sizeOf(u16));
+    offset = try regionEnd(offset, try std.math.mul(usize, hi_slots, m + 1), @sizeOf(u32));
+    return offset;
+}
+
+fn pageAlign(bytes: usize) !usize {
+    const mask = std.heap.page_size_min - 1;
+    return (try std.math.add(usize, bytes, mask)) & ~mask;
+}
+
+fn regionEnd(offset: usize, count: usize, element_size: usize) !usize {
+    const bytes = try std.math.mul(usize, count, element_size);
+    return pageAlign(try std.math.add(usize, offset, bytes));
+}

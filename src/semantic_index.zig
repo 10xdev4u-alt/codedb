@@ -65,6 +65,49 @@ pub const BuildStats = struct {
     vector_space_id: u64,
 };
 
+pub const default_max_build_memory_bytes: usize = 2 * 1024 * 1024 * 1024;
+pub const default_max_build_disk_bytes: usize = 3 * 1024 * 1024 * 1024;
+pub const build_max_memory_env = "CODEDB_SEMANTIC_BUILD_MAX_MEMORY_BYTES";
+pub const build_max_disk_env = "CODEDB_SEMANTIC_BUILD_MAX_DISK_BYTES";
+
+/// Build caps are disabled with a zero value, which keeps an explicit opt-out
+/// available without changing the documented defaults.
+pub const BuildLimits = struct {
+    max_memory_bytes: usize = default_max_build_memory_bytes,
+    max_disk_bytes: usize = default_max_build_disk_bytes,
+
+    pub fn fromEnv() !BuildLimits {
+        return .{
+            .max_memory_bytes = try envLimit(build_max_memory_env, default_max_build_memory_bytes),
+            .max_disk_bytes = try envLimit(build_max_disk_env, default_max_build_disk_bytes),
+        };
+    }
+};
+
+pub const BuildEstimate = struct {
+    records: usize = 0,
+    files: usize = 0,
+    slab_bytes: usize = 0,
+    metadata_bytes: usize = 0,
+    previous_bytes: usize = 0,
+    memory_bytes: usize = 0,
+    disk_bytes: usize = 0,
+};
+
+pub const BuildLimit = enum { memory, disk };
+
+pub const BuildDiagnostic = struct {
+    estimate: BuildEstimate = .{},
+    limit: ?BuildLimit = null,
+    cap_bytes: usize = 0,
+};
+
+pub const BuildOptions = struct {
+    /// Null loads the limits from the environment.
+    limits: ?BuildLimits = null,
+    diagnostic: ?*BuildDiagnostic = null,
+};
+
 pub const Hit = struct {
     path: []const u8,
     line_start: u32,
@@ -209,7 +252,10 @@ const MigrationJob = struct {
 
     fn run(self: *MigrationJob) void {
         const allocator = std.heap.page_allocator;
-        const result = build(self.io, allocator, self.explorer, self.store, self.project_root, self.data_dir);
+        var diagnostic = BuildDiagnostic{};
+        const result = build(self.io, allocator, self.explorer, self.store, self.project_root, self.data_dir, .{
+            .diagnostic = &diagnostic,
+        });
         if (result) |stats| {
             self.cache.migration_state.store(@intFromEnum(MigrationState.succeeded), .release);
             std.log.info(
@@ -218,7 +264,14 @@ const MigrationJob = struct {
             );
         } else |err| {
             self.cache.migration_state.store(@intFromEnum(MigrationState.failed), .release);
-            std.log.warn("semantic sidecar migration failed: {s}", .{@errorName(err)});
+            if (diagnostic.limit) |limit| {
+                std.log.warn(
+                    "semantic sidecar migration {s} limit exceeded: needs {d} bytes of memory and {d} bytes of disk, cap {d} bytes",
+                    .{ @tagName(limit), diagnostic.estimate.memory_bytes, diagnostic.estimate.disk_bytes, diagnostic.cap_bytes },
+                );
+            } else {
+                std.log.warn("semantic sidecar migration failed: {s}", .{@errorName(err)});
+            }
         }
         allocator.free(self.project_root);
         allocator.free(self.data_dir);
@@ -676,6 +729,141 @@ fn writeMetadata(
     return total;
 }
 
+fn envLimit(name: []const u8, default: usize) !usize {
+    const raw = cio.posixGetenv(name) orelse return default;
+    if (raw.len == 0) return default;
+    return std.fmt.parseInt(usize, raw, 10) catch error.InvalidSemanticBuildLimit;
+}
+
+fn countChunks(content: []const u8) usize {
+    var cursor = ChunkCursor{ .content = content };
+    var count: usize = 0;
+    while (cursor.next()) |_| {
+        count += 1;
+        if (count == max_chunks_per_file) break;
+    }
+    return count;
+}
+
+fn metadataOverhead(dimensions: u16, model_len: usize) !usize {
+    // 128 bytes reserve the generated slab name; `writeMetadata` writes the
+    // exact name later. The 64-byte git-head reserve covers the optional head.
+    var total = header_bytes;
+    total = try std.math.add(usize, total, model_len);
+    total = try std.math.add(usize, total, 128);
+    total = try std.math.add(usize, total, 64);
+    total = try std.math.add(usize, total, try std.math.mul(usize, dimensions, @sizeOf(f32)));
+    return total;
+}
+
+/// Estimates the memory and disk a build will add before the first embedding
+/// request. Counting chunks requires a source pass; the build later reads each
+/// file again to embed it. The extra pass is deliberate: an over-cap build must
+/// fail before spending hosted requests or allocating the HNSW payload.
+fn estimateBuild(
+    io: std.Io,
+    allocator: std.mem.Allocator,
+    explorer: *Explorer,
+    paths: []const []const u8,
+    dimensions: u16,
+    model_len: usize,
+    data_dir: []const u8,
+    previous_slab_name: ?[]const u8,
+) !BuildEstimate {
+    var estimate = BuildEstimate{};
+    var source_path_bytes: usize = 0;
+    var max_content_bytes: usize = 0;
+    estimate.metadata_bytes = try metadataOverhead(dimensions, model_len);
+
+    for (paths) |path| {
+        const content = (try explorer.getContent(path, allocator)) orelse return error.RepositoryChangedDuringAnnBuild;
+        defer allocator.free(content);
+        max_content_bytes = @max(max_content_bytes, content.len);
+        if (content.len == 0) continue;
+        const chunks = countChunks(content);
+        if (chunks == 0) continue;
+        estimate.files = try std.math.add(usize, estimate.files, 1);
+        estimate.records = try std.math.add(usize, estimate.records, chunks);
+        source_path_bytes = try std.math.add(usize, source_path_bytes, path.len);
+        const entry_bytes = try std.math.add(usize, 10, path.len);
+        estimate.metadata_bytes = try std.math.add(
+            usize,
+            estimate.metadata_bytes,
+            try std.math.mul(usize, chunks, entry_bytes),
+        );
+    }
+
+    if (estimate.records > max_records) return error.AnnRecordBudgetExceeded;
+    if (estimate.metadata_bytes > max_metadata_bytes) return error.AnnMetadataTooLarge;
+    estimate.slab_bytes = try ann.estimatedSlabBytes(estimate.records, dimensions);
+
+    const sidecar_path = try sidecarPath(allocator, data_dir);
+    defer allocator.free(sidecar_path);
+    estimate.previous_bytes = fileSize(io, sidecar_path) catch 0;
+    if (previous_slab_name) |name| {
+        const previous_path = try slabPath(allocator, data_dir, name);
+        defer allocator.free(previous_path);
+        estimate.previous_bytes = try std.math.add(usize, estimate.previous_bytes, fileSize(io, previous_path) catch 0);
+    }
+
+    estimate.disk_bytes = try std.math.add(
+        usize,
+        estimate.previous_bytes,
+        try std.math.add(usize, estimate.slab_bytes, estimate.metadata_bytes),
+    );
+
+    const parallel_batches = indexConcurrency();
+    const wave_capacity = try std.math.mul(usize, parallel_batches, semantic.max_index_documents);
+    const wave_cards = try std.math.mul(usize, wave_capacity, max_chunk_card_bytes);
+    const wave_records = try std.math.mul(usize, wave_capacity, @sizeOf(Record));
+    const wave_vectors = try std.math.mul(
+        usize,
+        wave_capacity,
+        try std.math.mul(usize, dimensions, @sizeOf(f32)),
+    );
+    const path_array = try std.math.add(
+        usize,
+        try std.math.mul(usize, paths.len, @sizeOf([]const u8)),
+        source_path_bytes,
+    );
+    const index_slack = estimate.slab_bytes / 4;
+    estimate.memory_bytes = try std.math.add(
+        usize,
+        try std.math.add(usize, estimate.slab_bytes, index_slack),
+        try std.math.add(
+            usize,
+            try std.math.mul(usize, estimate.records, @sizeOf(Record)),
+            try std.math.add(
+                usize,
+                path_array,
+                try std.math.add(
+                    usize,
+                    max_content_bytes,
+                    try std.math.add(usize, wave_cards, try std.math.add(usize, wave_records, wave_vectors)),
+                ),
+            ),
+        ),
+    );
+    return estimate;
+}
+
+fn enforceBuildLimits(estimate: BuildEstimate, limits: BuildLimits, diagnostic: ?*BuildDiagnostic) !void {
+    if (limits.max_memory_bytes != 0 and estimate.memory_bytes > limits.max_memory_bytes) {
+        if (diagnostic) |d| {
+            d.limit = .memory;
+            d.cap_bytes = limits.max_memory_bytes;
+        }
+        return error.AnnBuildMemoryLimitExceeded;
+    }
+    if (limits.max_disk_bytes != 0 and estimate.disk_bytes > limits.max_disk_bytes) {
+        if (diagnostic) |d| {
+            d.limit = .disk;
+            d.cap_bytes = limits.max_disk_bytes;
+        }
+        return error.AnnBuildDiskLimitExceeded;
+    }
+}
+
 pub fn build(
     io: std.Io,
     allocator: std.mem.Allocator,
@@ -683,6 +871,7 @@ pub fn build(
     store: *Store,
     project_root: []const u8,
     data_dir: []const u8,
+    options: BuildOptions,
 ) !BuildStats {
     const started = cio.nanoTimestamp();
     try secureDataDir(io, data_dir);
@@ -690,6 +879,7 @@ pub fn build(
     defer if (previous_slab_name) |name| allocator.free(name);
     const config = semantic.Config.fromEnv();
     try config.validate();
+    const limits = options.limits orelse try BuildLimits.fromEnv();
     const vector_space_id = config.vectorSpaceId();
     const manifest_before = try repositoryFingerprint(explorer, store, allocator);
     const git_head_before = try git_mod.getGitHead(project_root, allocator);
@@ -704,6 +894,19 @@ pub fn build(
     for (paths) |path| {
         if (semantic.isRemoteCandidatePathAllowed(path)) remote_paths.appendAssumeCapacity(path);
     }
+    const estimate = try estimateBuild(
+        io,
+        allocator,
+        explorer,
+        remote_paths.items,
+        config.dimensions,
+        config.model.len,
+        data_dir,
+        previous_slab_name,
+    );
+    if (options.diagnostic) |diagnostic| diagnostic.estimate = estimate;
+    try enforceBuildLimits(estimate, limits, options.diagnostic);
+
     const source_content_before = try store.semanticContentFingerprintForPaths(remote_paths.items);
     var embedded_content = Store.semanticContentHasher();
 
@@ -1846,4 +2049,67 @@ test "semantic build live fingerprint catches unreconciled repository edits" {
     try changed.writeStreamingAll(io, "pub fn after() void {}\n");
     changed.close(io);
     try testing.expect(indexed != try watcher.liveIndexedContentFingerprint(io, explorer.root_dir.?, testing.allocator));
+}
+
+test "semantic build preflight counts chunks and fails before embedding" {
+    const testing = std.testing;
+    const io = testing.io;
+    const allocator = testing.allocator;
+
+    var content_buf: [900]u8 = undefined;
+    @memset(content_buf[0..299], 'a');
+    content_buf[299] = '\n';
+    @memset(content_buf[300..], 'b');
+    const content = content_buf[0..];
+
+    var explorer = Explorer.init(allocator, 1024 * 1024);
+    defer explorer.deinit();
+    try explorer.indexFile("src/a.zig", content);
+    var store = Store.init(allocator);
+    defer store.deinit();
+    _ = try store.recordSnapshot("src/a.zig", content.len, std.hash.Wyhash.hash(0, content));
+
+    var tmp = testing.tmpDir(.{});
+    defer tmp.cleanup();
+    var root_buf: [std.fs.max_path_bytes]u8 = undefined;
+    const root = root_buf[0..try tmp.dir.realPathFile(io, ".", &root_buf)];
+    const data_dir = try std.fmt.allocPrint(allocator, "{s}/data", .{root});
+    defer allocator.free(data_dir);
+
+    var diagnostic = BuildDiagnostic{};
+    try testing.expectError(error.AnnBuildMemoryLimitExceeded, build(io, allocator, &explorer, &store, root, data_dir, .{
+        .limits = .{ .max_memory_bytes = 1, .max_disk_bytes = 0 },
+        .diagnostic = &diagnostic,
+    }));
+
+    // The newline at byte 299 makes the first chunk 300 bytes and the second
+    // 600 bytes; the preflight must count both before any embedding request.
+    try testing.expectEqual(@as(usize, 2), diagnostic.estimate.records);
+    try testing.expectEqual(@as(usize, 1), diagnostic.estimate.files);
+    try testing.expectEqual(BuildLimit.memory, diagnostic.limit.?);
+    try testing.expectEqual(@as(usize, 1), diagnostic.cap_bytes);
+    try testing.expect(diagnostic.estimate.memory_bytes > try ann.vectorPayloadBytes(2, 512));
+}
+
+test "semantic build limits name the cap and zero disables them" {
+    const testing = std.testing;
+    const estimate = BuildEstimate{ .records = 1, .memory_bytes = 100, .disk_bytes = 200 };
+
+    var memory_diagnostic = BuildDiagnostic{ .estimate = estimate };
+    try testing.expectError(
+        error.AnnBuildMemoryLimitExceeded,
+        enforceBuildLimits(estimate, .{ .max_memory_bytes = 99, .max_disk_bytes = 1_000 }, &memory_diagnostic),
+    );
+    try testing.expectEqual(BuildLimit.memory, memory_diagnostic.limit.?);
+    try testing.expectEqual(@as(usize, 99), memory_diagnostic.cap_bytes);
+
+    var disk_diagnostic = BuildDiagnostic{ .estimate = estimate };
+    try testing.expectError(
+        error.AnnBuildDiskLimitExceeded,
+        enforceBuildLimits(estimate, .{ .max_memory_bytes = 1_000, .max_disk_bytes = 199 }, &disk_diagnostic),
+    );
+    try testing.expectEqual(BuildLimit.disk, disk_diagnostic.limit.?);
+    try testing.expectEqual(@as(usize, 199), disk_diagnostic.cap_bytes);
+
+    try enforceBuildLimits(estimate, .{ .max_memory_bytes = 0, .max_disk_bytes = 0 }, null);
 }

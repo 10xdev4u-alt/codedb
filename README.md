@@ -514,8 +514,13 @@ It splits already-indexable files into bounded 832-byte source chunks, uses
 eight concurrent 100-item requests by default (explicitly configurable from one
 to eight), and writes a
 small `semantic-chunks-v3.meta` mapping plus a generation-named `.hmls` mmap
-slab only in codedb's per-project local data directory. The directory and
-files use private permissions (0700/0600 on POSIX).
+slab only in codedb's per-project local data directory. Before the first
+embedding request, the build counts chunks and estimates the memory and disk
+it will add. It aborts with both estimates when either exceeds the
+configurable caps (`CODEDB_SEMANTIC_BUILD_MAX_MEMORY_BYTES`, default 2 GiB,
+and `CODEDB_SEMANTIC_BUILD_MAX_DISK_BYTES`, default 3 GiB); the disk estimate
+includes the previous generation that stays readable until the atomic commit.
+The directory and files use private permissions (0700/0600 on POSIX).
 On lookup, codedb checks model/vector-space identity, Git/content freshness,
 and the bounded metadata before opening the slab. Metadata heap use is capped
 at 64 MiB and graph-validation reads at 128 MiB; vector slabs remain
@@ -571,6 +576,8 @@ CODEDB_EMBEDDINGS_DIMENSIONS=512
 CODEDB_EMBEDDINGS_TOKEN='optional bearer token for a protected/custom endpoint'
 CODEDB_EMBEDDINGS_TIMEOUT_MS=15000
 CODEDB_SEMANTIC_INDEX_CONCURRENCY=4
+CODEDB_SEMANTIC_BUILD_MAX_MEMORY_BYTES=2147483648
+CODEDB_SEMANTIC_BUILD_MAX_DISK_BYTES=3221225472
 ```
 
 To disable telemetry: set `CODEDB_NO_TELEMETRY=1` or pass `--no-telemetry`.
