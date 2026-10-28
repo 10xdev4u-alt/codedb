@@ -35,6 +35,7 @@ DEFAULT_RUNS = 5
 DEFAULT_WARMUPS = 1
 DEFAULT_ITERATIONS = 100
 DEFAULT_TIMEOUT_S = 300
+SUBPROCESS_TIMEOUT_S = 10
 
 
 def percentile(values: list[int], percent: int) -> int:
@@ -167,7 +168,12 @@ def parse_benchmark(payload: str, root: str = ".") -> dict[str, Any]:
 
 def git_output(root: Path, *args: str) -> str:
     result = subprocess.run(
-        ["git", *args], cwd=root, check=True, capture_output=True, text=True
+        ["git", *args],
+        cwd=root,
+        check=True,
+        capture_output=True,
+        text=True,
+        timeout=SUBPROCESS_TIMEOUT_S,
     )
     return result.stdout.strip()
 
@@ -192,9 +198,13 @@ def _linux_cpu_model() -> str | None:
 def _sysctl(name: str) -> str | None:
     try:
         return subprocess.run(
-            ["sysctl", "-n", name], check=True, capture_output=True, text=True
+            ["sysctl", "-n", name],
+            check=True,
+            capture_output=True,
+            text=True,
+            timeout=SUBPROCESS_TIMEOUT_S,
         ).stdout.strip()
-    except (OSError, subprocess.CalledProcessError):
+    except (OSError, subprocess.CalledProcessError, subprocess.TimeoutExpired):
         return None
 
 
@@ -239,6 +249,40 @@ def zig_version(root: Path) -> str | None:
     return path.read_text().strip() if path.is_file() else None
 
 
+def check_run_consistency(runs: list[dict[str, Any]]) -> None:
+    """Every run must query the same set with the same hit counts.
+
+    A file added or removed between runs changes the corpus, which makes the
+    latency comparison meaningless. Fail loudly instead of averaging it away.
+    """
+    expected = {
+        f"{query['kind']}:{query['name']}": query["hits"]
+        for query in runs[0]["benchmark"]["queries"]
+    }
+    for index, run in enumerate(runs):
+        seen = {
+            f"{query['kind']}:{query['name']}": query["hits"]
+            for query in run["benchmark"]["queries"]
+        }
+        missing = expected.keys() - seen.keys()
+        extra = seen.keys() - expected.keys()
+        if missing or extra:
+            raise ValueError(
+                f"run {index + 1} queried a different set: "
+                f"missing {sorted(missing)}, unexpected {sorted(extra)}"
+            )
+        changed = [
+            f"{key} {seen[key]} != {expected[key]}"
+            for key in expected
+            if seen[key] != expected[key]
+        ]
+        if changed:
+            raise ValueError(
+                f"run {index + 1} returned different hit counts ({', '.join(changed)}); "
+                "the corpus changed between runs"
+            )
+
+
 def build_report(
     *,
     runs: list[dict[str, Any]],
@@ -249,6 +293,7 @@ def build_report(
     command: str,
     settings: dict[str, Any],
 ) -> dict[str, Any]:
+    check_run_consistency(runs)
     index_values = [run["benchmark"]["index_ns"] for run in runs]
     rss_values = [run["peak_rss_bytes"] for run in runs]
     wall_values = [run["wall_ns"] for run in runs]

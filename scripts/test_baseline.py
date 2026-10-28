@@ -43,13 +43,16 @@ def fake_benchmark(index_ns: int = 1_000_000) -> dict:
     }
 
 
-def fake_report() -> dict:
-    runs = [
+def fake_runs() -> list[dict]:
+    return [
         {"benchmark": fake_benchmark(1_000_000), "wall_ns": 2_000_000_000, "peak_rss_bytes": 64 * 1024 * 1024},
         {"benchmark": fake_benchmark(1_100_000), "wall_ns": 2_100_000_000, "peak_rss_bytes": 66 * 1024 * 1024},
     ]
+
+
+def fake_report(runs: list[dict] | None = None) -> dict:
     return baseline.build_report(
-        runs=runs,
+        runs=runs if runs is not None else fake_runs(),
         hardware_info={
             "cpu": "test cpu",
             "cores": 8,
@@ -106,6 +109,18 @@ class BaselineTests(unittest.TestCase):
         broken["queries"][0].pop("samples_ns")
         with self.assertRaisesRegex(ValueError, "samples_ns"):
             baseline.parse_benchmark(json.dumps(broken))
+
+    def test_report_rejects_a_corpus_change_between_runs(self) -> None:
+        runs = fake_runs()
+        runs[1]["benchmark"]["queries"][0]["hits"] = 4
+        with self.assertRaisesRegex(ValueError, "different hit counts"):
+            fake_report(runs)
+
+    def test_report_rejects_a_query_set_change_between_runs(self) -> None:
+        runs = fake_runs()
+        runs[1]["benchmark"]["queries"][0]["name"] = "renamed"
+        with self.assertRaisesRegex(ValueError, "different set"):
+            fake_report(runs)
 
     def test_report_keeps_the_command_and_names_the_gap(self) -> None:
         report = fake_report()
