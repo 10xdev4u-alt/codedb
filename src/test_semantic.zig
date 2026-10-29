@@ -582,3 +582,106 @@ test "semantic: truncated and oversized provider bodies fail closed" {
         // failure here.
     }
 }
+
+const FakeLocalProvider = struct {
+    const dimensions: u16 = 8;
+    const model = "fake-eg2";
+    const vector_space_id: u64 = 0x0e62_0000_0000_0001;
+
+    fn identityOf(_: *anyopaque) semantic.Identity {
+        return .{
+            .kind = .local,
+            .model = model,
+            .dimensions = dimensions,
+            .query_encoding = "fake-query-v1",
+            .document_card = "fake-card-v1",
+            .vector_space_id = vector_space_id,
+        };
+    }
+
+    fn healthOf(_: *anyopaque, _: std.Io, _: std.mem.Allocator) anyerror!semantic.Health {
+        return .{ .kind = .local, .ok = true, .detail = "fake local provider" };
+    }
+
+    fn embedOf(
+        _: *anyopaque,
+        _: std.Io,
+        allocator: std.mem.Allocator,
+        inputs: []const []const u8,
+    ) anyerror!semantic.EmbeddingBatchResult {
+        if (inputs.len == 0 or inputs.len > semantic.max_index_documents) return error.InvalidEmbeddingBatch;
+        const vectors = try allocator.alloc(f32, inputs.len * dimensions);
+        errdefer allocator.free(vectors);
+        @memset(vectors, 0.25);
+        return .{
+            .vectors = vectors,
+            .count = inputs.len,
+            .model = model,
+            .dimensions = dimensions,
+            .text_bytes_sent = 0,
+            .retention = .none_by_codedb_policy,
+        };
+    }
+
+    const vtable = semantic.Provider.VTable{
+        .identity = identityOf,
+        .health = healthOf,
+        .embed = embedOf,
+    };
+
+    fn provider(self: *FakeLocalProvider) semantic.Provider {
+        return .{ .ptr = self, .vtable = &vtable };
+    }
+};
+
+/// Every provider must answer identity, health, and embed the same way.
+fn assertProviderContract(
+    provider: semantic.Provider,
+    kind: semantic.ProviderKind,
+    dimensions: u16,
+) !void {
+    const identity = provider.identity();
+    try testing.expectEqual(kind, identity.kind);
+    try testing.expectEqual(dimensions, identity.dimensions);
+    try testing.expect(identity.vector_space_id != 0);
+    try testing.expect(identity.model.len > 0);
+    try testing.expect(identity.query_encoding.len > 0);
+    try testing.expect(identity.document_card.len > 0);
+
+    const health = try provider.health(io, testing.allocator);
+    try testing.expectEqual(kind, health.kind);
+    try testing.expect(health.ok);
+    try testing.expect(health.detail.len > 0);
+
+    const result = try provider.embed(io, testing.allocator, &.{ "first", "second" });
+    defer testing.allocator.free(result.vectors);
+    try testing.expectEqual(@as(usize, 2), result.count);
+    try testing.expectEqual(@as(usize, 2) * @as(usize, dimensions), result.vectors.len);
+    try testing.expectEqualStrings(identity.model, result.model);
+    try testing.expectEqual(identity.dimensions, result.dimensions);
+}
+
+test "semantic: hosted and local providers satisfy the same contract" {
+    var guards = EmbeddingEnvGuards.init();
+    defer guards.deinit();
+
+    const response = try makeMockEmbeddingResponse(testing.allocator, "mock-model", 2, 64);
+    defer testing.allocator.free(response);
+    const addr = try std.Io.net.IpAddress.parse("127.0.0.1", 0);
+    var server = try addr.listen(io, .{ .reuse_address = true, .mode = .stream, .protocol = .tcp });
+    defer server.deinit(io);
+    try configureMockEndpoint(&server, "mock-model", 2_000);
+
+    var mock = MockEmbeddingServer{ .server = &server, .response = response };
+    const thread = try std.Thread.spawn(.{}, MockEmbeddingServer.run, .{&mock});
+    var hosted = semantic.HostedProvider.init(semantic.Config.fromEnv());
+    assertProviderContract(hosted.provider(), .hosted, 64) catch |err| {
+        thread.join();
+        return err;
+    };
+    thread.join();
+    if (mock.failure) |err| return err;
+
+    var local = FakeLocalProvider{};
+    try assertProviderContract(local.provider(), .local, FakeLocalProvider.dimensions);
+}

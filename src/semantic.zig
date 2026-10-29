@@ -150,6 +150,160 @@ pub const Config = struct {
     }
 };
 
+/// Which engine answers an embedding request. `hosted` is the default; the
+/// local sidecar from issue #26 plugs into the same interface.
+pub const ProviderKind = enum { hosted, local };
+
+pub const default_provider_kind: ProviderKind = .hosted;
+
+/// The vector space a provider produces. Vectors from two identities are not
+/// comparable, so the ANN sidecar stores `vector_space_id`.
+pub const Identity = struct {
+    kind: ProviderKind,
+    model: []const u8,
+    dimensions: u16,
+    query_encoding: []const u8,
+    document_card: []const u8,
+    vector_space_id: u64,
+};
+
+pub const Health = struct {
+    kind: ProviderKind,
+    ok: bool,
+    /// Static or provider-owned text, valid while the provider lives.
+    detail: []const u8,
+};
+
+/// One seam for hosted and local embeddings. The hosted implementation keeps
+/// the existing wire bytes; issue #26 adds the local sidecar without touching
+/// callers.
+pub const Provider = struct {
+    ptr: *anyopaque,
+    vtable: *const VTable,
+
+    pub const VTable = struct {
+        identity: *const fn (ptr: *anyopaque) Identity,
+        health: *const fn (ptr: *anyopaque, io: std.Io, allocator: std.mem.Allocator) anyerror!Health,
+        embed: *const fn (ptr: *anyopaque, io: std.Io, allocator: std.mem.Allocator, inputs: []const []const u8) anyerror!EmbeddingBatchResult,
+    };
+
+    /// The provider borrows its state. Keep the state alive while using it.
+    pub fn identity(self: Provider) Identity {
+        return self.vtable.identity(self.ptr);
+    }
+
+    pub fn health(self: Provider, io: std.Io, allocator: std.mem.Allocator) !Health {
+        return self.vtable.health(self.ptr, io, allocator);
+    }
+
+    pub fn embed(self: Provider, io: std.Io, allocator: std.mem.Allocator, inputs: []const []const u8) !EmbeddingBatchResult {
+        return self.vtable.embed(self.ptr, io, allocator, inputs);
+    }
+};
+
+/// The hosted endpoint, unchanged. `Config.fromEnv()` still decides its URL,
+/// model, token, dimensions, and timeout.
+pub const HostedProvider = struct {
+    config: Config,
+
+    pub fn init(config: Config) HostedProvider {
+        return .{ .config = config };
+    }
+
+    pub fn provider(self: *HostedProvider) Provider {
+        return .{ .ptr = self, .vtable = &vtable };
+    }
+
+    const vtable = Provider.VTable{
+        .identity = identityOf,
+        .health = healthOf,
+        .embed = embedOf,
+    };
+
+    fn identityOf(ptr: *anyopaque) Identity {
+        const self: *HostedProvider = @ptrCast(@alignCast(ptr));
+        return .{
+            .kind = .hosted,
+            .model = self.config.model,
+            .dimensions = self.config.dimensions,
+            .query_encoding = queryEncodingVersion(self.config.model),
+            .document_card = document_card_version,
+            .vector_space_id = self.config.vectorSpaceId(),
+        };
+    }
+
+    fn healthOf(ptr: *anyopaque, io: std.Io, allocator: std.mem.Allocator) anyerror!Health {
+        _ = io;
+        _ = allocator;
+        const self: *HostedProvider = @ptrCast(@alignCast(ptr));
+        self.config.validate() catch |err| return .{
+            .kind = .hosted,
+            .ok = false,
+            .detail = @errorName(err),
+        };
+        return .{ .kind = .hosted, .ok = true, .detail = "hosted endpoint configured" };
+    }
+
+    fn embedOf(ptr: *anyopaque, io: std.Io, allocator: std.mem.Allocator, inputs: []const []const u8) anyerror!EmbeddingBatchResult {
+        const self: *HostedProvider = @ptrCast(@alignCast(ptr));
+        return embedRemoteTextsWithConfig(io, allocator, self.config, inputs);
+    }
+};
+
+test "semantic: hosted provider is the default and reports its identity" {
+    const testing = std.testing;
+    const config = Config{
+        .url = default_url,
+        .model = default_model,
+        .token = null,
+        .dimensions = default_dimensions,
+        .timeout_ms = default_timeout_ms,
+    };
+    var hosted = HostedProvider.init(config);
+    const provider = hosted.provider();
+    const identity = provider.identity();
+    try testing.expectEqual(default_provider_kind, identity.kind);
+    try testing.expectEqual(@as(u16, default_dimensions), identity.dimensions);
+    try testing.expectEqualStrings(default_model, identity.model);
+    try testing.expectEqualStrings(hosted_query_encoding_version, identity.query_encoding);
+    try testing.expectEqual(config.vectorSpaceId(), identity.vector_space_id);
+
+    const health = try provider.health(std.testing.io, testing.allocator);
+    try testing.expect(health.ok);
+    try testing.expectEqual(.hosted, health.kind);
+}
+
+test "semantic: hosted health fails closed on an insecure endpoint" {
+    const testing = std.testing;
+    var hosted = HostedProvider.init(.{
+        .url = "http://example.com/v1/embeddings",
+        .model = default_model,
+        .token = null,
+        .dimensions = default_dimensions,
+        .timeout_ms = default_timeout_ms,
+    });
+    const health = try hosted.provider().health(std.testing.io, testing.allocator);
+    try testing.expect(!health.ok);
+    try testing.expectEqualStrings("InsecureEmbeddingEndpoint", health.detail);
+}
+
+test "semantic: hosted request bytes are stable" {
+    const testing = std.testing;
+    const config = Config{
+        .url = default_url,
+        .model = default_model,
+        .token = null,
+        .dimensions = default_dimensions,
+        .timeout_ms = default_timeout_ms,
+    };
+    const body = try encodeEmbeddingRequest(testing.allocator, config, &.{"code"}, compact_encoding);
+    defer testing.allocator.free(body);
+    try testing.expectEqualStrings(
+        "{\"model\":\"codedb-hosted-v1\",\"input\":[\"code\"],\"dimensions\":512,\"encoding_format\":\"base64-f16\"}",
+        body,
+    );
+}
+
 fn queryEncodingVersion(model: []const u8) []const u8 {
     if (std.mem.eql(u8, model, jina_model)) return jina_query_encoding_version;
     if (std.mem.eql(u8, model, default_model)) return hosted_query_encoding_version;
@@ -298,6 +452,20 @@ fn embeddingEncoding(config: Config) []const u8 {
     return if (config.isCodedbHosted()) compact_encoding else "float";
 }
 
+fn encodeEmbeddingRequest(
+    allocator: std.mem.Allocator,
+    config: Config,
+    inputs: []const []const u8,
+    encoding_format: []const u8,
+) ![]u8 {
+    return std.json.Stringify.valueAlloc(allocator, EmbeddingRequest{
+        .model = config.model,
+        .input = inputs,
+        .dimensions = config.dimensions,
+        .encoding_format = encoding_format,
+    }, .{});
+}
+
 fn fetchEmbeddingInputs(
     io: std.Io,
     allocator: std.mem.Allocator,
@@ -305,24 +473,14 @@ fn fetchEmbeddingInputs(
     inputs: []const []const u8,
 ) ![]u8 {
     const encoding_format = embeddingEncoding(config);
-    const body = try std.json.Stringify.valueAlloc(allocator, EmbeddingRequest{
-        .model = config.model,
-        .input = inputs,
-        .dimensions = config.dimensions,
-        .encoding_format = encoding_format,
-    }, .{});
+    const body = try encodeEmbeddingRequest(allocator, config, inputs, encoding_format);
     defer allocator.free(body);
     return fetchEmbeddingResponse(io, allocator, config, body) catch |err| {
         // A pre-negotiation CodeDB edge rejects the new request field with a
         // 4xx. Retry once with the legacy contract and a fresh signed proof.
         // Custom providers never enter this path.
         if (!config.isCodedbHosted() or err != error.EmbeddingProviderRejected) return err;
-        const legacy_body = try std.json.Stringify.valueAlloc(allocator, EmbeddingRequest{
-            .model = config.model,
-            .input = inputs,
-            .dimensions = config.dimensions,
-            .encoding_format = "float",
-        }, .{});
+        const legacy_body = try encodeEmbeddingRequest(allocator, config, inputs, "float");
         defer allocator.free(legacy_body);
         return fetchEmbeddingResponse(io, allocator, config, legacy_body);
     };
@@ -453,14 +611,23 @@ fn fetchEmbeddingResponse(
     };
 }
 
-/// Embed an already-bounded batch. This is the primitive used by the local
-/// file-card ANN builder and query-only ANN lookup. It never writes vectors.
+/// Embed an already-bounded batch through the default (hosted) provider.
+/// This is the primitive used by the local file-card ANN builder and
+/// query-only ANN lookup. It never writes vectors.
 pub fn embedRemoteTexts(
     io: std.Io,
     allocator: std.mem.Allocator,
     inputs: []const []const u8,
 ) !EmbeddingBatchResult {
-    const config = Config.fromEnv();
+    return embedRemoteTextsWithConfig(io, allocator, Config.fromEnv(), inputs);
+}
+
+fn embedRemoteTextsWithConfig(
+    io: std.Io,
+    allocator: std.mem.Allocator,
+    config: Config,
+    inputs: []const []const u8,
+) !EmbeddingBatchResult {
     try config.validate();
     if (inputs.len == 0 or inputs.len > max_index_documents) return error.InvalidEmbeddingBatch;
     var text_bytes: usize = 0;
