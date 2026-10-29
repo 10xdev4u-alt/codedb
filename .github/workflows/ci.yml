@@ -115,3 +115,6 @@ jobs:
 
       - name: Test the gate and runners
         run: python3 -m unittest discover -s evals -p 'test_*.py'
+
+      - name: Test the baseline harness
+        run: python3 scripts/test_baseline.py

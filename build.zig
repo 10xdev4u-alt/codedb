@@ -210,6 +210,12 @@ pub fn build(b: *std.Build) void {
     const benchmark_step = b.step("benchmark", "Run repo benchmark (use -- --root /path/to/repo)");
     benchmark_step.dependOn(&benchmark_run.step);
 
+    // Install the benchmark binary so repeated baseline runs avoid the build
+    // system and measure only the benchmark process.
+    const benchmark_install = b.addInstallArtifact(benchmark, .{});
+    const benchmark_bin_step = b.step("benchmark-bin", "Build the repo benchmark into zig-out/bin");
+    benchmark_bin_step.dependOn(&benchmark_install.step);
+
     // ── Word-index microbenchmark (O(1) lookup scaling) ──
     const bench_word = b.addExecutable(.{
         .name = "bench-word",

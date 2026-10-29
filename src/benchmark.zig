@@ -36,7 +36,7 @@ fn parseArgs(allocator: std.mem.Allocator) !Args {
             out.root = try allocator.dupe(u8, argv[i]);
         } else if (std.mem.eql(u8, argv[i], "--iterations") and i + 1 < argv.len) {
             i += 1;
-            out.iterations = try std.fmt.parseInt(usize, argv[i], 10);
+            out.iterations = @max(1, try std.fmt.parseInt(usize, argv[i], 10));
         } else if (std.mem.eql(u8, argv[i], "--json")) {
             out.json = true;
         }
@@ -51,6 +51,10 @@ const QueryResult = struct {
     kind: []const u8,
     hits: usize,
     avg_ns: u64,
+    p50_ns: u64,
+    p95_ns: u64,
+    /// Per-iteration latencies, sorted ascending.
+    samples_ns: []u64,
 };
 
 const ReindexResult = struct {
@@ -69,6 +73,7 @@ const GitHeadResult = struct {
 const BenchResult = struct {
     root: []const u8,
     file_count: u64,
+    index_ns: u64,
     index_ms: u64,
     queries: []QueryResult,
     reindex: ReindexResult,
@@ -77,50 +82,93 @@ const BenchResult = struct {
 
 // ── Query benchmarks ──────────────────────────────────────────────────────────
 
+/// Nearest-rank percentile over ascending samples.
+fn percentile(samples: []const u64, percent: usize) u64 {
+    if (samples.len == 0) return 0;
+    const rank = @max(@as(usize, 1), (percent * samples.len + 99) / 100);
+    return samples[@min(rank, samples.len) - 1];
+}
+
 fn benchSearch(explorer: *Explorer, query: []const u8, n: usize, alloc: std.mem.Allocator) !QueryResult {
+    const samples = try alloc.alloc(u64, n);
+    errdefer alloc.free(samples);
     var total: u64 = 0;
     var hits: usize = 0;
-    for (0..n) |_| {
+    for (samples) |*sample| {
         var t = try cio.Timer.start();
         const r = try explorer.searchContent(query, alloc, 50);
-        total +|= t.read();
+        sample.* = t.read();
+        total +|= sample.*;
         hits = r.len;
         for (r) |e| alloc.free(e.line_text);
         alloc.free(r);
     }
+    std.mem.sort(u64, samples, {}, std.sort.asc(u64));
     if (cio.posixGetenv("CODEDB_BENCH_BREAKDOWN") != null) {
         const b = explorer.last_search_breakdown;
         var buf: [512]u8 = undefined;
         const msg = std.fmt.bufPrint(&buf, "  breakdown[{s}]: t0={d}ns t05={d}ns t1={d}ns t2={d}ns t3={d}ns t4={d}ns t5={d}ns rerank={d}ns tier_reached={d} cands={d} results={d}\n", .{ query, b.tier0_ns, b.tier05_ns, b.tier1_ns, b.tier2_ns, b.tier3_ns, b.tier4_ns, b.tier5_ns, b.rerank_ns, b.tier_reached, b.candidate_count, b.result_count }) catch "";
         cio.File.stderr().writeAll(msg) catch {};
     }
-    return .{ .name = query, .kind = "search", .hits = hits, .avg_ns = total / n };
+    return .{
+        .name = query,
+        .kind = "search",
+        .hits = hits,
+        .avg_ns = total / n,
+        .p50_ns = percentile(samples, 50),
+        .p95_ns = percentile(samples, 95),
+        .samples_ns = samples,
+    };
 }
 
 fn benchWord(explorer: *Explorer, word: []const u8, n: usize, alloc: std.mem.Allocator) !QueryResult {
+    const samples = try alloc.alloc(u64, n);
+    errdefer alloc.free(samples);
     var total: u64 = 0;
     var hits: usize = 0;
-    for (0..n) |_| {
+    for (samples) |*sample| {
         var t = try cio.Timer.start();
         const r = try explorer.searchWord(word, alloc);
-        total +|= t.read();
+        sample.* = t.read();
+        total +|= sample.*;
         hits = r.len;
         alloc.free(r);
     }
-    return .{ .name = word, .kind = "word", .hits = hits, .avg_ns = total / n };
+    std.mem.sort(u64, samples, {}, std.sort.asc(u64));
+    return .{
+        .name = word,
+        .kind = "word",
+        .hits = hits,
+        .avg_ns = total / n,
+        .p50_ns = percentile(samples, 50),
+        .p95_ns = percentile(samples, 95),
+        .samples_ns = samples,
+    };
 }
 
 fn benchSymbol(explorer: *Explorer, name: []const u8, n: usize, alloc: std.mem.Allocator) !QueryResult {
+    const samples = try alloc.alloc(u64, n);
+    errdefer alloc.free(samples);
     var total: u64 = 0;
     var hits: usize = 0;
-    for (0..n) |_| {
+    for (samples) |*sample| {
         var t = try cio.Timer.start();
         const r = try explorer.findAllSymbols(name, alloc);
-        total +|= t.read();
+        sample.* = t.read();
+        total +|= sample.*;
         hits = r.len;
         alloc.free(r);
     }
-    return .{ .name = name, .kind = "symbol", .hits = hits, .avg_ns = total / n };
+    std.mem.sort(u64, samples, {}, std.sort.asc(u64));
+    return .{
+        .name = name,
+        .kind = "symbol",
+        .hits = hits,
+        .avg_ns = total / n,
+        .p50_ns = percentile(samples, 50),
+        .p95_ns = percentile(samples, 95),
+        .samples_ns = samples,
+    };
 }
 
 // ── Re-index efficiency ───────────────────────────────────────────────────────
@@ -229,11 +277,20 @@ fn printHuman(allocator: std.mem.Allocator, file: cio.File, r: BenchResult) !voi
     var tb: [32]u8 = undefined;
     try w.print("  index time    : {s}\n\n", .{fmtNs(r.index_ms * std.time.ns_per_ms, &tb)});
 
-    try w.print("  {s:<28} {s:>10}  {s:>8}  {s}\n", .{ "query", "avg latency", "hits", "kind" });
-    try w.print("  {s:-<28} {s:->10}  {s:->8}  {s:-<6}\n", .{ "", "", "", "" });
+    try w.print("  {s:<26} {s:>10} {s:>10} {s:>10}  {s:>6}  {s}\n", .{ "query", "p50", "p95", "avg", "hits", "kind" });
+    try w.print("  {s:-<26} {s:->10} {s:->10} {s:->10}  {s:->6}  {s:-<6}\n", .{ "", "", "", "", "", "" });
     for (r.queries) |q| {
-        var nb: [32]u8 = undefined;
-        try w.print("  {s:<28} {s:>10}  {d:>8}  {s}\n", .{ q.name, fmtNs(q.avg_ns, &nb), q.hits, q.kind });
+        var p50b: [32]u8 = undefined;
+        var p95b: [32]u8 = undefined;
+        var avgb: [32]u8 = undefined;
+        try w.print("  {s:<26} {s:>10} {s:>10} {s:>10}  {d:>6}  {s}\n", .{
+            q.name,
+            fmtNs(q.p50_ns, &p50b),
+            fmtNs(q.p95_ns, &p95b),
+            fmtNs(q.avg_ns, &avgb),
+            q.hits,
+            q.kind,
+        });
     }
 
     try w.print("\n  re-index ({d} cycles × {d} files):\n", .{ r.reindex.cycles, r.reindex.files_per_cycle });
@@ -254,14 +311,19 @@ fn printJson(allocator: std.mem.Allocator, file: cio.File, r: BenchResult) !void
     var out: std.ArrayList(u8) = .empty;
     defer out.deinit(allocator);
     const w = cio.listWriter(&out, allocator);
-    try w.print("{{\"root\":\"{s}\",\"file_count\":{d},\"index_ms\":{d},\"queries\":[", .{
-        r.root, r.file_count, r.index_ms,
+    try w.print("{{\"root\":\"{s}\",\"file_count\":{d},\"index_ns\":{d},\"index_ms\":{d},\"queries\":[", .{
+        r.root, r.file_count, r.index_ns, r.index_ms,
     });
     for (r.queries, 0..) |q, i| {
         if (i > 0) try w.print(",", .{});
-        try w.print("{{\"name\":\"{s}\",\"kind\":\"{s}\",\"hits\":{d},\"avg_ns\":{d}}}", .{
-            q.name, q.kind, q.hits, q.avg_ns,
+        try w.print("{{\"name\":\"{s}\",\"kind\":\"{s}\",\"hits\":{d},\"avg_ns\":{d},\"p50_ns\":{d},\"p95_ns\":{d},\"samples_ns\":[", .{
+            q.name, q.kind, q.hits, q.avg_ns, q.p50_ns, q.p95_ns,
         });
+        for (q.samples_ns, 0..) |sample, j| {
+            if (j > 0) try w.print(",", .{});
+            try w.print("{d}", .{sample});
+        }
+        try w.print("]}}", .{});
     }
     try w.print("],\"reindex\":{{\"cycles\":{d},\"files_per_cycle\":{d},\"id_to_path_before\":{d},\"id_to_path_after\":{d},\"free_ids\":{d}}},", .{
         r.reindex.cycles,            r.reindex.files_per_cycle,
@@ -272,6 +334,10 @@ fn printJson(allocator: std.mem.Allocator, file: cio.File, r: BenchResult) !void
         r.git_head.stat_ns, r.git_head.stat_stable,
     });
     try file.writeAll(out.items);
+}
+
+fn appendQuery(alloc: std.mem.Allocator, list: *std.ArrayList(QueryResult), result: QueryResult) void {
+    list.append(alloc, result) catch alloc.free(result.samples_ns);
 }
 
 // ── main ──────────────────────────────────────────────────────────────────────
@@ -315,20 +381,23 @@ pub fn main(init: std.process.Init.Minimal) !void {
     // latency for a representative query.
     cio.posixSetenv("CODEDB_NO_SEARCH_CACHE", "1");
     var qlist: std.ArrayList(QueryResult) = .empty;
-    defer qlist.deinit(alloc);
+    defer {
+        for (qlist.items) |q| alloc.free(q.samples_ns);
+        qlist.deinit(alloc);
+    }
 
     for ([_][]const u8{ "middleware", "authentication", "webhook", "database", "error" }) |q|
-        (qlist.append(alloc, try benchSearch(&explorer, q, args.iterations, alloc)) catch {});
+        appendQuery(alloc, &qlist, try benchSearch(&explorer, q, args.iterations, alloc));
     cio.posixUnsetenv("CODEDB_NO_SEARCH_CACHE");
     if (benchSearch(&explorer, "error", args.iterations, alloc) catch null) |cached_qr| {
         var qr = cached_qr;
         qr.kind = "cached";
-        qlist.append(alloc, qr) catch {};
+        appendQuery(alloc, &qlist, qr);
     }
     for ([_][]const u8{ "request", "response", "config", "error" }) |q|
-        (qlist.append(alloc, try benchWord(&explorer, q, args.iterations, alloc)) catch {});
+        appendQuery(alloc, &qlist, try benchWord(&explorer, q, args.iterations, alloc));
     for ([_][]const u8{ "init", "main", "handleRequest", "render" }) |q|
-        (qlist.append(alloc, try benchSymbol(&explorer, q, args.iterations, alloc)) catch {});
+        appendQuery(alloc, &qlist, try benchSymbol(&explorer, q, args.iterations, alloc));
 
     const reindex = try benchReindex(io, &explorer, root, alloc);
     const git_head = benchGitHead(io, root);
@@ -336,6 +405,7 @@ pub fn main(init: std.process.Init.Minimal) !void {
     const result = BenchResult{
         .root = root,
         .file_count = store.currentSeq(),
+        .index_ns = index_ns,
         .index_ms = @intCast(@divTrunc(index_ns, std.time.ns_per_ms)),
         .queries = qlist.items,
         .reindex = reindex,
