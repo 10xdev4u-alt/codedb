@@ -84,6 +84,33 @@ pub fn build(b: *std.Build) void {
     const run_step = b.step("run", "Run codedb daemon");
     run_step.dependOn(&run_cmd.step);
 
+    // ── Managed sidecar (#26) ──
+    // `codedb-sidecar` is shipped next to the CLI: it owns the embedding
+    // server's lifetime. The helper is a test-only stub server and is built
+    // into the cache, never installed.
+    const sidecar_exe = b.addExecutable(.{
+        .name = "codedb-sidecar",
+        .root_module = b.createModule(.{
+            .root_source_file = b.path("src/sidecar_main.zig"),
+            .target = target,
+            .optimize = optimize,
+            .link_libc = true,
+            .strip = strip_debug,
+        }),
+    });
+    const sidecar_install = b.addInstallArtifact(sidecar_exe, .{});
+    b.getInstallStep().dependOn(&sidecar_install.step);
+
+    const sidecar_helper_exe = b.addExecutable(.{
+        .name = "codedb-sidecar-helper",
+        .root_module = b.createModule(.{
+            .root_source_file = b.path("src/sidecar_helper.zig"),
+            .target = target,
+            .optimize = optimize,
+            .link_libc = true,
+        }),
+    });
+
     // ── Tests (split into independent binaries for faster compilation) ──
     const test_filter = b.option([]const u8, "test-filter", "Only run tests whose name contains this substring");
     const test_step = b.step("test", "Run all tests");
@@ -131,6 +158,30 @@ pub fn build(b: *std.Build) void {
         const individual_step = b.step(tf.name, b.fmt("Run {s}", .{tf.name}));
         individual_step.dependOn(&run.step);
     }
+
+    // Sidecar lifecycle tests spawn the real supervisor, so the test binary
+    // needs the emitted paths rather than whatever is on PATH.
+    const sidecar_tests = b.addTest(.{
+        .root_module = b.createModule(.{
+            .root_source_file = b.path("src/test_sidecar.zig"),
+            .target = target,
+            .optimize = optimize,
+            .link_libc = true,
+        }),
+    });
+    const sidecar_build_options = b.addOptions();
+    sidecar_build_options.addOptionPath("sidecar_helper", sidecar_helper_exe.getEmittedBin());
+    sidecar_build_options.addOptionPath("sidecar_supervisor", sidecar_exe.getEmittedBin());
+    sidecar_tests.root_module.addOptions("build_options", sidecar_build_options);
+    const sidecar_test_run = b.addRunArtifact(sidecar_tests);
+    if (test_filter) |f| {
+        const filters = b.allocator.alloc([]const u8, 1) catch @panic("oom");
+        filters[0] = f;
+        sidecar_tests.filters = filters;
+    }
+    test_step.dependOn(&sidecar_test_run.step);
+    const sidecar_test_step = b.step("test-sidecar", "Run sidecar lifecycle tests");
+    sidecar_test_step.dependOn(&sidecar_test_run.step);
 
     // ── Library tests (verify the module root compiles) ──
     const lib_tests = b.addTest(.{
