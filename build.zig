@@ -100,6 +100,7 @@ pub fn build(b: *std.Build) void {
         .{ .name = "test-query", .path = "src/test_query.zig", .needs_nanoregex = true },
         .{ .name = "test-list-dir", .path = "src/test_list_dir.zig", .needs_nanoregex = false },
         .{ .name = "test-semantic", .path = "src/test_semantic.zig", .needs_nanoregex = false },
+        .{ .name = "test-model-cache", .path = "src/model_cache.zig", .needs_nanoregex = false },
         // Keep semantic_index.zig as an explicit root. Zig does not discover
         // test declarations transitively just because test_ann.zig imports it,
         // so omitting this entry can make `zig build test` pass without ever
