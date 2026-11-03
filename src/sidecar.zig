@@ -116,12 +116,6 @@ pub const Sidecar = struct {
         terminate(self.io, &self.child, self.options.stop_grace_ms, false, null);
     }
 
-    /// A supervisor that crashed on its own is reaped here; the next `embed`
-    /// restarts it. Returns false when no supervisor is running.
-    pub fn isRunning(self: *Sidecar) bool {
-        return self.child.id != null;
-    }
-
     pub fn health(self: *Sidecar) !bool {
         const body = try self.fetchWithTimeout(self.healthUrl(), .GET, null, &.{});
         defer self.allocator.free(body);
