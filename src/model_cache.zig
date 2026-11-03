@@ -46,7 +46,7 @@ pub const Error = error{
 ///      `~/.local/share/codedb/models`
 pub fn cacheDir(io: std.Io, allocator: std.mem.Allocator) ![]u8 {
     if (cio.posixGetenv(override_env)) |value| {
-        if (value.len == 0) return error.InvalidModelCacheDir;
+        if (value.len == 0 or !std.fs.path.isAbsolute(value)) return error.InvalidModelCacheDir;
         const dir = try allocator.dupe(u8, value);
         errdefer allocator.free(dir);
         std.Io.Dir.cwd().createDirPath(io, dir) catch return error.InvalidModelCacheDir;
@@ -62,7 +62,8 @@ pub fn cacheDir(io: std.Io, allocator: std.mem.Allocator) ![]u8 {
         .macos => try std.fmt.allocPrint(allocator, "{s}/Library/Application Support/codedb/models", .{home}),
         else => blk: {
             if (cio.posixGetenv("XDG_DATA_HOME")) |xdg| {
-                if (xdg.len > 0) break :blk try std.fmt.allocPrint(allocator, "{s}/codedb/models", .{xdg});
+                if (xdg.len > 0 and std.fs.path.isAbsolute(xdg))
+                    break :blk try std.fmt.allocPrint(allocator, "{s}/codedb/models", .{xdg});
             }
             break :blk try std.fmt.allocPrint(allocator, "{s}/.local/share/codedb/models", .{home});
         },
@@ -106,8 +107,23 @@ pub fn ensure(io: std.Io, allocator: std.mem.Allocator, spec: Spec, options: Opt
     const partial = try partialPath(io, allocator, spec);
     defer allocator.free(partial);
 
+    if (try verify(io, allocator, path, spec)) return path;
+
+    if (options.offline or isOffline()) return error.ModelNotCachedOffline;
+
+    // Serialize the download across processes. The lock lives beside the
+    // cache and is never removed, so the inode is stable between open and
+    // lock. Nothing else may delete `.partial` before the lock is held.
+    const lock_path = try std.fmt.allocPrint(allocator, "{s}.lock", .{path});
+    defer allocator.free(lock_path);
+    const lock_file = try std.Io.Dir.createFileAbsolute(io, lock_path, .{});
+    defer lock_file.close(io);
+    try lock_file.lock(io, .exclusive);
+    defer lock_file.unlock(io);
+
+    // Another process may have finished while we waited for the lock.
     if (try verify(io, allocator, path, spec)) {
-        // A valid cache wins even when a stale partial is lying around.
+        // The partial is stale now, and the lock makes deleting it safe.
         std.Io.Dir.deleteFileAbsolute(io, partial) catch {};
         return path;
     }
@@ -115,8 +131,6 @@ pub fn ensure(io: std.Io, allocator: std.mem.Allocator, spec: Spec, options: Opt
     // A file that exists but fails verification is corrupt. Remove it so the
     // download cannot append to bad bytes.
     std.Io.Dir.deleteFileAbsolute(io, path) catch {};
-
-    if (options.offline or isOffline()) return error.ModelNotCachedOffline;
 
     try download(io, allocator, spec, path);
     if (!try verify(io, allocator, path, spec)) return error.ModelChecksumMismatch;
@@ -205,7 +219,7 @@ fn download(io: std.Io, allocator: std.mem.Allocator, spec: Spec, final_path: []
     const uri = try std.Uri.parse(spec.url);
     var req = try client.request(.GET, uri, .{
         .extra_headers = headers[0..header_count],
-        .redirect_behavior = @fromBackingInt(@intCast(3)),
+        .redirect_behavior = .not_allowed,
     });
     defer req.deinit();
     try req.sendBodiless();
@@ -298,6 +312,7 @@ const MockModelServer = struct {
     request_count: usize = 0,
     last_range: [64]u8 = undefined,
     last_range_len: usize = 0,
+    redirect_location: ?[]const u8 = null,
     failure: ?anyerror = null,
 
     fn run(self: *MockModelServer) void {
@@ -347,6 +362,20 @@ const MockModelServer = struct {
                     ) catch "";
                 }
             }
+        }
+
+        if (self.redirect_location) |loc| {
+            var head_buffer: [512]u8 = undefined;
+            const head = try std.fmt.bufPrint(
+                &head_buffer,
+                "HTTP/1.1 302 Found\r\nLocation: {s}\r\nContent-Length: 0\r\nConnection: close\r\n\r\n",
+                .{loc},
+            );
+            var writer_buffer: [4096]u8 = undefined;
+            var writer = stream.writer(test_io, &writer_buffer);
+            try writer.interface.writeAll(head);
+            try writer.interface.flush();
+            return;
         }
 
         const slice = self.body[start..];
@@ -624,4 +653,57 @@ test "model cache: rejects a checksum mismatch and leaves no final file" {
         file.close(test_io);
         return error.TestUnexpectedResult;
     } else |err| try testing.expectEqual(error.FileNotFound, err);
+}
+
+test "model cache: rejects a relative override directory" {
+    var dir_guard = EnvGuard.save(override_env);
+    defer dir_guard.restore();
+    cio.posixSetenv(override_env, "models-relative");
+    try testing.expectError(error.InvalidModelCacheDir, cacheDir(test_io, testing.allocator));
+}
+
+test "model cache: does not follow redirects" {
+    var dir_guard = EnvGuard.save(override_env);
+    defer dir_guard.restore();
+    var offline_guard = EnvGuard.save(offline_env);
+    defer offline_guard.restore();
+    cio.posixUnsetenv(offline_env);
+
+    var tmp = testing.tmpDir(.{});
+    defer tmp.cleanup();
+    const override = try tmpCacheDir(&tmp);
+    defer testing.allocator.free(override);
+    cio.posixSetenv(override_env, override);
+
+    var model = try TestModel.init(testing.allocator);
+    defer model.deinit(testing.allocator);
+
+    const addr = try std.Io.net.IpAddress.parse("127.0.0.1", 0);
+    var server = try addr.listen(test_io, .{ .reuse_address = true, .mode = .stream, .protocol = .tcp });
+    defer server.deinit(test_io);
+    var url_buffer: [128]u8 = undefined;
+    const url = try std.fmt.bufPrint(&url_buffer, "http://127.0.0.1:{d}/model.gguf", .{server.socket.address.getPort()});
+
+    // Each redirect the client follows costs one more connection; a refusing
+    // client opens exactly one and returns an error.
+    var mock = MockModelServer{
+        .server = &server,
+        .body = model.body,
+        .connections = 1,
+        .redirect_location = url,
+    };
+    const thread = try std.Thread.spawn(.{}, MockModelServer.run, .{&mock});
+    const spec = model.spec(url);
+
+    if (ensure(test_io, testing.allocator, spec, .{})) |path| {
+        testing.allocator.free(path);
+        return error.TestUnexpectedSuccess;
+    } else |_| {}
+    thread.join();
+    if (mock.failure) |err| return err;
+    try testing.expectEqual(@as(usize, 1), mock.request_count);
+
+    const final_path = try modelPath(test_io, testing.allocator, spec);
+    defer testing.allocator.free(final_path);
+    try testing.expectError(error.FileNotFound, std.Io.Dir.accessAbsolute(test_io, final_path, .{}));
 }
