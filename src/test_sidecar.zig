@@ -87,6 +87,8 @@ fn startSidecar(
 }
 
 test "sidecar: starts, reports health, embeds, and stops the server" {
+    if (comptime builtin.os.tag == .windows) return error.SkipZigTest;
+
     var tmp = testing.tmpDir(.{});
     defer tmp.cleanup();
     const pid_path = try tmpPath(&tmp, testing.allocator, "server.pid");
@@ -110,6 +112,8 @@ test "sidecar: starts, reports health, embeds, and stops the server" {
 }
 
 test "sidecar: a killed server is restarted once and the retry is reported" {
+    if (comptime builtin.os.tag == .windows) return error.SkipZigTest;
+
     var tmp = testing.tmpDir(.{});
     defer tmp.cleanup();
     const pid_path = try tmpPath(&tmp, testing.allocator, "server.pid");
@@ -151,7 +155,7 @@ test "sidecar: a server that exits before health fails with a typed error" {
             .model_path = "unused-model.gguf",
             .server_args = &.{ "serve", "--pid-file", pid_path, "--exit-after-ms", "50" },
             .startup_timeout_ms = 500,
-            .stop_grace_ms = 500,
+            .stop_grace_ms = sidecar.min_stop_grace_ms,
             .request_timeout_ms = 500,
         }),
     );

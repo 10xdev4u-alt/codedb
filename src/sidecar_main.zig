@@ -39,10 +39,12 @@ pub fn main(init: std.process.Init) !void {
     if (count == 0) return fail(io, "missing server command");
 
     // The parent stops this process by closing the pipe, so the supervisor
-    // must survive a terminal signal long enough to clean up. Install the
-    // handlers only after the server is spawned: signal dispositions are
-    // inherited across exec, and a server that ignores SIGTERM cannot be
-    // stopped gracefully.
+    // must survive a terminal signal long enough to clean up. Handlers are
+    // installed before the spawn: they are a no-op, and exec resets them, so
+    // the server starts with default dispositions and can be stopped
+    // gracefully. A tiny window before the spawn is all that is skipped.
+    installStopHandlers();
+
     var child = std.process.spawn(io, .{
         .argv = server_argv[0..count],
         .stdin = .ignore,
@@ -54,13 +56,11 @@ pub fn main(init: std.process.Init) !void {
         .pgid = if (builtin.os.tag == .windows) null else 0,
     }) catch return fail(io, "could not start the embedding server");
 
-    ignoreStopSignals();
-
     waitForParentExit(io);
 
     // The parent's grace period is longer than this one, so the supervisor
     // finishes its own escalation before the parent gives up on it.
-    sidecar.terminate(io, &child, 1_000, true, .TERM);
+    sidecar.terminate(io, &child, sidecar.supervisor_teardown_ms, true, .TERM);
     std.process.exit(0);
 }
 
@@ -75,15 +75,21 @@ fn waitForParentExit(io: std.Io) void {
     }
 }
 
-fn ignoreStopSignals() void {
+fn noopStopHandler(_: std.posix.SIG) callconv(.c) void {}
+
+fn installStopHandlers() void {
     if (builtin.os.tag == .windows) return;
     var action: std.posix.Sigaction = .{
-        .handler = .{ .handler = std.posix.SIG.IGN },
+        .handler = .{ .handler = noopStopHandler },
         .mask = std.posix.sigemptyset(),
         .flags = 0,
     };
+    // Not signored: exec resets handlers to the default, so the server keeps
+    // graceful termination. SIG_IGN would be inherited and would break stop.
     std.posix.sigaction(std.posix.SIG.TERM, &action, null);
     std.posix.sigaction(std.posix.SIG.INT, &action, null);
+    std.posix.sigaction(std.posix.SIG.HUP, &action, null);
+    std.posix.sigaction(std.posix.SIG.QUIT, &action, null);
 }
 
 fn fail(io: std.Io, message: []const u8) noreturn {

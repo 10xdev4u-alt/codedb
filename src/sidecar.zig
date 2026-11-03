@@ -16,6 +16,11 @@ const cio = @import("cio.zig");
 
 pub const default_startup_timeout_ms: u32 = 30_000;
 pub const default_stop_grace_ms: u32 = 5_000;
+/// Grace the supervisor gives the server before SIGKILL; the parent's
+/// `stop_grace_ms` must exceed this by a margin so the supervisor is not
+/// SIGKILLed mid-teardown.
+pub const supervisor_teardown_ms: u32 = 1_000;
+pub const min_stop_grace_ms: u32 = supervisor_teardown_ms + 1_000;
 pub const default_request_timeout_ms: u32 = 30_000;
 pub const health_poll_interval_ms: u32 = 50;
 pub const max_server_args: usize = 32;
@@ -169,7 +174,8 @@ pub const Sidecar = struct {
         var port_buffer: [8]u8 = undefined;
         const port_text = std.fmt.bufPrint(&port_buffer, "{d}", .{self.port}) catch return error.InvalidSidecarOptions;
 
-        var argv: [6 + max_server_args][]const u8 = undefined;
+        // supervisor, `--`, server, args..., --model, model, --port, port
+        var argv: [7 + max_server_args][]const u8 = undefined;
         var count: usize = 0;
         argv[count] = self.options.supervisor_path;
         count += 1;
@@ -276,9 +282,10 @@ fn validateOptions(options: Options) !void {
     if (options.server_path.len == 0 or options.server_path.len > 4096) return error.InvalidSidecarOptions;
     if (options.model_path.len == 0 or options.model_path.len > 4096) return error.InvalidSidecarOptions;
     if (options.server_args.len > max_server_args) return error.InvalidSidecarOptions;
-    if (options.startup_timeout_ms == 0 or options.stop_grace_ms == 0 or options.request_timeout_ms == 0) {
+    if (options.startup_timeout_ms == 0 or options.request_timeout_ms == 0) {
         return error.InvalidSidecarOptions;
     }
+    if (options.stop_grace_ms < min_stop_grace_ms) return error.InvalidSidecarOptions;
     for ([_][]const u8{ options.supervisor_path, options.server_path, options.model_path }) |path| {
         if (std.mem.indexOfScalar(u8, path, 0) != null) return error.InvalidSidecarOptions;
     }
